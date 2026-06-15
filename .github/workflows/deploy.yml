@@ -24,6 +24,10 @@ jobs:
           node-version: 20
       - name: Build with Honkit
         run: npx --yes honkit build . _book
+      - name: Apply brand favicon
+        run: |
+          find _book -path '*gitbook/images/favicon.ico' -exec cp brand/favicon.ico {} \;
+          find _book -path '*gitbook/images/apple-touch-icon-precomposed-152.png' -exec cp brand/apple-touch.png {} \;
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _book
