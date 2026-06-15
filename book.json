@@ -1,10 +1,13 @@
 {
   "title": "Nogada Guide",
   "description": "Nogada — EVM NFT minting bot user guide",
-  "plugins": ["-sharing", "-fontsettings"],
+  "plugins": ["-sharing"],
   "pluginsConfig": {
     "theme-default": {
       "showLevel": true
+    },
+    "fontsettings": {
+      "theme": "night"
     }
   }
 }

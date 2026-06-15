@@ -7,6 +7,7 @@
 * [1. 설치하기](getting-started/installation.md)
 * [2. 라이선스 활성화](getting-started/license.md)
 * [3. 초기 필수 세팅 (5분)](getting-started/first-setup.md)
+* [4. 추천 부가 세팅 (선택)](getting-started/recommended-settings.md)
 
 ## 📖 화면별 사용법
 
