@@ -6,7 +6,7 @@ The first screen you see when you open the app. It shows your minting status **a
 
 ## Common — elements on every screen
 
-* **Top menu (left)**: Dashboard · Tasks · Wallets · NFT · PnL · RPC · Proxies · Tools · Settings (operators also see **Admin**). Click to switch screens.
+* **Top menu (left)**: Dashboard · Tasks · Wallets · NFT · PnL · RPC · Proxies · Tools · Settings. Click to switch screens.
 * **Top-right buttons**
   * **⌘K (Ctrl + K)** — opens the **command palette** anywhere; jump to any screen or run a command just by searching.
   * **New task** — quickly create a new minting task.

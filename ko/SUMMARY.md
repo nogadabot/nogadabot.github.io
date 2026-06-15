@@ -20,7 +20,6 @@
 * [프록시 (Proxies)](app-guide/proxies.md)
 * [도구 (가스 계산기)](app-guide/tools.md)
 * [설정 (Settings)](app-guide/settings.md)
-* [관리자 (운영자 전용)](app-guide/admin.md)
 
 ## 🎯 민팅 가이드
 

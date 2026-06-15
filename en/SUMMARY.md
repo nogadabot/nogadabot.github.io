@@ -20,7 +20,6 @@
 * [Proxies](app-guide/proxies.md)
 * [Tools (Gas Calculator)](app-guide/tools.md)
 * [Settings](app-guide/settings.md)
-* [Admin (operators only)](app-guide/admin.md)
 
 ## 🎯 Minting Guide
 
