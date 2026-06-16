@@ -23,6 +23,7 @@
 
 ## 🎯 Minting Guide
 
+* [Mint Modes — Instant·Safe·Spam (explained)](minting/modes.md)
 * [Whitelist (WL) Mint](minting/whitelist.md)
 * [Public Mint](minting/public.md)
 * [Gas Settings Explained](minting/gas.md)

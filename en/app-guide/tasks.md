@@ -2,6 +2,8 @@
 
 A **task** is one minting setup that holds "which contract, with which wallets, and how to mint." Create a task and **Run** it to start minting.
 
+> ⭐ **Confused by mint modes (Instant·Safe·Spam), delay, guardrail, scheduled start, or many wallets (parallel)? Read → [Mint Modes explained](../minting/modes.md)** first. This page is about *where things are*; that page is about *when to use what*.
+
 ![tasks](../images/tasks.png)
 
 ## Layout
@@ -37,7 +39,7 @@ Click `+ New task` to open the editor. Let's go field by field.
 |---|---|---|
 | ① | **Contract address** | Paste the NFT's contract address — e.g. `0x4E1f…480e56` |
 | ② | **Fetch ABI → Function** | Click **Fetch ABI**; the app reads the contract and lists its functions. Pick **`mint(uint256)`** and the Function field fills in. |
-| ③ | **Arguments** | The value(s) the function needs. For `mint(uint256)` this is just the **quantity → `1`** |
+| ③ | **Arguments** | Pick a function and its **argument fields appear automatically** (name + type). For `mint(uint256)` that's just the **quantity field → `1`** |
 | ④ | **Value (ETH)** | The mint **price per item → `0.05`** (put `0` for a free mint) |
 | ⑤ | **Wallets + RPC** | Tick the wallets to mint with (**All** = both here), and tick at least one **RPC** |
 | ⑥ | **Create** | Done — the task drops into your list, ready to **Run** |
@@ -58,7 +60,7 @@ Click `+ New task` to open the editor. Let's go field by field.
 | **Chain** | The chain to mint on (Ethereum, Base, etc.) |
 | **Raw calldata** | Check to enter **raw hex data** instead of a function (advanced) |
 | **Function** | The mint function (e.g. `mint(uint256)`). Use **Fetch ABI** to auto-fill |
-| **Arguments** | Values for the function, separated by `;`. `{address}` = wallet address, `{id}` = token id (auto-replaced) |
+| **Arguments** | **Pick a function from the ABI and one field per argument is built for you** (name + type) — no guessing the order. `{address}` = each wallet, `{id}` = token id (auto-replaced). If the function is **payable, Value is required** (red asterisk). _(Without an ABI, type them separated by `;`)_ |
 | **Amount (ETH)** | Mint price (per item). `0` if free |
 
 #### 🔧 "Fetch ABI" — no need to type the function by hand
@@ -85,6 +87,59 @@ The editor also has gas and timing settings: **Gas Limit / Max fee (gwei) / Prio
 
 * **Templates** — save/load frequently used settings.
 * **Cancel / Create** — **Create** makes the task.
+
+---
+
+## 📋 New-task window — every field explained
+
+> Every field in the new-task popup, in one place. For *when to use what*, see → [Mint Modes explained](../minting/modes.md).
+
+### 🎯 Target — "what to mint"
+| Field | What it is |
+|---|---|
+| **Target tab** | **Contract** (by address) / **OpenSea drop** (link) / **Launchpad** |
+| **Contract address / mint link** | The NFT's `0x…` address, or an OpenSea/launchpad **link** |
+| **Chain** | The blockchain to mint on (Ethereum, Base, …) |
+| **Raw calldata** _(advanced)_ | Paste **hex calldata** instead of a function. Rarely needed |
+| **Function** | The mint function (e.g. `mint`). Auto-filled by **Fetch ABI** |
+| **Arguments** | The values the function needs. **Pick a function and fields appear** per argument (name + type). `{address}`/`{id}` auto-fill |
+| **Value (ETH)** | Price per item. `0` if free. **Required if the function is payable** (red asterisk) |
+
+### 🔥 Mint mode (3 choices)
+| Mode | What it does |
+|---|---|
+| **Instant (once)** | One shot per wallet — fastest (pair with a schedule) |
+| **Safe (simulate)** | Dry-run first, skip would-fail wallets, then fire once |
+| **Spam** | Repeat until it lands → **auto-stops on success** |
+
+### ⛽ Gas (fees)
+| Field | What it is |
+|---|---|
+| **Gas limit** | Max gas the tx may use. Usually auto (blank) |
+| **Max fee** | Highest gas price per unit you'll pay (gwei). Auto = tracks the market |
+| **Priority** | Miner tip (gwei). Higher = mined sooner — the edge in a race |
+
+### ⏱️ Timing & repeat
+| Field | What it is |
+|---|---|
+| **Start at** | Scheduled fire time (calendar+clock, your local time). Blank = now |
+| **Delay** _(spam)_ | Gap between retries. `100` = every 0.1s, `0` = max speed |
+| **Max tx** _(spam)_ | Cap on sends. Blank = unlimited (until success / manual stop) |
+| **nonce** _(non-spam)_ | The tx sequence number. Usually auto |
+
+### 👛 Wallets & RPC
+| Field | What it is |
+|---|---|
+| **Wallets** | Wallets to mint with (pick many). **Default: one task per wallet** (parallel). Or "bundle into one task" |
+| **RPC** | Nodes to use. None = public RPC |
+
+### ⚙️ Options
+| Field | What it is |
+|---|---|
+| **After-mint action** | On a mint, auto **transfer / list on OpenSea / accept an offer** |
+| **Flashbots bundles** | Submit via the **private mempool** (Ethereum only) — no public-mempool exposure; dodges sandwich/front-run |
+| **Copies** | Make N identical tasks |
+| **Template** | Save/load a reusable run setup |
 
 ---
 

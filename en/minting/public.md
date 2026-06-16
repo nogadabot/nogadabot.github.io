@@ -2,6 +2,8 @@
 
 An open mint anyone can join. Nogada offers two ways.
 
+> 💡 For a contested public, the keys are **Spam + fast gas + a scheduled start** → [Mint Modes explained](modes.md)
+
 ## Method A — Launchpad/market link (easiest)
 
 For launchpads like OpenSea or Transient, **just paste the link**.

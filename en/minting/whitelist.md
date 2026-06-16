@@ -2,6 +2,8 @@
 
 A WL mint lets **only registered wallets** mint. It usually needs a proof or signature, so there's one more thing to prepare than a public mint.
 
+> 💡 Mint modes (Instant·Safe·Spam), scheduled start, and many-wallet handling → [Mint Modes explained](modes.md)
+
 ## Easiest path — OpenSea / Transient WL
 
 For OpenSea/Transient launchpad WLs, Nogada **handles the proof automatically**.

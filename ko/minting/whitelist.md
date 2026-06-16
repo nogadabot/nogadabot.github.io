@@ -2,6 +2,8 @@
 
 WL 민트는 **등록된 지갑만** 민팅할 수 있는 단계입니다. 보통 증명(proof)이나 서명(signature)이 필요해서 퍼블릭보다 한 단계 더 챙길 게 있습니다.
 
+> 💡 민트 방식(즉시·안전·연사)·예약 시작·여러 지갑 처리는 → [민트 방식 완전정복](modes.md)
+
 ## 가장 쉬운 길 — OpenSea / Transient WL
 
 OpenSea·Transient 런치패드의 WL이라면 Nogada가 **proof를 자동으로 처리**합니다.
