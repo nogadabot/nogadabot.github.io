@@ -4,10 +4,15 @@
 
 ## 🚀 Getting Started
 
+* [⬇️ Download & Install](getting-started/download.md)
 * [1. Installation](getting-started/installation.md)
 * [2. Activate Your License](getting-started/license.md)
 * [3. First-Time Setup (5 min)](getting-started/first-setup.md)
 * [4. Recommended Settings (optional)](getting-started/recommended-settings.md)
+
+## 📋 What's New
+
+* [What changed — by version](changelog.md)
 
 ## 📖 Screen-by-Screen Guide
 

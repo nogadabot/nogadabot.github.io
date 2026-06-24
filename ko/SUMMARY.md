@@ -4,10 +4,15 @@
 
 ## 🚀 시작하기
 
+* [⬇️ 다운로드 & 설치](getting-started/download.md)
 * [1. 설치하기](getting-started/installation.md)
 * [2. 라이선스 활성화](getting-started/license.md)
 * [3. 초기 필수 세팅 (5분)](getting-started/first-setup.md)
 * [4. 추천 부가 세팅 (선택)](getting-started/recommended-settings.md)
+
+## 📋 변경사항
+
+* [무엇이 바뀌었나 — 버전별](changelog.md)
 
 ## 📖 화면별 사용법
 
