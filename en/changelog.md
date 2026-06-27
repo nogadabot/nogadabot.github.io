@@ -2,6 +2,30 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.22
+
+- Smart Mint now shows the correct estimated cost for a whitelist / signed phase — it could previously show the public price even when you'd selected a cheaper allowlist phase. (Display only; your tasks always fired at the right price.)
+- Sending or spreading ERC-1155 NFTs to another wallet now works — it was reverting every time before.
+- A broad round of stability and reliability fixes across minting, transfers, listings, and the Telegram bot.
+
+## v0.9.21
+
+- Whitelist minting is much faster now — the app catches your mint voucher the instant OpenSea issues it and fires the moment the drop opens, instead of lagging seconds behind.
+- The whitelist checker now shows each drop's real phases and whether each wallet is on the list (✓ / ✗), instead of only showing "Public".
+- Smart Mint correctly reads and displays a drop's allowlist / signed phases.
+- Firing is gas-safe: the app won't waste gas broadcasting into a sold-out or not-yet-open drop.
+- Spam tasks can now fire as private, revert-protected Flashbots bundles on Ethereum mainnet (optional).
+- Fixed a few rare screen freezes and sharpened text contrast for readability.
+
+## v0.9.20
+
+- Boost now replaces a stuck transaction in place — same nonce, higher gas — instead of piling on another one, and it works on a running task too, with +10% / +25% / +50% quick presets.
+- New "funded wallets only" quick-pick when building a task: instantly select just the wallets that hold enough to mint.
+- Whitelist scan results can now be saved, reloaded, and deleted — your eligibility checks stick around instead of vanishing when you close the dialog.
+- Spam tasks can now have an end time: pick a clock time and the burst stops itself then, even when set to unlimited.
+- Task editor shows each wallet's balance in the picker, the start time supports seconds, and the start / stop / boost controls were tidied up.
+- Steadier spam timing, and every running task now stops cleanly when you close the app.
+
 ## v0.9.19
 
 - Fixed an OpenSea minting bug: drops that had already started — any tokens already minted — failed to fetch your mint data and wouldn't fire. They now mint correctly, on both public and signed (GTD / FCFS allowlist) phases.
