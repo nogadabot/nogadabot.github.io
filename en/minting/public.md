@@ -4,7 +4,7 @@ An open mint anyone can join. Nogada offers two ways.
 
 > 💡 For a contested public, the keys are **Spam + fast gas + a scheduled start** → [Mint Modes explained](modes.md)
 
-## Method A — Launchpad/market link (easiest)
+## Method A: Launchpad/market link (easiest)
 
 For launchpads like OpenSea or Transient, **just paste the link**.
 
@@ -16,14 +16,14 @@ For launchpads like OpenSea or Transient, **just paste the link**.
 
 > 💡 For a mint that's already live, auto-detection is the fastest and easiest.
 
-## Method B — Contract directly (manual)
+## Method B: Contract directly (manual)
 
 For a regular contract where auto-detection doesn't apply, specify the function yourself.
 
 1. Get the project's **contract address** (from Etherscan, etc.).
 2. **Tasks** → `+ New task` → target **Contract**.
 3. Enter the address and click **Fetch ABI** to pick `mint` / `publicMint` etc. from the function list.
-4. Fill **Arguments** — a public mint usually has just **quantity**.
+4. Fill **Arguments**: a public mint usually has just **quantity**.
 5. Put the mint price in **Amount (ETH)** (0 if free).
 6. Set wallets/RPC/gas → **Create** → **Run**.
 
@@ -35,8 +35,8 @@ You can copy the **input data (hex)** from someone else's minting transaction.
 * In the task editor, check **Raw calldata** and paste the hex
 * Just match the contract address + total amount (price × quantity)
 
-> ⚠️ **Be careful with functions that include a receiver address or token id** — a wrong copy could mint to someone else's wallet. Simple `mint(quantity)` types are safe to copy directly.
+> ⚠️ **Be careful with functions that include a receiver address or token id**: a wrong copy could mint to someone else's wallet. Simple `mint(quantity)` types are safe to copy directly.
 
-> 💡 Confused about the function/hex? Ask ChatGPT/Claude "what's this contract's mint function and arguments?" — they read contracts well.
+> 💡 Confused about the function/hex? Ask ChatGPT/Claude "what's this contract's mint function and arguments?", they read contracts well.
 
 Next → [Gas Settings Explained](gas.md)

@@ -1,6 +1,6 @@
 # 4. Recommended Settings (optional)
 
-Once the essentials (wallets · RPC · gas) are done, these are the **"nice-to-have" settings that boost your mint success rate, speed, and convenience**. All optional — but if you're going after competitive mints, the ⭐ ones are strongly recommended.
+Once the essentials (wallets · RPC · gas) are done, these are the **"nice-to-have" settings that boost your mint success rate, speed, and convenience**. All optional, but if you're going after competitive mints, the ⭐ ones are strongly recommended.
 
 > 💡 You don't have to do all of these. **For competitive mints, start with the 3 ⭐ items**; add the rest when you need them.
 
@@ -18,17 +18,17 @@ Fires your transaction to **several RPCs at once** to land in a block faster.
 
 ### ⭐ Pre-set Quick Fire defaults
 For time-critical mints (live mints), picking wallets · RPC every time is too slow.
-* **Settings → Quick Fire** — pre-assign default wallets · RPC → fire in one click
+* **Settings → Quick Fire**: pre-assign default wallets · RPC → fire in one click
 * Details → [Tasks](../app-guide/tasks.md)
 
 ## ⚙️ Stability · advanced (situational)
 
 ### Flashbots (private bundles)
 When you want to reduce front-running exposure and failed-tx leakage.
-* **Settings → Engine → Flashbots** — enable bundles + tune window / priority
+* **Settings → Engine → Flashbots**: enable bundles + tune window / priority
 
 ### Default gas policy
-* **Settings → Engine → Gas** — set your usual gas stance via auto tip multiplier (×) and min priority (gwei floor)
+* **Settings → Engine → Gas**: set your usual gas stance via auto tip multiplier (×) and min priority (gwei floor)
 * Details → [Gas Settings Explained](../minting/gas.md)
 
 ### Proxies

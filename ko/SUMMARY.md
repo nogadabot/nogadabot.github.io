@@ -12,12 +12,12 @@
 
 ## 📋 변경사항
 
-* [무엇이 바뀌었나 — 버전별](changelog.md)
+* [무엇이 바뀌었나, 버전별](changelog.md)
 
 ## 📖 화면별 사용법
 
 * [대시보드](app-guide/dashboard.md)
-* [작업 (Tasks) — 민팅의 핵심](app-guide/tasks.md)
+* [작업 (Tasks), 민팅의 핵심](app-guide/tasks.md)
 * [지갑 (Wallets)](app-guide/wallets.md)
 * [NFT (보유 · 마켓)](app-guide/nft.md)
 * [손익 (PnL)](app-guide/pnl.md)
@@ -28,7 +28,7 @@
 
 ## 🎯 민팅 가이드
 
-* [민트 방식 — 즉시·안전·스팸 (완전정복)](minting/modes.md)
+* [민트 방식, 즉시·안전·스팸 (완전정복)](minting/modes.md)
 * [화이트리스트(WL) 민트](minting/whitelist.md)
 * [퍼블릭 민트](minting/public.md)
 * [가스 설정 완전정복](minting/gas.md)

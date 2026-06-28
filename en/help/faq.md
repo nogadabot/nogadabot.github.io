@@ -2,7 +2,7 @@
 
 ## Which chains are supported?
 
-Ethereum mainnet (L1) and major L2/EVM chains — **Arbitrum, Optimism, Base, Polygon, BNB Chain, Avalanche, Linea, Abstract, Zora, Blast, Scroll** and more. You can add custom EVM chains too.
+Ethereum mainnet (L1) and major L2/EVM chains, **Arbitrum, Optimism, Base, Polygon, BNB Chain, Avalanche, Linea, Abstract, Zora, Blast, Scroll** and more. You can add custom EVM chains too.
 
 ## Are my wallets 100% safe?
 
@@ -14,7 +14,7 @@ That said, nothing is 100% safe in web3. Keep large assets in a **vault wallet**
 
 Yes, you need RPC. **Free** via [Chainlist](https://chainlist.org) public RPCs, and **paid dedicated RPC** (Alchemy/DRPC etc.) for competitive mints. Other EVM chains (Arb/Base etc.) require your own RPC. → [RPC links](../resources/nodes.md)
 
-## I'm new — is it hard to use?
+## I'm new: is it hard to use?
 
 No. Follow the 3 [Getting Started](../getting-started/installation.md) steps and the [Minting Guide](../minting/public.md) to mint in a few clicks. Success rate, though, depends on many variables (gas, competition, project conditions).
 
@@ -40,6 +40,6 @@ No. **Minting itself works without captcha, proxies, or API keys.** Captcha is f
 
 ## Do you guarantee minting success?
 
-No. Low-supply FCFS is decided by everyone's gas, RPC speed, internet, and project API state — sometimes by milliseconds. Better gas/RPC prep raises your odds.
+No. Low-supply FCFS is decided by everyone's gas, RPC speed, internet, and project API state, sometimes by milliseconds. Better gas/RPC prep raises your odds.
 
 > More help → [Troubleshooting](troubleshooting.md) · [Security](security.md)

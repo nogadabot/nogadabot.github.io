@@ -12,12 +12,12 @@
 
 ## 📋 What's New
 
-* [What changed — by version](changelog.md)
+* [What changed, by version](changelog.md)
 
 ## 📖 Screen-by-Screen Guide
 
 * [Dashboard](app-guide/dashboard.md)
-* [Tasks — the heart of minting](app-guide/tasks.md)
+* [Tasks, the heart of minting](app-guide/tasks.md)
 * [Wallets](app-guide/wallets.md)
 * [NFT (Holdings · Market)](app-guide/nft.md)
 * [PnL (Profit & Loss)](app-guide/pnl.md)
@@ -28,7 +28,7 @@
 
 ## 🎯 Minting Guide
 
-* [Mint Modes — Instant·Safe·Spam (explained)](minting/modes.md)
+* [Mint Modes, Instant·Safe·Spam (explained)](minting/modes.md)
 * [Whitelist (WL) Mint](minting/whitelist.md)
 * [Public Mint](minting/public.md)
 * [Gas Settings Explained](minting/gas.md)

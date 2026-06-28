@@ -25,10 +25,10 @@
 
 ### Flashbots (프라이빗 번들)
 프론트러닝 노출과 실패 트랜잭션을 줄이고 싶을 때.
-* **설정 → 엔진 → Flashbots** — 번들 켜기 + window / priority 조정
+* **설정 → 엔진 → Flashbots**: 번들 켜기 + window / priority 조정
 
 ### 가스 기본 정책
-* **설정 → 엔진 → 가스** — 자동 팁 배수(×)와 최소 priority(gwei 하한)로 평소 가스 성향을 정해둠
+* **설정 → 엔진 → 가스**: 자동 팁 배수(×)와 최소 priority(gwei 하한)로 평소 가스 성향을 정해둠
 * 자세히 → [가스 설정 완전정복](../minting/gas.md)
 
 ### 프록시

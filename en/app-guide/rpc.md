@@ -1,18 +1,18 @@
 # RPC
 
-An **RPC** is the pipe the app uses to talk to the blockchain. It's one of the most important settings — it directly affects minting **speed and success rate**.
+An **RPC** is the pipe the app uses to talk to the blockchain. It's one of the most important settings: it directly affects minting **speed and success rate**.
 
 ![rpc](../images/rpc.png)
 
-![RPC — close-up](../images/rpc-detail.png)
+![RPC, close-up](../images/rpc-detail.png)
 
 > 🔍 *Close-up: 1) **Import endpoints** (paste URLs) → 2) **Test group** (check speed).*
 
 ## Layout
 
-* **Group rail (left)** — organize RPCs into groups. `+ New group`.
-* **Import endpoints** — paste RPC addresses to add (multiple lines = multiple).
-* **Test group** — measure response speed (ping) of your RPCs.
+* **Group rail (left)**: organize RPCs into groups. `+ New group`.
+* **Import endpoints**: paste RPC addresses to add (multiple lines = multiple).
+* **Test group**: measure response speed (ping) of your RPCs.
 
 ## Adding RPCs for free (Chainlist)
 
@@ -21,7 +21,7 @@ An **RPC** is the pipe the app uses to talk to the blockchain. It's one of the m
 3. Paste them into **Import endpoints** on the Nogada **RPC** screen.
 4. Run **Test group** and keep only the fast (low-ping) ones.
 
-### 🎯 Worked example — import 3 RPCs
+### 🎯 Worked example: import 3 RPCs
 
 Click **Import endpoints**, then:
 
@@ -29,8 +29,8 @@ Click **Import endpoints**, then:
 
 | # | Step |
 |---|---|
-| ① | **Paste the URLs** — one per line (here: 3 free public Ethereum RPCs) |
-| ② | Click **Import** — they're added to the group. Then hit **Test group** and keep the fastest (low-ping) ones. |
+| ① | **Paste the URLs**: one per line (here: 3 free public Ethereum RPCs) |
+| ② | Click **Import**: they're added to the group. Then hit **Test group** and keep the fastest (low-ping) ones. |
 
 > 💡 The example URLs above are free public RPCs (fine to start with). For competitive mints, also add a **paid / dedicated** RPC → [RPC / Node links](../resources/nodes.md)
 

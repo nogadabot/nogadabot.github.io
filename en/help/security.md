@@ -6,7 +6,7 @@ Core principles for using an NFT bot safely. **Please read this.**
 
 * Imported wallets' private keys are **encrypted with Windows DPAPI and stored only on this PC**.
 * Our server never receives or stores private keys.
-* **Export key** is the only feature that shows a private key on screen — keep it away from others/recording/streaming.
+* **Export key** is the only feature that shows a private key on screen, keep it away from others/recording/streaming.
 
 ## 2. Always mint with a burner (small) wallet
 
@@ -19,10 +19,10 @@ Core principles for using an NFT bot safely. **Please read this.**
 
 ## 4. Don't expose your pairing code / keys
 
-* The Telegram **pairing code is like a password.** Never expose it while recording/streaming — anyone who sees it can connect to your bot and drain the bot wallet.
+* The Telegram **pairing code is like a password.** Never expose it while recording/streaming, anyone who sees it can connect to your bot and drain the bot wallet.
 * Don't share your **license key** either (it's 1-device, so others can't use it anyway, but avoid exposure).
 
-## 5. Beware phishing — official links only
+## 5. Beware phishing: official links only
 
 * Minting via the bot reduces scam/phishing-site risk, but **always suspect DMs and unfamiliar links**.
 * Download/buy only via the **official links from the operator**.

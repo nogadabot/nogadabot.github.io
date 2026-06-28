@@ -6,7 +6,7 @@ Nogada is a desktop app for Windows 10/11. Installation takes about 2–3 minute
 
 Download the setup file from the **download link your operator provides**.
 
-* `Nogada-Setup-x.x.x.exe` — the **installer** (recommended). Double-click and it installs automatically.
+* `Nogada-Setup-x.x.x.exe`, the **installer** (recommended). Double-click and it installs automatically.
 
 > 💡 **If the download is blocked or fails**: your browser or antivirus (Windows Defender) may block "an app from an unknown publisher." This is common for new, unsigned apps. See "Getting past the warning" below.
 

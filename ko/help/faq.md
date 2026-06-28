@@ -2,7 +2,7 @@
 
 ## 어떤 체인을 지원하나요?
 
-이더리움 메인넷(L1)과 주요 L2/EVM 체인 — **Arbitrum, Optimism, Base, Polygon, BNB Chain, Avalanche, Linea, Abstract, Zora, Blast, Scroll** 등을 지원합니다. 목록에 없는 EVM 체인도 커스텀으로 추가할 수 있습니다.
+이더리움 메인넷(L1)과 주요 L2/EVM 체인, **Arbitrum, Optimism, Base, Polygon, BNB Chain, Avalanche, Linea, Abstract, Zora, Blast, Scroll** 등을 지원합니다. 목록에 없는 EVM 체인도 커스텀으로 추가할 수 있습니다.
 
 ## 제 지갑은 100% 안전한가요?
 

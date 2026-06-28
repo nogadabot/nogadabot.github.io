@@ -28,7 +28,7 @@
 * Is the **wallet balance** enough (mint price + gas, 20–50% buffer)?
 * Is an **RPC** connected and checked on the task? Test it on the [RPC] screen.
 * Is **gas** too low? See [Gas Guide](../minting/gas.md).
-* **Leave Gas Limit blank** — setting it too low causes "out of gas" failure.
+* **Leave Gas Limit blank**: setting it too low causes "out of gas" failure.
 
 ## Transaction stays pending
 

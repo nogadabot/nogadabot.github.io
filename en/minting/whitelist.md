@@ -4,7 +4,7 @@ A WL mint lets **only registered wallets** mint. It usually needs a proof or sig
 
 > 💡 Mint modes (Instant·Safe·Spam), scheduled start, and many-wallet handling → [Mint Modes explained](modes.md)
 
-## Easiest path — OpenSea / Transient WL
+## Easiest path: OpenSea / Transient WL
 
 For OpenSea/Transient launchpad WLs, Nogada **handles the proof automatically**.
 
@@ -16,9 +16,9 @@ For OpenSea/Transient launchpad WLs, Nogada **handles the proof automatically**.
 ## General steps (common to all WL mints)
 
 1. **Make sure the app is the latest version** (bottom-left).
-2. **Create the task and check the log first** — Run it to confirm the log message looks right.
-3. **Stop and Run again 3–5 minutes before mint time** — projects sometimes change settings at the last minute; this reloads the latest data.
-4. **Prepare manual minting as backup** — if minting starts but your task log doesn't change to "pending" within 5–10 seconds, mint manually on the project site.
+2. **Create the task and check the log first**: Run it to confirm the log message looks right.
+3. **Stop and Run again 3–5 minutes before mint time**: projects sometimes change settings at the last minute; this reloads the latest data.
+4. **Prepare manual minting as backup**: if minting starts but your task log doesn't change to "pending" within 5–10 seconds, mint manually on the project site.
 
 > 💡 **Check WL wallets**: [Wallets] → select wallets → **Whitelist check** to see which wallets are on a drop's WL in advance.
 

@@ -10,13 +10,13 @@ Pay for a subscription on the operator's **Whop page**.
 
 After payment, you can receive your key **two ways** (both work):
 
-### 📩 Method A — Email (automatic, recommended)
+### 📩 Method A: Email (automatic, recommended)
 
-Right after payment, your license key is **emailed automatically to your purchase email** (arrives within minutes — **be sure to check spam**).
+Right after payment, your license key is **emailed automatically to your purchase email** (arrives within minutes: **be sure to check spam**).
 
 The key looks like: `NOGADA-XXXX-XXXX-XXXX-XXXX`
 
-### 🤖 Method B — Telegram (if you didn't get the email)
+### 🤖 Method B: Telegram (if you didn't get the email)
 
 1. Search for **@NOGADA\_Mint\_Bot** on Telegram and open a chat.
 2. Send this (with the email you purchased with):
@@ -40,7 +40,7 @@ The key looks like: `NOGADA-XXXX-XXXX-XXXX-XXXX`
 
 Once activated, all features unlock. A green **Authenticated ●** dot at the bottom-right means you're good.
 
-## ⚠️ Important — One device per license
+## ⚠️ Important: One device per license
 
 * **One license key works on only one PC.**
 * **To switch PCs**: deactivate (release the device) on the old PC's app, then activate on the new PC. (If the old PC is too broken to open the app, ask the operator to reset the device.)

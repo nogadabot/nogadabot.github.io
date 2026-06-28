@@ -16,7 +16,7 @@ The app **raises gas automatically to match market conditions** (looks at pendin
 You set the **Max fee** and **Priority fee** directly.
 
 * **When**: hyped mints, low supply, gas wars, high-profit mints.
-* You decide the value — preview cost with the [gas calculator](../app-guide/tools.md) first.
+* You decide the value, preview cost with the [gas calculator](../app-guide/tools.md) first.
 * For a **slow/guaranteed mint**, keep Max moderate and **Priority around 0.1** = cheapest mint.
 
 > In Nogada, set the defaults for **auto tip multiplier** and **minimum priority (gwei)** in [Settings → Engine](../app-guide/settings.md), and adjust per task.
@@ -25,7 +25,7 @@ You set the **Max fee** and **Priority fee** directly.
 
 * Gas Limit is the "upper bound of work for this transaction." **Lowering it does NOT save fees.**
 * **Leave it blank or 0** so the app estimates it safely.
-* Setting it too low yourself causes **"out of gas" failure** — you **lose the gas fee.** Don't touch it unless you're an expert.
+* Setting it too low yourself causes **"out of gas" failure**: you **lose the gas fee.** Don't touch it unless you're an expert.
 
 ## Keep enough balance
 
@@ -37,6 +37,6 @@ In [Settings → Engine](../app-guide/settings.md), enabling Flashbots bundles s
 
 ## There's no perfect answer
 
-Low-supply FCFS (100–300 items, done in 1–2 blocks) depends on **everyone's gas, RPC speed, internet, and the project's API state** — sometimes decided by milliseconds. There's no "input this and you'll always succeed." Build your own instinct with experience.
+Low-supply FCFS (100–300 items, done in 1–2 blocks) depends on **everyone's gas, RPC speed, internet, and the project's API state**: sometimes decided by milliseconds. There's no "input this and you'll always succeed." Build your own instinct with experience.
 
 Next → [Transaction Boost](boost.md)
