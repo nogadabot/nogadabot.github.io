@@ -46,4 +46,4 @@ Low-supply FCFS (first-come-first-serve) mints sell out in 1–2 blocks. Public 
 
 In [Settings → Setup](../app-guide/settings.md), enabling **Multi-RPC broadcast** sends your transaction to **several RPCs at once**, raising the odds of landing in a block faster.
 
-> ⚠️ Don't forget to **check the RPC for the task** when creating it. (If none is selected, it runs on a public RPC.)
+> 💡 **RPCs are used automatically once you add them.** If a task has **no RPC checked**, it uses **all your registered RPCs + the public node pool** together (the widest spread). Only **check** specific RPCs when you want to use those alone (checking them excludes the public pool).

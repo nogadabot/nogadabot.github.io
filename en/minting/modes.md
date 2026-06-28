@@ -68,6 +68,8 @@ Set a **start time** on the task and the bot **waits until then and fires precis
 * **Example:** mint is 5:00 PM sharp → set start to `5:00:00 PM`, start early → the bot fires at exactly 5:00. A **countdown** shows on screen.
 * No schedule → it fires the **instant** you press start. (That's why "arm it early" means **Schedule** or **Spam**.)
 
+> ⏱️ **For Spam, the "mint open time" is a reference point, not a wait.** When you set a mint open time on a spam task, the bot starts watching the drop the **moment you press start**. So if it opens **earlier than announced** (a surprise open) it catches it right away, and from **20 seconds before** the open it checks more tightly so it doesn't miss the exact moment. The open time only drives the countdown and the speed-up; if the drop opens before it, the bot fires immediately instead of waiting. (By contrast, the **"start time" on Instant and Safe is a real schedule** that waits until then to fire.)
+
 ---
 
 ## 🏆 Winning a competitive mint (FCFS · Public)
