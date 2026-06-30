@@ -2,6 +2,14 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.24
+
+- New: use your own OpenSea API key for whitelist (signed) drops. Register it once and the app — and the Telegram bot — pull each voucher from OpenSea's official Drops API (120/min per account) instead of the shared swap. Public mints still need no key.
+- New: set a custom proxy test URL, so you can check your proxies against any address you like (defaults to api.ipify.org).
+- New: unwrap WETH back to ETH in one click, right from the Wallets screen.
+- New: the whole app, the user guide, and the Telegram bot are now fully available in Simplified Chinese (简体中文) — switch language in Settings.
+- Cleaner, more natural wording across English, Korean, and Chinese.
+
 ## v0.9.23
 
 - New: check your wallets for an EIP-7702 delegation (a smart-account upgrade some mints reject) and revoke it in one click, right from the Wallets screen.
