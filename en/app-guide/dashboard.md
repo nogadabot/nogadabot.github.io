@@ -8,7 +8,7 @@ The first screen you see when you open the app. It shows your minting status **a
 
 * **Top menu (left)**: Dashboard · Tasks · Wallets · NFT · PnL · RPC · Proxies · Tools · Settings. Click to switch screens.
 * **Top-right buttons**
-  * **⌘K (Ctrl + K)**: opens the **command palette** anywhere; jump to any screen or run a command just by searching.
+  * **⌘K (Ctrl + K)**: opens the **command palette** anywhere — type to jump to any screen or run a command.
   * **New task**: quickly create a new minting task.
   * **Row spacing toggle**: switch lists between compact/comfortable.
 * **Bottom status bar**: `Ready` · `Gas` (live gas price) · `rpc` (connected RPC count) · `Sync` (server time offset) · `Authenticated ●` (green when license is OK) · `version`.

@@ -41,6 +41,6 @@
 
 ## Minting started but my task isn't responding
 
-* If the log doesn't change to "pending" within 5–10 seconds of start, **mint manually on the project site** (backup). Projects sometimes change settings at the last minute.
+* If the log doesn't change to "pending" within 5–10 seconds after starting, **mint manually on the project site** (backup). Projects sometimes change settings at the last minute.
 
 > If none of these help, **contact the operator with a screenshot**. Steps can vary by Windows version / antivirus.

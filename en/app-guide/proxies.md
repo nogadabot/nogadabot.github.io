@@ -6,7 +6,7 @@ Proxies hide your real IP so requests don't all come from the same place. **Most
 
 ## When do you need them?
 
-* When using dozens/hundreds of wallets or accounts for **website tasks (WL sites, Twitter, Discord)**: coming from one IP can trigger bot detection, bans, or suspensions, so proxies spread them out.
+* When using dozens/hundreds of wallets or accounts for **website tasks (WL sites, Twitter, Discord)**: coming from one IP can trigger bot detection, bans, or suspensions, so proxies distribute them across different IPs.
 * If you just mint to a contract, you usually **don't need them.**
 
 ## Format
@@ -23,7 +23,7 @@ You can paste many, one per line.
 
 * **Group rail (left)**: manage proxy groups. `+ New group`.
 * **Import proxies**: paste in the format above.
-* **Test all**: check they work and how fast.
+* **Test all**: check whether they work and how fast they respond.
 * **Delete all**: empty the group.
 * **Filter by host**: search when you have many.
 

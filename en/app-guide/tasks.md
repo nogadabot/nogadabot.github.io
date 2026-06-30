@@ -1,6 +1,6 @@
 # Tasks: the heart of minting
 
-A **task** is one minting setup that holds "which contract, with which wallets, and how to mint." Create a task and **Run** it to start minting.
+A **task** is a minting setup that holds "which contract, with which wallets, and how to mint." Create a task and **Run** it to start minting.
 
 > ⭐ **Confused by mint modes (Instant·Safe·Spam), delay, guardrail, scheduled start, or many wallets (parallel)? Read → [Mint Modes explained](../minting/modes.md)** first. This page is about *where things are*; that page is about *when to use what*.
 
@@ -39,7 +39,7 @@ Click `+ New task` to open the editor. Let's go field by field.
 |---|---|---|
 | ① | **Contract address** | Paste the NFT's contract address, e.g. `0x4E1f…480e56` |
 | ② | **Fetch ABI → Function** | Click **Fetch ABI**; the app reads the contract and lists its functions. Pick **`mint(uint256)`** and the Function field fills in. |
-| ③ | **Arguments** | Pick a function and its **argument fields appear automatically** (name + type). For `mint(uint256)` that's just the **quantity field → `1`** |
+| ③ | **Arguments** | Pick a function and its **argument fields appear automatically** (name + type). For `mint(uint256)`, that's just the **quantity field → `1`** |
 | ④ | **Value (ETH)** | The mint **price per item → `0.05`** (put `0` for a free mint) |
 | ⑤ | **Wallets + RPC** | Tick the wallets to mint with (**All** = both here), and tick at least one **RPC** |
 | ⑥ | **Create** | Done: the task drops into your list, ready to **Run** |

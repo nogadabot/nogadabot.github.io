@@ -26,7 +26,7 @@ That choice is the **mint mode**. You pick one of three in the task editor.
 **Simulate = a safety check that "test-runs" the mint before really sending it.**
 
 * Before sending for real, it does a **dry-run** (eth_call) against the chain.
-* Any wallet that **would fail (revert)**: mint not open, not eligible, sold out, low balance, is **skipped**.
+* Any wallet that **would fail (revert)** — mint not open, not eligible, sold out, low balance — is **skipped**.
 * Only wallets that pass actually send (once).
 
 **Why it's nice:** it never sends a doomed transaction, so it **doesn't waste gas**.
@@ -57,18 +57,18 @@ This is the "don't know the time / it's competitive, **just turn it on and it ca
 > 💡 **Delay** = how fast you hammer, **Max tx** = how many times, **Guardrail** = for how many seconds.
 
 > ⚠️ **Watch the guardrail trap!**
-> If the guardrail is set to e.g. 120s and you **start a 5:00 mint at 4:55**, it **shuts off at 4:57: before the mint even opens.** If you start early, set the guardrail long enough or just turn it off. (It's off by default.)
+> If the guardrail is set to e.g. 120s and you **start a 5:00 mint at 4:55**, it **shuts off at 4:57 — before the mint even opens.** If you start early, set the guardrail long enough or just turn it off. (It's off by default.)
 
 ---
 
 ## ⏰ Scheduled start: fire exactly at mint time
 
-Set a **start time** on the task and the bot **waits until then and fires precisely**: even if you started it early. (Works with Instant, Safe, and Spam.)
+Set a **start time** on the task and the bot **waits until then and fires precisely**, even if you started it early. (Works with Instant, Safe, and Spam.)
 
 * **Example:** mint is 5:00 PM sharp → set start to `5:00:00 PM`, start early → the bot fires at exactly 5:00. A **countdown** shows on screen.
 * No schedule → it fires the **instant** you press start. (That's why "arm it early" means **Schedule** or **Spam**.)
 
-> ⏱️ **For Spam, the "mint open time" is a reference point, not a wait.** When you set a mint open time on a spam task, the bot starts watching the drop the **moment you press start**. So if it opens **earlier than announced** (a surprise open) it catches it right away, and from **20 seconds before** the open it checks more tightly so it doesn't miss the exact moment. The open time only drives the countdown and the speed-up; if the drop opens before it, the bot fires immediately instead of waiting. (By contrast, the **"start time" on Instant and Safe is a real schedule** that waits until then to fire.)
+> ⏱️ **For Spam, the "mint open time" is a reference point, not a wait.** When you set a mint open time on a spam task, the bot starts watching the drop the **moment you press start**. So if it opens **earlier than announced** (a surprise open) it catches it right away, and from **20 seconds before** the open it checks more tightly so it doesn't miss the exact moment. The open time only drives the countdown and the speed-up; if the drop opens before that, the bot fires immediately instead of waiting. (By contrast, the **"start time" on Instant and Safe is a real schedule** that waits until then to fire.)
 
 ---
 
@@ -80,7 +80,7 @@ To land a contested mint:
 2. **Fast gas**: auto (recommended) or manual-high → [Gas guide](gas.md)
 3. **Spam**: if it's fierce, keep hammering
 
-> 💡 Simulate (Safe) is **not** a success booster, it's a gas saver. In a real race, dropping it can be faster (the dry-run costs a beat).
+> 💡 Simulate (Safe) is **not** a success booster, it's a gas saver. In a real race, skipping it can be faster (the dry-run costs a beat).
 
 > 🎯 **Recommended setup: "arm it and it grabs the mint"**
 > If you don't know the exact time or just want to land it, make a new task **1–2 minutes before mint** and set:
@@ -105,10 +105,10 @@ Most people mint with many wallets (dozens). Two ways:
 | **One task per wallet (default · recommended)** | Pick 20 wallets + create → **20 tasks** auto-made (wallet1=task1 … wallet20=task20) | See **each wallet's progress at a glance** in the list; start/stop each one |
 | **Many wallets in one task (option)** | Check the option → 20 wallets ride **one task** and **fire together** | Tidy, one row |
 
-Either way, **wallets fire in parallel**: they don't queue one-by-one.
+Either way, **wallets fire in parallel**: they don't queue up one by one.
 
 > ⚠️ **Golden rule: "one wallet, one task"**
-> **Don't run the same wallet in two tasks at once.** Each wallet has a sequential **nonce** (0,1,2,3…). If two tasks use the same wallet, they grab the **same nonce** → only one lands and the rest fail "nonce too low", or they tangle and **both just burn gas.**
+> **Don't run the same wallet in two tasks at once.** Each wallet has a sequential **nonce** (0,1,2,3…). If two tasks use the same wallet, they grab the **same nonce** → only one lands and the rest fail "nonce too low", or they tangle and **both just waste gas.**
 > 👉 That's why **"one task per wallet" is safe** (each wallet is bound to its own task). Putting **different** wallets in one task is fine (independent nonces).
 
 > 🛡️ **The app guards this for you.** If a wallet is **already minting in another task** and you start a second task that also uses it, that **one wallet is auto-skipped** (a toast says "wallet 0x12…34 is already minting in another task, skipped") while the task's other wallets fire normally. The whole task doesn't stop.

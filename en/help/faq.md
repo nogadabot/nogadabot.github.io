@@ -12,7 +12,7 @@ That said, nothing is 100% safe in web3. Keep large assets in a **vault wallet**
 
 ## Do I need to prepare my own RPC node?
 
-Yes, you need RPC. **Free** via [Chainlist](https://chainlist.org) public RPCs, and **paid dedicated RPC** (Alchemy/DRPC etc.) for competitive mints. Other EVM chains (Arb/Base etc.) require your own RPC. → [RPC links](../resources/nodes.md)
+Yes, you need an RPC. **Free** via [Chainlist](https://chainlist.org) public RPCs, and **paid dedicated RPC** (Alchemy/DRPC etc.) for competitive mints. Other EVM chains (Arb/Base etc.) require your own RPC. → [RPC links](../resources/nodes.md)
 
 ## I'm new: is it hard to use?
 
@@ -40,6 +40,6 @@ No. **Minting itself works without captcha, proxies, or API keys.** Captcha is f
 
 ## Do you guarantee minting success?
 
-No. Low-supply FCFS is decided by everyone's gas, RPC speed, internet, and project API state, sometimes by milliseconds. Better gas/RPC prep raises your odds.
+No. Low-supply FCFS is decided by everyone's gas, RPC speed, internet, and project API state, sometimes within milliseconds. Better gas/RPC prep raises your odds.
 
 > More help → [Troubleshooting](troubleshooting.md) · [Security](security.md)

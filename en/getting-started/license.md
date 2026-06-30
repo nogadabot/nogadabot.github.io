@@ -19,7 +19,7 @@ The key looks like: `NOGADA-XXXX-XXXX-XXXX-XXXX`
 ### 🤖 Method B: Telegram (if you didn't get the email)
 
 1. Search for **@NOGADA\_Mint\_Bot** on Telegram and open a chat.
-2. Send this (with the email you purchased with):
+2. Send this (using the email you purchased with):
 
    ```
    /redeem youremail@example.com
@@ -36,7 +36,7 @@ The key looks like: `NOGADA-XXXX-XXXX-XXXX-XXXX`
 
 ![Settings - License tab](../images/settings-license.png)
 
-> *Settings → License. Once activated, it shows your **device binding** and a **Deactivate** button (use it before moving to another PC). On first launch you'll instead see a **key field + Activate** button here.*
+> *Settings → License. Once activated, it shows your **device binding** and a **Deactivate** button (use it before moving to another PC). On first launch you'll instead see a **key field + Activate** button.*
 
 Once activated, all features unlock. A green **Authenticated ●** dot at the bottom-right means you're good.
 
@@ -47,6 +47,6 @@ Once activated, all features unlock. A green **Authenticated ●** dot at the bo
 
 ## Refund policy
 
-Refunds are only offered for **install-blocking problems**. Minting success/failure depends on many variables (gas, remaining supply, project conditions), so it is **not guaranteed and not refundable.**
+Refunds are only offered for **install-blocking problems**. Minting success/failure depends on many variables (gas, remaining supply, project conditions), so it is **neither guaranteed nor refundable.**
 
 > ✅ **Summary**: Pay on Whop → get key by email (or Telegram /redeem) → paste in app & activate → check Authenticated ●.

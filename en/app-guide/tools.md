@@ -6,7 +6,7 @@ Helper tools to **estimate cost and time before minting.**
 
 ## ⛽ Gas Planner
 
-Estimates "how much ETH per wallet will this mint cost?"
+Estimates how much ETH per wallet a mint will cost.
 
 1. **NFT price (ETH)**: price per mint (0 if free).
 2. **Quantity per wallet**: how many each wallet mints.
@@ -17,7 +17,7 @@ Estimates "how much ETH per wallet will this mint cost?"
    * **Custom (gwei)**: your own value
 4. **Total per wallet**: computed **live** from the above (mint cost + gas).
 
-> 💡 Keep **20–50% more ETH than this number** in each wallet to be safe, complex contracts can use more gas.
+> 💡 Keep **20–50% more ETH than this number** in each wallet to be safe; complex contracts can use more gas.
 
 * **Advanced / Reference table**: expand a per-gas-price cost table.
 

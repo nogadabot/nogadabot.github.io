@@ -29,14 +29,14 @@ You set the **Max fee** and **Priority fee** directly.
 
 ## Keep enough balance
 
-When using high custom gas, keep **20–50% more ETH than the estimate** in the wallet. Complex contracts can require a larger gas limit and more ETH, and if it's short, the transaction won't go out at all.
+When using high custom gas, keep **20–50% more ETH than the estimate** in the wallet. Complex contracts can require a larger gas limit and more ETH, and if it falls short, the transaction won't go through at all.
 
 ## Flashbots (advanced)
 
-In [Settings → Engine](../app-guide/settings.md), enabling Flashbots bundles submits transactions directly to block builders instead of the public mempool (anti-frontrun, etc.). Leave it default if unsure.
+In [Settings → Engine](../app-guide/settings.md), enabling Flashbots bundles submits transactions directly to block builders instead of the public mempool (anti-frontrunning, etc.). Leave it default if unsure.
 
 ## There's no perfect answer
 
-Low-supply FCFS (100–300 items, done in 1–2 blocks) depends on **everyone's gas, RPC speed, internet, and the project's API state**: sometimes decided by milliseconds. There's no "input this and you'll always succeed." Build your own instinct with experience.
+Low-supply FCFS (100–300 items, done in 1–2 blocks) depends on **everyone's gas, RPC speed, internet, and the project's API state**: sometimes it comes down to milliseconds. There's no "input this and you'll always succeed." Build your own instinct with experience.
 
 Next → [Transaction Boost](boost.md)

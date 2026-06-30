@@ -50,7 +50,7 @@ For spreading IPs when you have many wallets or do WL-site work.
 Details → [Settings → Integrations](../app-guide/settings.md)
 
 ### Discord webhook alerts
-Get mint success/failure pinged to Discord → **Settings → Integrations → Discord webhook**
+Get mint success/failure posted to Discord → **Settings → Integrations → Discord webhook**
 
 ### Run on startup
 Launch the app **minimized at login** so the bot · alerts · auto-backup are always running → **Settings → General → Run on startup**

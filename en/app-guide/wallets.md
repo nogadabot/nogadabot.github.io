@@ -47,7 +47,7 @@ The **Bot Wallet (server)** section at the top is a Telegram-only wallet that **
 
 ## 💸 Manage Funds (Disperse / Consolidate)
 
-For spreading gas to many wallets or gathering scattered balances back.
+For spreading gas to many wallets or collecting scattered balances back.
 
 * **Disperse**: send ETH from one wallet → many wallets (gas top-up before minting)
 * **Consolidate**: gather balances from many wallets → one wallet (`send-max`, nearly the full amount)
@@ -70,4 +70,4 @@ Before a mint, send gas from **one funded wallet → all your minting wallets**:
 
 For selected wallets: **Copy addresses / Export keys (confirm) / Delete (confirm) / Clear**, etc.
 
-> ⚠️ **Export keys** is the only feature that shows a private key on screen. Be careful not to expose it to others, and never click it while screen-recording or streaming.
+> ⚠️ **Export keys** is the only feature that shows a private key on screen. Be careful not to expose the key to others, and never click it while screen-recording or streaming.

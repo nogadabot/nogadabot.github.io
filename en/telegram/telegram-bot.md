@@ -1,6 +1,6 @@
 # Telegram Bot (Complete Guide)
 
-The Nogada Telegram bot lets you mint and manage wallets **24/7 even with the app closed**. The heart of it is **bot tasks**: send **one line** in Telegram and **the server mints directly** from your bot wallets. It works while your computer is off, or while you sleep.
+The Nogada Telegram bot lets you mint and manage wallets **24/7 even with the app closed**. The core feature is **bot tasks**: send **one line** in Telegram and **the server mints directly** from your bot wallets. It works while your computer is off, or while you sleep.
 
 > 🤖 Bot: **@NOGADA\_Mint\_Bot**
 
@@ -60,14 +60,20 @@ To mint from Telegram, your **bot wallets** need funds. Unlike the app's on-devi
 | ⛽ Gas | Live gas |
 | 🤖 Auto-mint | Create/run a task **in the app** (app must be on) |
 | 📋 Mint history / 🖼 Portfolio | History · holdings |
-| 🛠 Settings | Bot-only RPC · proxies |
-| ℹ️ Status / 🌐 Language | Status · EN/KO |
+| 🛠 Settings | Bot-only RPC · proxies · **OpenSea API key** |
+| ℹ️ Status / 🌐 Language | Status · EN/KO/ZH |
+
+---
+
+### 🔑 OpenSea API key (optional, for WL/signed drops)
+
+Register a key under **🛠 Settings → ➕ OpenSea key** and, on whitelist (signed) drops, the bot fetches each voucher from **OpenSea's official Drops API** (120/min per account). Without a key it uses the anonymous swap (proxy IP), and **public mints need no key at all**. Get a key at [docs.opensea.io](https://docs.opensea.io); the message you send is deleted automatically.
 
 ---
 
 ## 4) ⭐ Bot tasks: mint in one line
 
-This is the core. Tap **⚙️ Tasks → 🤖 Bot tasks → ➕ New bot task** and the bot shows the one-line format. Send a line like below; the task is created, and **▶** fires from your bot wallets.
+This is the core. Tap **⚙️ Tasks → 🤖 Bot tasks → ➕ New bot task** and the bot shows the one-line format. Send a line like below; the task is created, then hit **▶** to fire from your bot wallets.
 
 ### Basic format
 
@@ -77,7 +83,7 @@ This is the core. Tap **⚙️ Tasks → 🤖 Bot tasks → ➕ New bot task** a
 
 | Field | Meaning | If omitted |
 |---|---|---|
-| **0xcontract** *(required)* | the NFT contract to mint |, |
+| **0xcontract** *(required)* | the NFT contract to mint | |
 | chain | eth · base · arb · op · poly · blast · linea · scroll · zora · avax · bnb · abstract · ape · ink · sepolia | `ethereum` |
 | qty | items per wallet (1–100) | `1` |
 | priceETH | ETH to send (the price for a paid mint) | `0` |
@@ -116,13 +122,13 @@ Order doesn't matter, e.g. `0xed5af3...c544 eth 1 0.01 fire=spam tip=8 at=+10m`
 | `fire=safe` | **dry-run** first → skip would-fail wallets, fire the rest once | mint safely without wasting gas |
 | `fire=spam` | **retry until it lands** → auto-stop on success | mint time unknown, or fierce competition |
 
-> 💡 **Spam (`fire=spam`) is the "set it and it catches" mode.** It keeps knocking while the mint is closed, grabs it the instant it opens, and **stops itself once confirmed on-chain** (no extra gas).
+> 💡 **Spam (`fire=spam`) is the "set it and catch it" mode.** It keeps knocking while the mint is closed, grabs it the instant it opens, and **stops itself once confirmed on-chain** (no extra gas).
 
 > ⚠️ **Safe (`fire=safe`) is NOT a retry.** It simulates and fires once. Start it **before the mint opens** → simulation fails → it ends. To arm it early, use **schedule (`at=`)** or **spam**.
 
 ### ⏰ Schedule (`at=`)
 
-Create it and hit ▶ early, the bot **waits until the time, then fires precisely** (shown as "armed").
+Create it and hit ▶ early; the bot **waits until the time, then fires precisely** (shown as "armed").
 
 | Use | Meaning |
 |---|---|
@@ -147,7 +153,7 @@ Default is **auto** (tracks the market). To clearly win a competitive mint, bid 
 
 Only meaningful with `fire=spam`.
 
-* `delay=` **gap between knocks (ms)**. `300` = every 0.3s, `1000` = every 1s. Smaller = aggressive, larger = saves RPC/gas.
+* `delay=` **gap between knocks (ms)**. `300` = every 0.3s, `1000` = every 1s. Smaller = more aggressive, larger = saves RPC/gas.
 * `max=` **max sends** (cap). ⚠️ Not "N successes": it stops after N **sends**. Empty = unlimited. To avoid hammering a mint that will **never** work (sold out / not eligible), set a cap (or ⏹ stop).
 
 ### 🔧 Custom function (`sig=` `args=`)
@@ -211,7 +217,7 @@ When the operator publishes drops, they appear under **🎁 Drops**.
 1. Open **🎁 Drops** → each drop shows its **phases** (Public/GTD/FCFS…), price, max qty.
 2. Tap **「Get」** on the phase you want.
 3. That phase is **turned into a bot task automatically** (contract, function, price, qty all set).
-4. **▶** to run: or if it's set to **spam**, it knocks until the mint opens.
+4. **▶** to run; or if it's set to **spam**, it knocks until the mint opens.
 
 > 💡 The easiest path: no need to type a contract or function, just **receive what the operator already configured**. Fund the bot wallets and go.
 
@@ -249,7 +255,7 @@ Even before activating, you can fetch your key from the bot:
 * 🔐 **Small amounts in bot wallets.** Big funds → app wallets (this PC). After minting, **💸 Withdraw** or `sweep=`.
 * 🤐 **Pairing code / exported keys are passwords.** Never reveal while streaming/recording.
 * ⛽ **Raise `tip=`** and set a fast **RPC** for hot drops.
-* ⏰ **Unknown time → spam** (`fire=spam`); **known time → schedule** (`at=`). Both? schedule + spam works too.
+* ⏰ **Unknown time → spam** (`fire=spam`); **known time → schedule** (`at=`). Both? schedule + spam work too.
 * 🕘 `HH:MM` is **UTC**. When in doubt use `+5m`/`+2h`.
 * 🛑 For mints that will never work (sold out / not eligible), cap with `max=` or ⏹ stop so it doesn't hammer forever.
 

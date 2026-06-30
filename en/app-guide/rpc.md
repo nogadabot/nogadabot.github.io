@@ -36,7 +36,7 @@ Click **Import endpoints**, then:
 
 ## Paid RPC (strongly recommended for competitive mints)
 
-Low-supply FCFS (first-come-first-serve) mints sell out in 1–2 blocks. Public RPCs often **rate-limit** you here, so a paid dedicated RPC has the edge.
+Low-supply FCFS (first-come-first-served) mints sell out in 1–2 blocks. Public RPCs often **rate-limit** you here, so a paid dedicated RPC has the edge.
 
 * Recommended providers & how to buy → [RPC / Node links](../resources/nodes.md)
 

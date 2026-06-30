@@ -1,6 +1,6 @@
 # Gas Trackers & Useful Tools
 
-External tools worth keeping nearby when minting.
+External tools worth bookmarking when minting.
 
 ## ⛽ Check gas prices
 
@@ -11,7 +11,7 @@ External tools worth keeping nearby when minting.
 
 ## 🔍 Reading contracts
 
-* **Etherscan**: [etherscan.io](https://etherscan.io), view a contract's mint function (Write Contract) and others' mint transaction input data (hex). Essential for copying functions/hex.
+* **Etherscan**: [etherscan.io](https://etherscan.io), view a contract's mint function (Write Contract) and other transactions' input data (hex). Essential for inspecting functions and decoding hex input data.
 
 > 💡 Confused about a function/hex? Ask **ChatGPT / Claude** "what's this contract's mint function and arguments?", modern AI reads contracts well.
 

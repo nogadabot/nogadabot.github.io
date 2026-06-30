@@ -6,7 +6,7 @@ Configure app behavior and API keys. There are **7 tabs** on the left.
 
 ![Settings, close-up](../images/settings-detail.png)
 
-> 🔍 *Close-up: the left rail switches categories, **Language**, **Integrations** (API/Telegram), Networks, etc.*
+> 🔍 *Close-up: the left rail switches between categories — **Language**, **Integrations** (API/Telegram), Networks, etc.*
 
 ## General
 
@@ -53,4 +53,4 @@ More links → [Resources](../resources/nodes.md)
 
 ## Quick Fire
 
-* **Quick task wallets / RPCs**: preset the default wallets/RPCs for fast minting (live mints, etc.).
+* **Quick task wallets / RPCs**: set the default wallets/RPCs for fast minting (live mints, etc.).

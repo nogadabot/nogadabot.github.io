@@ -1,6 +1,6 @@
 # Transaction Boost (speedup)
 
-When a minting transaction you sent **takes too long to land**, re-fire it at higher gas.
+When a minting transaction you sent **takes too long to land**, resend it at higher gas.
 
 ## When to use
 
@@ -11,7 +11,7 @@ When a minting transaction you sent **takes too long to land**, re-fire it at hi
 
 1. On the [Tasks] screen, select the pending task/transaction.
 2. Click the **Boost (🚀 rocket)** button.
-3. The app **re-fires the same transaction at a higher priority fee.**
+3. The app **resends the same transaction at a higher priority fee.**
 
 > 💡 In some versions you can type the boost gas directly. Format examples:
 > * `300 150` → Max 300, Priority 150
@@ -19,7 +19,7 @@ When a minting transaction you sent **takes too long to land**, re-fire it at hi
 
 ## Notes
 
-* Boost **re-sends an already-sent transaction more expensively.** Gas cost goes up.
-* You can't boost a transaction that's already confirmed (success/failure final).
+* Boost **resends an already-sent transaction at a higher cost.** Gas cost goes up.
+* You can't boost a transaction that's already confirmed (success or failure is final).
 
-> 💡 For a competitive mint, setting [gas](gas.md) high enough from the start beats boosting. Boost is a "rescue when it's slower than expected."
+> 💡 For a competitive mint, setting [gas](gas.md) high enough from the start beats boosting. Boost is a rescue for when it lands slower than expected.

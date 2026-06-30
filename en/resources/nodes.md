@@ -20,7 +20,7 @@ RPC directly affects minting speed & success. Start free, and get a paid dedicat
 ## Tips
 
 * **Different providers work better on different chains.** Keep 1–3 ready and pick the fastest via **Test** on the [RPC] screen.
-* The lower the supply / more FCFS the mint, the more RPC speed & stability matter, paid dedicated RPC wins on those days.
+* The lower the supply / more FCFS the mint, the more RPC speed & stability matter; a paid dedicated RPC wins on those days.
 * No 100% answer. Your own tested experience is the best guide.
 
 > ⚠️ Links/pricing change often. If a link is down, search the provider name.

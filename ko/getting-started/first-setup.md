@@ -37,7 +37,7 @@ RPC는 앱이 블록체인과 대화하는 "통로"입니다. **RPC** 메뉴로 
 대부분의 민팅엔 **필요 없습니다.** 다음 경우에만:
 
 * **프록시**: 지갑이 아주 많거나 웹사이트 기반 작업(WL 사이트 등)을 할 때 IP 분산용 → [프록시](../app-guide/proxies.md)
-* **OpenSea / Alchemy / Etherscan / 캡차 API 키**: NFT 보유목록·손익·리스팅 등 부가 기능용. **민팅 자체는 키 없이 됩니다.** → [설정](../app-guide/settings.md)
+* **OpenSea / Alchemy / Etherscan / 캡차 API 키**: NFT 보유목록·손익·리스팅 등 부가 기능용. **민팅 자체는 키 없이도 됩니다.** → [설정](../app-guide/settings.md)
 
 ---
 
