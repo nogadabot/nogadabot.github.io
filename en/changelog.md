@@ -2,6 +2,14 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.25
+
+- New: a Drops page — scan popular chains for SeaDrop mints that are opening or just deployed, then tap one to load it straight into Smart Mint.
+- Faster whitelist and signed-drop minting across many wallets: each wallet's voucher is now fetched in parallel and shared per drop, so a big multi-wallet launch no longer waits through them one at a time.
+- New: a drop's per-wallet tasks now fold into one collapsible card in Tasks — see the drop, phase, wallet count and live progress, and start or stop them all at once.
+- New: per-task gas tuning — set a tip multiplier and a minimum priority fee on an individual task, with quick 15/30/60% bump presets for spam mode.
+- Fixed a few labels that were showing in English inside the Korean and Chinese interfaces.
+
 ## v0.9.24
 
 - New: use your own OpenSea API key for whitelist (signed) drops. Register it once and the app — and the Telegram bot — pull each voucher from OpenSea's official Drops API (120/min per account) instead of the shared swap. Public mints still need no key.
