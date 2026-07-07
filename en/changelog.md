@@ -2,6 +2,14 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.26
+
+- More reliable minting: more accurate price, value, gas and ERC-20 handling across every mint path.
+- Faster launches: RPC connections are pre-warmed and the fire path is leaner.
+- Sturdier under pressure: better retries, clearer statuses, and self-healing when a drop's data shifts.
+- New: whitelist checks can use operator-published external checkers, routed automatically from the pasted slug or link.
+- A large batch of stability and accuracy fixes throughout the app.
+
 ## v0.9.25
 
 - New: a Drops page — scan popular chains for SeaDrop mints that are opening or just deployed, then tap one to load it straight into Smart Mint.
