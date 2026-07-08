@@ -2,6 +2,13 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.27
+
+- More accurate payment on ERC-20 drops: Manifold and TLStacks mints now send the exact native platform fee, so an ERC-20-priced drop no longer reverts.
+- Manifold allowlist drops now mint correctly (the on-chain fee for allowlist claims is used).
+- Fixed a case where pasting an OpenSea link could show a temporary red error — the app now retries across your RPCs automatically instead of failing the first try.
+- Safer custom gas: when you set a max fee, the tip is kept within it so the mint isn't rejected by the network.
+
 ## v0.9.26
 
 - More reliable minting: more accurate price, value, gas and ERC-20 handling across every mint path.
