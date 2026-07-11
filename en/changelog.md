@@ -2,6 +2,12 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.28
+
+- Faster mints: removed the delay before the first transaction (auto-gas prep) so the app fires at the open much quicker — aiming for the first block.
+- Fires at your gas, once: the app no longer raises the gas on its own every few seconds. It fires once at the gas you set (Auto or Custom); raise it yourself with the Boost button if you want.
+- Mint success now shows correctly (green) in the status panel — a landed mint is no longer mislabeled as failed.
+
 ## v0.9.27
 
 - More accurate payment on ERC-20 drops: Manifold and TLStacks mints now send the exact native platform fee, so an ERC-20-priced drop no longer reverts.
