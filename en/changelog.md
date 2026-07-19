@@ -2,6 +2,14 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.29
+
+- More reliable minting across supported launchpads: the wallet, chain, price, quantity, recipient and transaction you selected now stay attached to the task from launch through confirmation.
+- Faster launches under load: network and gas preparation happens earlier, large wallet groups avoid unnecessary queues, and the first transaction gains no new online wait.
+- Stop, restart and Boost now continue or replace only the transaction belonging to that task, preventing accidental duplicate mints or changes to another pending transaction.
+- NFT transfers, listings, offers, funding and consolidation now recover cleanly from timeouts and show the confirmed on-chain result more accurately.
+- Improved app and Telegram bot stability across scheduling, wallet management, licensing, payments, updates, backups and status screens.
+
 ## v0.9.28
 
 - Faster mints: removed the delay before the first transaction (auto-gas prep) so the app fires at the open much quicker — aiming for the first block.
