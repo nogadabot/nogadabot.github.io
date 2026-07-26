@@ -2,6 +2,14 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.30
+
+- PnL is now easier to trust: results clearly say whether they are exact, estimated, or partial, explain missing evidence, and never turn unavailable history into a false zero.
+- Recover faster when something fails: follow plain-language fixes, retry only the affected wallets, check task readiness before launch, and restore an earlier task version when needed.
+- See what happened at a glance with a clearer activity timeline, before-and-after wallet balances, and searchable task and change history.
+- Address-heavy work is quicker and safer with saved destinations, import previews, faster search, and privacy controls that hide sensitive details when sharing your screen.
+- Admin and operations tools are safer and more useful, with privacy-protected customer references, clearer queues and audit history, stronger backup checks, and automatic service-health alerts.
+
 ## v0.9.29
 
 - More reliable minting across supported launchpads: the wallet, chain, price, quantity, recipient and transaction you selected now stay attached to the task from launch through confirmation.
