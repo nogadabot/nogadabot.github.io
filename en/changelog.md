@@ -2,6 +2,11 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.31
+
+- Added Robinhood Chain and Stable. Robinhood supports Nogada's NFT, PnL, and OpenSea tools; Stable supports minting and transfers with USDT0 gas, while its OpenSea NFT and PnL tools stay hidden until those data surfaces are verified.
+- Gas guidance now follows each chain: Stable sends priority fees as 0, while Robinhood explains that its first-come, first-served ordering is not improved by a higher tip.
+
 ## v0.9.30
 
 - PnL is now easier to trust: results clearly say whether they are exact, estimated, or partial, explain missing evidence, and never turn unavailable history into a false zero.

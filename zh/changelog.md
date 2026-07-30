@@ -2,6 +2,11 @@
 
 最新版本显示在最上方。每次打开应用都会自动更新到最新版本 — 安装请参阅 [下载](getting-started/download.md)。
 
+## v0.9.31
+
+- 新增 Robinhood Chain 与 Stable。Robinhood 可使用 Nogada 的 NFT、PnL 和 OpenSea 功能；Stable 支持使用 USDT0 支付 Gas 的铸造与转账，其 OpenSea NFT 与 PnL 功能会在相关数据链路验证完成前保持隐藏。
+- Gas 提示现在会遵循各链特性：Stable 将优先费设为 0 后发送；Robinhood 会说明其先到先得（FCFS）排序不会因提高优先费而提前。
+
 ## v0.9.30
 
 - PnL 结果现在更值得信赖：明确区分精确、估算与部分结果，说明缺失的依据，并且不会把无法取得的历史错误显示为零。
