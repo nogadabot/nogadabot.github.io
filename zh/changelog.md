@@ -2,10 +2,15 @@
 
 最新版本显示在最上方。每次打开应用都会自动更新到最新版本 — 安装请参阅 [下载](getting-started/download.md)。
 
+## v0.9.32
+
+- 已修正各链的 Gas 说明。Stable 仍将优先费设为 0 后发送；Robinhood 会保留你选择的 Gas 设置，而 Public、GTD 和 FCFS 仍是项目的铸造阶段。
+- 从 Base、Optimism、Ink 和 Shape 的机器人钱包提取全部余额时，现在会预留少量 L1 费用，避免因网络费用不足而导致发送失败。
+
 ## v0.9.31
 
 - 新增 Robinhood Chain 与 Stable。Robinhood 可使用 Nogada 的 NFT、PnL 和 OpenSea 功能；Stable 支持使用 USDT0 支付 Gas 的铸造与转账，其 OpenSea NFT 与 PnL 功能会在相关数据链路验证完成前保持隐藏。
-- Gas 提示现在会遵循各链特性：Stable 将优先费设为 0 后发送；Robinhood 会说明其先到先得（FCFS）排序不会因提高优先费而提前。
+- Gas 处理现在会遵循各链特性：Stable 将优先费设为 0 后发送。Robinhood 会保留用户选择的 Gas 设置；链上的交易到达顺序与项目的 Public、GTD 或 FCFS 铸造阶段彼此独立。
 
 ## v0.9.30
 

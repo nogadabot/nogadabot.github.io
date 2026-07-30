@@ -2,10 +2,15 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.32
+
+- Corrected chain gas guidance. Stable still sends priority fees as 0; Robinhood keeps your selected gas settings, and Public, GTD, and FCFS remain project mint phases.
+- Bot wallet recovery on Base, Optimism, Ink, and Shape now keeps a small L1 fee reserve so send-max withdrawals can pay the full network fee.
+
 ## v0.9.31
 
 - Added Robinhood Chain and Stable. Robinhood supports Nogada's NFT, PnL, and OpenSea tools; Stable supports minting and transfers with USDT0 gas, while its OpenSea NFT and PnL tools stay hidden until those data surfaces are verified.
-- Gas guidance now follows each chain: Stable sends priority fees as 0, while Robinhood explains that its first-come, first-served ordering is not improved by a higher tip.
+- Gas handling now follows each chain: Stable sends priority fees as 0. Robinhood keeps the user's selected gas settings; its sequencer arrival order is separate from the project's Public/GTD/FCFS mint phase.
 
 ## v0.9.30
 

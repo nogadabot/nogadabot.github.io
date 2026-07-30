@@ -2,10 +2,15 @@
 
 최신 버전이 맨 위에 있습니다. 앱은 켤 때마다 자동으로 최신 버전으로 업데이트됩니다 — 설치는 [다운로드](getting-started/download.md) 참고.
 
+## v0.9.32
+
+- 체인별 가스 안내를 바로잡았습니다. Stable은 계속 우선 수수료를 0으로 전송하고, Robinhood는 사용자가 선택한 가스를 그대로 사용합니다. Public·GTD·FCFS는 프로젝트의 민팅 방식입니다.
+- Base·Optimism·Ink·Shape에서 봇 지갑 잔액을 전부 회수할 때 L1 수수료용 소액을 남겨, 네트워크 수수료 부족으로 전송이 실패하지 않도록 개선했습니다.
+
 ## v0.9.31
 
 - Robinhood Chain과 Stable을 추가했습니다. Robinhood에서는 NFT·PnL·OpenSea 기능을 사용할 수 있고, Stable에서는 USDT0 가스로 민트와 전송을 지원합니다. Stable의 OpenSea NFT·PnL 기능은 해당 조회 경로가 검증될 때까지 숨겨집니다.
-- 체인 특성에 맞는 가스 안내도 추가했습니다. Stable은 우선 수수료를 0으로 전송하고, Robinhood는 FCFS 방식이라 팁을 높여도 대기 순서가 앞당겨지지 않음을 알려줍니다.
+- 가스 처리를 체인별로 맞췄습니다. Stable은 우선 수수료를 0으로 전송합니다. Robinhood는 사용자가 선택한 가스 설정을 그대로 사용하며, 체인의 거래 도착 순서와 프로젝트의 Public/GTD/FCFS 민팅 페이즈는 서로 별개입니다.
 
 ## v0.9.30
 
