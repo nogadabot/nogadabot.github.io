@@ -2,6 +2,15 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.33
+
+- Mint launches are faster and more predictable: the app and Telegram bot prepare eligible wallets, gas, nonce, network routes, and scheduled transactions before you launch or the scheduled opening time, then broadcast without adding a new online wait.
+- Smart Mint support on Stable now includes Fefer Genesis, GMCards, and OmniHub public mints, with current price and approval handling, exact scheduled execution, and safer restart recovery.
+- Stable NFT holdings, transfers, and split sends are now available through verified ownership checks. OpenSea marketplace, SeaDrop, and PnL remain closed on Stable until their data paths are independently verified.
+- Restart, Safe, Boost, Flashbots, proxy, and multi-RPC handling now preserve the exact wallet, transaction, route, and privacy choice while avoiding duplicate sends or unintended public fallback.
+- The Telegram bot stays responsive while balances load in the background, refreshes automatic gas while a mint gate is closed, and immediately discards revoked OpenSea credentials.
+- Server upgrades now preserve pending Telegram mint and approval records created by earlier versions.
+
 ## v0.9.32
 
 - Corrected chain gas guidance. Stable still sends priority fees as 0; Robinhood keeps your selected gas settings, and Public, GTD, and FCFS remain project mint phases.

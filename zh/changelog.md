@@ -2,6 +2,15 @@
 
 最新版本显示在最上方。每次打开应用都会自动更新到最新版本 — 安装请参阅 [下载](getting-started/download.md)。
 
+## v0.9.33
+
+- 铸造启动更快且更可预测：应用与 Telegram 机器人会在手动启动或预定开放时间前准备可用钱包、Gas、nonce、网络路由和定时交易，并在发射时不再增加新的在线等待。
+- Stable Smart Mint 现已支持 Fefer Genesis、GMCards 与 OmniHub public 铸造，并包含最新价格与授权处理、精确定时执行以及更安全的重启恢复。
+- Stable 现支持通过已验证的所有权检查查看 NFT 持仓、转账和拆分发送。OpenSea 市场、SeaDrop 与 PnL 会在数据链路独立验证前继续保持关闭。
+- 重启、Safe、Boost、Flashbots、代理与多 RPC 现在会保留原始钱包、交易、路由和隐私选择，避免重复发送或意外切换到公开广播。
+- Telegram 机器人会在后台加载余额以保持界面响应，在铸造门槛关闭期间刷新自动 Gas，并立即从内存中清除已撤销的 OpenSea 密钥。
+- 服务器升级现在会保留由旧版本创建且仍在等待处理的 Telegram 铸造与授权记录。
+
 ## v0.9.32
 
 - 已修正各链的 Gas 说明。Stable 仍将优先费设为 0 后发送；Robinhood 会保留你选择的 Gas 设置，而 Public、GTD 和 FCFS 仍是项目的铸造阶段。
