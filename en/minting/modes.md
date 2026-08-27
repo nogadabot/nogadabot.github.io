@@ -29,7 +29,7 @@ Set a start time and press Start early to arm the task.
 | **Max tx** | Maximum transmissions per wallet, not number of successes |
 | **End/guardrail** | User-selected automatic stop time or duration |
 
-Spam does not stop merely because receipt status is 1. It auto-stops as Minted only when the expected NFT contract, recipient, and quantity are proven in the receipt. A pending or unverified result does not keep creating new nonces automatically and is shown separately.
+Spam does not stop merely because receipt status is 1. It auto-stops as Minted only when the expected NFT contract, signing wallet, and quantity are proven in the receipt. A pending or unverified result does not keep creating new nonces automatically and is shown separately.
 
 ## Quantity and multiple wallets
 

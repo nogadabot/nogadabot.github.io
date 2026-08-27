@@ -33,12 +33,13 @@ When automatic lookup is insufficient, use **+ New task**.
 | Transaction target | Contract being called; it may be a router/shared minter |
 | ABI function and arguments | Choose from fetched ABI or enter the exact signature/arguments |
 | Raw calldata | Send user-supplied hex unchanged |
-| Requested quantity per wallet | Total NFT amount expected in each wallet's receipts |
 | Transaction value | **Total native-token value sent in one transaction**, not a per-item price |
-| Expected NFT contract | Receipt target when a router mints from a different NFT contract |
-| NFT recipient | Address that must receive the mint result |
 
-For ABI/Hex, expected quantity never silently rewrites calldata or value. Only a provable quantity conflict on a protocol-bound route such as SeaDrop is reported before sending; Nogada does not guess arbitrary calldata semantics to block a launch.
+### Receipt verification (advanced)
+
+The collapsed advanced section verifies the confirmed result; it does not configure the mint call. **NFT contract to verify** tells the receipt scanner which contract's Transfer events count when the transaction target is a router/shared minter. When blank, the transaction target is used. **Minted quantity to verify** is the number of matching NFTs required for the Minted result. It never changes ABI arguments, raw calldata, value, transaction count, or the actual mint request. The signing wallet is always the expected recipient and is not configurable.
+
+For ABI/Hex, the actual mint quantity comes from the exact function arguments or raw calldata. Only a provable quantity conflict on a protocol-bound route such as SeaDrop is reported before sending; Nogada does not guess arbitrary calldata semantics to block a launch.
 
 ## Wallets and exact quantity
 
@@ -67,7 +68,7 @@ Press Start early to arm a scheduled task. Wallet keys, RPC connections, gas, no
 |---|---|
 | Preparing/queued | Start is stored and preparation or scheduled time is pending |
 | Submitted/pending | A transaction hash exists and the same receipt is being reconciled |
-| Minted | A successful receipt proves the expected NFT contract, recipient, and exact quantity |
+| Minted | A successful receipt proves the expected NFT contract, signing wallet, and exact quantity |
 | Failed | An on-chain revert or launch failure is confirmed |
 | Mint unverified | Receipt status succeeded, but the exact NFT Transfer was not proven |
 | Partial | Completed, failed, pending, or unverified wallet/chunk results are mixed |
@@ -76,4 +77,4 @@ A pending transaction never creates a new nonce automatically. Unverified tasks 
 
 ## Check before launch
 
-Review selected wallets, quantity per wallet, total target quantity, value per transaction, total maximum value, chain, transaction target, NFT recipient, and phase. A changed chain, target, recipient, value, selected phase, or quantity in protocol-bound calldata is an intent-integrity mismatch and will not launch. Guessed eligibility, balance, price, or same-wallet app/bot use is never a blocking reason.
+Review selected wallets, quantity per wallet, total target quantity, value per transaction, total maximum value, chain, transaction target, phase, and any advanced receipt-verification target/count. A changed chain, target, value, selected phase, or quantity in protocol-bound calldata is an intent-integrity mismatch and will not launch. The signing wallet is the fixed mint recipient. Guessed eligibility, balance, price, or same-wallet app/bot use is never a blocking reason.

@@ -36,8 +36,8 @@
 
 ## 无法导入 ABI
 
-* 在[设置 → 集成](../app-guide/settings.md)中填入 **Etherscan API 密钥**可大幅提升成功率（未填写时会尝试通过 Sourcify 获取）。
-* 未经验证的合约可能没有 ABI → 请直接手动填写函数签名或 hex。
+* ABI 查询使用用户选择的链，并依次检查受支持的已验证浏览器来源（包括目录浏览器与 Blockscout）以及 Sourcify。在[设置 → 集成](../app-guide/settings.md)中填写 **Etherscan API 密钥**可扩大 Etherscan v2 覆盖范围，但它不是唯一查询路径。
+* 查询结果会区分“合约存在但没有已验证 ABI”“地址没有合约代码”和“无法检查链/RPC”。若合约存在但没有已验证 ABI，请手动输入准确函数签名、参数或 hex。
 
 ## 铸造已开始但任务没有响应
 

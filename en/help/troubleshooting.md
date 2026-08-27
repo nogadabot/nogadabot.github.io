@@ -36,8 +36,8 @@
 
 ## Fetch ABI doesn't work
 
-* Add an **Etherscan API key** in [Settings → Integrations](../app-guide/settings.md) for better results (falls back to Sourcify without one).
-* Unverified contracts may have no ABI → enter the function/hex manually.
+* ABI lookup uses the chain you selected. It checks supported verified explorer sources, including catalog explorers and Blockscout, and then Sourcify. An **Etherscan API key** in [Settings → Integrations](../app-guide/settings.md) improves Etherscan v2 coverage but is not the only lookup route.
+* The result distinguishes a contract with no verified ABI, an address with no contract code, and a chain/RPC that could not be checked. If the contract exists but has no verified ABI, enter the exact function signature/arguments or hex manually.
 
 ## Minting started but my task isn't responding
 

@@ -26,6 +26,6 @@ Expected quantity for ABI/Hex does not change calldata or value. Nogada also doe
 
 ## Success truth
 
-After submission, Nogada reconciles the same transaction receipt. **Minted** requires a successful receipt proving the exact expected NFT contract, recipient, and Transfer quantity. If receipt status succeeds but the NFT result cannot be proven, it is **Mint unverified**.
+After submission, Nogada reconciles the same transaction receipt. **Minted** requires a successful receipt proving the exact expected NFT contract, signing wallet, and Transfer quantity. If receipt status succeeds but the NFT result cannot be proven, it is **Mint unverified**.
 
 Next → [Mint Modes](modes.md) · [Gas Settings](gas.md)

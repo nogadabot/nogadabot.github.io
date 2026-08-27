@@ -12,7 +12,7 @@ Smart Mint resolves a user-supplied mint target into a task draft. **Resolving o
 
 ## Workflow
 
-1. Paste a link or contract and select **Resolve mint route**.
+1. Choose the contract's deployment chain, paste a link or contract, and select **Resolve mint route**.
 2. If the project registered multiple phases, they appear with their exact names. Choose one.
 3. Review chain, transaction target, NFT target, wallets, quantity per wallet, total target quantity, value, gas, and schedule.
 4. Select **Create task**.
@@ -20,11 +20,13 @@ Smart Mint resolves a user-supplied mint target into a task draft. **Resolving o
 
 There is no “Auto (best phase)”. Nogada does not choose a phase on the user's behalf.
 
+Direct contract lookup uses the chain you explicitly selected and searches supported EVM explorer and verified-source fallbacks, including Blockscout and Sourcify. A verified ABI loads callable functions automatically in the task editor. If no ABI is available, Nogada distinguishes an existing contract from an address with no contract code or a chain/RPC that could not be checked instead of treating every failure as the same error.
+
 ## Telegram fast path
 
-In the Telegram bot, tap **Smart Mint** or send `/mint`. A single bot wallet is selected automatically; with multiple wallets, choose the execution scope. Then send only a supported project-mint, marketplace/OpenSea, explorer, launchpad URL, or `0x` address. If the chain is unknown, choose it with a button, then choose the exact project phase.
+In the Telegram bot, tap **Smart Mint** or send `/mint`. A single bot wallet is selected automatically; with multiple wallets, choose the execution scope. Then send only a supported project-mint, marketplace/OpenSea, explorer, launchpad URL, or `0x` address. Choose the chain with a button, then choose the exact project phase.
 
-The default path creates the task with 1 mint per wallet. A future phase uses its published start time, its end only when published, Spam, and automatic gas. Turn on **Advanced settings** before sending the link only to change quantity, launch mode, schedule, or gas. The legacy one-line flags remain an optional power-user route.
+After phase selection, use the mint-settings buttons to set quantity per wallet, launch mode, schedule, and gas, then create the task. A future phase pre-fills its published start and end times when available. The legacy one-line flags remain an optional power-user route.
 
 ## Phase truth
 
@@ -47,6 +49,6 @@ Nogada never invents a Public phase or contract merely because lookup failed.
 
 ## Quantity and result
 
-Quantity is requested per wallet and total target multiplies it by selected wallet count. A known per-transaction cap is handled with exact nonce chunks, never a silent reduction. **Minted** appears only when the receipt proves the expected NFT contract, recipient, and quantity.
+Quantity is requested per wallet and total target multiplies it by selected wallet count. A known per-transaction cap is handled with exact nonce chunks, never a silent reduction. The signing wallet always receives the mint, and **Minted** appears only when the receipt proves the expected NFT contract, signing wallet, and quantity.
 
 Next → [Tasks](../app-guide/tasks.md)

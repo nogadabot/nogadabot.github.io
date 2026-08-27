@@ -2,9 +2,27 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.35
+
+- Smart Mint now resolves supported project mint sites and direct contracts that use verified Blockscout ABIs and on-chain group minting, including Robinhood Chain. Group price, start state, supply, and collection sold-out status come from contract facts without blocking the user's phase choice or launch.
+- Contract ABI lookup now uses the chain selected by the user across supported EVM explorers and verified-source fallbacks. Smart Mint requires an explicit chain choice, and the task editor automatically loads verified callable functions after a valid contract is entered.
+- Minted NFTs are always received by the wallet that signs the mint transaction. Separate mint-recipient controls were removed from the app and bot, and older tasks that target another recipient stop before broadcast.
+- The task editor's RPC picker no longer stacks group headers over endpoint names and URLs. Long RPC names, addresses, connection state, and selection controls remain readable on every chain.
+- Telegram Smart Mint now starts with a link or contract address only. The next step always asks the user to confirm the chain and then choose the exact phase. Quantity, launch mode, schedule, and gas are available as buttons on the normal mint-settings screen; the legacy one-line command remains available for experienced users.
+- Telegram phase, created-task, and terminal-result cards now show the essential price, limit, schedule, wallet, success, failure, pending, mint-count, and short transaction-link facts without repeated nonce or custody explanations.
+
+## v0.9.34
+
+- Smart Mint now resolves the project's actual mint phases from supported links and contracts without inventing an Auto, Public, or ended phase. Eligibility guesses no longer block phase selection or launch.
+- The app and Telegram bot operate independently and can use the same wallet without sharing tasks, state, nonce coordination, credentials, or execution. A clear warning explains that simultaneous use may create an on-chain nonce conflict.
+- Scheduled GTD, FCFS, and Public tasks prepare before the opening time and broadcast through the selected RPC routes as soon as the real phase or voucher becomes available, without adding a new synchronous wait at launch.
+- Mint execution now preserves the selected wallet, recipient, phase, quantity, price, calldata, and gas. Supported multi-mint routes split exact quantities into tracked transactions instead of silently reducing the request.
+- Task status and mint results now follow persisted run and receipt evidence, preventing idle tasks from changing state on their own and avoiding guessed success, failure, or ended labels.
+- OpenSea drop links and contract inputs resolve more reliably, Smart Mint hands created tasks back to the task list clearly, and app and bot controls provide clearer phase, wallet, RPC, recipient, and launch feedback.
+
 ## v0.9.33
 
-- Mint launches are faster and more predictable: the app and Telegram bot prepare eligible wallets, gas, nonce, network routes, and scheduled transactions before you launch or the scheduled opening time, then broadcast without adding a new online wait.
+- Mint launches are faster and more predictable: the app and Telegram bot each independently prepare their own wallets, gas, nonce, network routes, and scheduled transactions before launch or the scheduled opening time, then broadcast without adding a new online wait.
 - Smart Mint support on Stable now includes Fefer Genesis, GMCards, and OmniHub public mints, with current price and approval handling, exact scheduled execution, and safer restart recovery.
 - Stable NFT holdings, transfers, and split sends are now available through verified ownership checks. OpenSea marketplace, SeaDrop, and PnL remain closed on Stable until their data paths are independently verified.
 - Restart, Safe, Boost, Flashbots, proxy, and multi-RPC handling now preserve the exact wallet, transaction, route, and privacy choice while avoiding duplicate sends or unintended public fallback.
@@ -68,7 +86,7 @@ Newest version first. The app auto-updates to the latest version every time you 
 
 ## v0.9.24
 
-- New: use your own OpenSea API key for whitelist (signed) drops. Register it once and the app — and the Telegram bot — pull each voucher from OpenSea's official Drops API (120/min per account) instead of the shared swap. Public mints still need no key.
+- New: use your own OpenSea API key for signed drops. App and bot credentials are separate, so register the key in the product where you want to use it. That product then pulls each voucher from OpenSea's official Drops API (120/min per account). Public mints still need no key.
 - New: set a custom proxy test URL, so you can check your proxies against any address you like (defaults to api.ipify.org).
 - New: unwrap WETH back to ETH in one click, right from the Wallets screen.
 - New: the whole app, the user guide, and the Telegram bot are now fully available in Simplified Chinese (简体中文) — switch language in Settings.

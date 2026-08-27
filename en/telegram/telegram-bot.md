@@ -28,15 +28,15 @@ RPCs, proxies, and OpenSea API keys under **🛠 Settings** belong only to the b
    https://opensea.io/collection/example
    ```
 
-4. If the chain cannot be confirmed from the input, choose it with an inline button.
+4. Choose the actual deployment chain with an inline button. The bot does not make the final chain choice from the input alone.
 5. If the project registered multiple phases, choose the exact project phase you want.
-6. The default path creates the bot task immediately. For a future phase, it uses the project's published start time, its end time only when one was published, **Spam**, and automatic gas.
-7. Open **⚙️ Tasks → 🤖 Bot tasks**, review the task, and press **Start** early enough to arm it.
+6. Review or change quantity, launch mode, schedule, and gas with buttons on the mint-settings screen, then create the task. A future phase pre-fills its published start and end times when available.
+7. Open **⚙️ Tasks → 🤖 Bot tasks**, review the task again, and press **Start** early enough to arm it.
 
 Smart Mint accepts contracts, block-explorer URLs, OpenSea collection/item/assets URLs, marketplaces, launchpads, and project mint sites. If a protected or data-poor page cannot be resolved, continue with its contract or an advanced ABI/Hex task.
 
 * The default quantity is **1 per selected wallet**. The bot shows the total as `wallet count × quantity per wallet`.
-* Tap **⚙️ Advanced settings** before sending the link only when you want to change quantity, launch mode, schedule, or gas.
+* Quantity, launch mode, schedule, and gas are available as buttons in every mint setup; no command flags are required.
 * When a known per-transaction cap applies, the bot splits the exact request across nonces. It never silently reduces quantity.
 * Missing phase indexes or incomplete timing are not guessed as Public or Ended.
 * The bot does not guess eligibility to block wallet selection or Start. If an actual signature, proof, or other execution input cannot be obtained, that wallet receives a factual preparation/execution result.
@@ -50,9 +50,9 @@ Every bot mint begins from **Start inside Bot tasks**. Resolving a Smart Mint ne
 * The same raw transaction may be propagated through multiple RPCs. There is no automatic RBF or automatic fee escalation.
 * The same wallet may run in the app at the same time. The bot warns about possible nonce collisions but does not block it.
 
-## 5. Optional advanced settings and manual input
+## 5. Mint settings and manual input
 
-The normal Smart Mint path does not require command flags. Turn on **⚙️ Advanced settings** before sending the link, then use buttons after phase selection to change:
+The normal Smart Mint path does not require command flags. After choosing the chain and phase, use the mint-settings buttons to set:
 
 * Quantity: 1, 2, 3, 5, or a custom per-wallet amount
 * Launch: Spam, Once, or Safe
@@ -86,11 +86,12 @@ Common options:
 | `max=200 delay=500` | Maximum spam sends and interval in ms |
 | `at=+5m` / `at=16:59` | Scheduled Start in UTC |
 | `until=17:00` | Spam stop time in UTC |
-| `recipient=0x...` | Separate NFT recipient on supported mint routes |
 | `nft=0x...` | NFT contract expected in the receipt when minting through a router |
 | `sweep=0x...` | Move confirmed NFTs to a safe wallet |
 
-For ABI/Hex tasks, `quantity` is the expected NFT count in the receipt; it does not rewrite calldata. Only a provable conflict on a protocol-bound route such as SeaDrop is rejected before sending. The bot does not guess arbitrary calldata semantics to block a launch.
+The bot wallet that signs the mint transaction always receives the NFT. Separate mint recipients are unsupported; use `sweep=` only when you want to move a confirmed mint afterward.
+
+For ABI/Hex tasks, `quantity` is the expected NFT count in the receipt; it does not rewrite calldata. `nft=` is also only a receipt-verification target for routers and never changes the call target or calldata. Only a provable conflict on a protocol-bound route such as SeaDrop is rejected before sending. The bot does not guess arbitrary calldata semantics to block a launch.
 
 ## 6. Reading results
 
@@ -105,9 +106,9 @@ Internal platform names, minter addresses, selectors, and setup diagnostics are 
 | State | Meaning |
 |---|---|
 | Submitted / pending | A transaction hash exists, but its receipt is not final yet |
-| Minted | A successful receipt contains the exact expected NFT Transfer contract, recipient, and quantity |
+| Minted | A successful receipt contains the exact expected NFT Transfer contract, signing wallet, and quantity |
 | Failed | An on-chain revert or launch failure is confirmed |
-| Mint unverified | Receipt status succeeded, but the expected NFT contract, recipient, or quantity was not proven |
+| Mint unverified | Receipt status succeeded, but the expected NFT contract, signing wallet, or quantity was not proven |
 
 While a transaction is pending, the bot creates no new nonce and keeps reconciling the same transaction. It also never auto-reruns an unverified mint. You may explicitly press Start again from the task detail, but the bot first warns that this sends a new transaction and may duplicate the mint.
 

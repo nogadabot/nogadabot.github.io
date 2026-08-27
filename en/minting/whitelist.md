@@ -25,7 +25,7 @@ The app and Telegram bot never share OpenSea keys, wallets, tasks, RPCs, or prox
 * There is no WL-check result or eligibility badge, and guessed eligibility never blocks wallet selection or Start.
 * If an actual proof, voucher, or other value required to build calldata cannot be obtained, that wallet receives a factual preparation/execution failure.
 * Once submitted, the transaction hash is preserved and the same receipt is reconciled. A new nonce is not created automatically for a pending transaction.
-* **Minted** is shown only when the successful receipt proves the expected NFT contract, recipient, and quantity.
+* **Minted** is shown only when the successful receipt proves the expected NFT contract, signing wallet, and quantity.
 * If receipt status succeeds but the exact NFT Transfer cannot be proven, the result is **Mint unverified**.
 
 ## Custom contracts
