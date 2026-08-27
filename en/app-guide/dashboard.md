@@ -21,7 +21,7 @@ The first screen you see when you open the app. It shows your minting status **a
 * **Pending tasks**: tasks you've created appear here. Create one with `+ New task`.
 * **Mint feed**: successfully minted tokens stack up here, newest first.
 * **Running**: status of currently running tasks.
-* **Watchlist**: add a collection's contract address and click **Watch**; you'll be alerted when supply moves. (Link Telegram and you'll get alerts even with the app closed.)
+* **Watchlist**: add a collection contract and click **Watch** to see supply changes while the app is running. A supply change is not proof that minting opened.
 * **Featured drops**: shows posted recommended drops, if any.
 
-> 💡 **Watchlist + Telegram**: drops you add to the watchlist are monitored 24/7 by the Telegram bot. Even with the app closed, you get an alert when a drop goes live. → [Telegram Bot](../telegram/telegram-bot.md)
+> 💡 The app Watchlist and Telegram Drop Watch are separate. Add a drop independently in the bot for 24/7 monitoring; the app list never synchronizes to the bot. → [Telegram Bot](../telegram/telegram-bot.md)

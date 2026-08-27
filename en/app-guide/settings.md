@@ -2,23 +2,17 @@
 
 Configure app behavior and API keys. There are **7 tabs** on the left.
 
-![settings](../images/settings.png)
-
-![Settings, close-up](../images/settings-detail.png)
-
-> 🔍 *Close-up: the left rail switches between categories — **Language**, **Integrations** (API/Telegram), Networks, etc.*
-
 ## General
 
 * **UI scale**: zoom the whole UI 70–140% (saved on this PC).
-* **Run on startup**: auto-launch Nogada minimized at Windows login (so the bot/alerts run in the background).
+* **Run on startup**: auto-launch the desktop app minimized at Windows login. It has no effect on whether the Telegram bot runs.
 * **Browser extension**: connect the Nogada Capture extension (detected: Chrome/Edge).
 * **Logs**: open the folder where task/engine output is recorded (for troubleshooting).
 * **Check/Apply update** · **Factory reset**: use carefully.
 
 ## Language
 
-* Switch **한국어 / English**. The whole app changes instantly.
+* Switch **English / 한국어 / 简体中文**. The whole app changes instantly.
 
 ## Integrations: API keys
 
@@ -51,6 +45,6 @@ More links → [Resources](../resources/nodes.md)
 * **Activate / Deactivate (release device)**: release here when switching PCs, then activate on the new one.
 * **HWID**: this machine's identifier (copyable).
 
-## Quick Fire
+## Quick task setup
 
-* **Quick task wallets / RPCs**: set the default wallets/RPCs for fast minting (live mints, etc.).
+* **Quick task wallets / RPCs**: save the defaults used when creating a quick task. This only creates a task; open **Tasks** and press **Start** to broadcast it.

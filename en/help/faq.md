@@ -6,7 +6,7 @@ Ethereum mainnet (L1) and major L2/EVM chains, **Arbitrum, Optimism, Base, Polyg
 
 ## Are my wallets 100% safe?
 
-Wallet safety is the top priority. Imported wallets' **private keys are encrypted (Windows DPAPI) and stored on your PC**, never on our server. Only the Nogada app on your PC decrypts them to sign mints.
+Wallet safety is the top priority. Desktop app wallet **private keys are encrypted with Windows DPAPI and stored on your PC**; license and update services never receive them. Only the Nogada app on your PC decrypts them to sign mints. The standalone Telegram bot uses separate bot-wallet keys encrypted in server custody for 24/7 signing; those wallets never sync with the app.
 
 That said, nothing is 100% safe in web3. Keep large assets in a **vault wallet** that never touches dApps, and use a **burner (small) wallet** for minting/events. → [Security](security.md)
 

@@ -9,7 +9,7 @@ Add the wallet(s) you'll mint with. Go to the **Wallets** menu:
 * **Generate**: the app creates new wallets for you (keys stored automatically).
 * **Import**: paste the private key of an existing wallet.
 
-> 🔐 Private keys are **stored encrypted on your PC only**. Still, use a **burner (small-balance) wallet** for minting, not your main wallet.
+> 🔐 Desktop app wallet keys are **encrypted with Windows DPAPI and stored only on your PC**. Telegram bot wallets are separate and use encrypted server custody. In either product, use a **burner (small-balance) wallet** for minting, not your main wallet.
 
 Details → [Wallets](../app-guide/wallets.md)
 
@@ -41,6 +41,6 @@ Most mints **don't need these.** Only if:
 
 ---
 
-> ✅ **You're ready!** Create your first mint in [Tasks](../app-guide/tasks.md), or read the [Minting Guide](../minting/whitelist.md).
+> ✅ **You're ready!** Create a task from a link in [Smart Mint](../minting/smart-mint.md), then launch your first mint from Start in [Tasks](../app-guide/tasks.md).
 >
 > 🤖 Want to mint with the app closed? → [Telegram Bot](../telegram/telegram-bot.md)

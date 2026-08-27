@@ -1,47 +1,35 @@
-# Whitelist (WL) Mint
+# Signed and Allowlist Mints
 
-A WL mint lets **only registered wallets** mint. It usually needs a proof or signature, so there is one extra preparation step compared to a public mint.
+An allowlist phase may require a wallet-specific proof or signature (voucher). Nogada does not guess that a wallet is “eligible” or “ineligible” to block selection or launch. It relies on required execution data and the actual on-chain result.
 
-> 💡 Mint modes (Instant·Safe·Spam), scheduled start, and many-wallet handling → [Mint Modes explained](modes.md)
+## Create it in the app
 
-## Easiest path: OpenSea / Transient WL
+1. Paste a contract, block-explorer, OpenSea, marketplace, launchpad, or project mint link into **Smart Mint**.
+2. Choose the signed/allowlist phase by the exact name registered by the project.
+3. Review wallets, quantity per wallet, gas, schedule, and required settings, then select **Create task**.
+4. Open **Tasks**, select the created task, and press **Start**.
 
-For OpenSea/Transient launchpad WLs, Nogada **handles the proof automatically**.
+Smart Mint creates the task; it never broadcasts from the resolver screen. Every app mint starts from Start in Tasks.
 
-1. **Tasks** → `+ New task` → target **OpenSea Drop** or **Launchpad**.
-2. Paste the **link** and the phase auto-detects → select the **WL (allowlist) phase**.
-3. Select your **WL-registered wallets**. (Check which wallets are on the WL with **Whitelist check** on the [Wallets] screen first.)
-4. Fill RPC/gas → **Create** → **Run**.
+## OpenSea signed data
 
-## How to fetch OpenSea WL vouchers: API key vs Default
+A signed SeaDrop phase needs a voucher for each wallet. The app fetches this data while preparing the task and supports:
 
-An OpenSea SeaDrop **WL (signed/allowlist) drop** needs each wallet's mint voucher to be fetched before it can fire. There are two ways to fetch it (pick under **WL voucher source** on the Smart Mint / task editor screen):
+* **OpenSea API**: uses app-only OpenSea API keys registered under **Settings → Integrations**.
+* **Default route**: uses the network/proxy route configured in the app.
 
-* **OpenSea API (recommended)** — fetch the voucher with your own **OpenSea API key**. The limit is **per key, not per IP** (~120 requests/min per key ≈ about 50 wallets), so **no proxy is needed**, and you scale by adding more keys. Add keys under **Settings → OpenSea API keys** — create them at `https://opensea.io/settings/developer` (fill the company/site fields with anything).
-  * Past ~50 wallets, **create separate OpenSea accounts and add one key per account**. The limit is **per account**, so several keys on the same account do NOT add up.
-  * Keys **expire after 30 days** — recreate and replace them when they do.
-* **Default (proxy)** — fetch over your **proxy IPs**, no key. The limit is per IP, so use **several proxies** when minting from many wallets.
+The app and Telegram bot never share OpenSea keys, wallets, tasks, RPCs, or proxies. Register bot credentials separately in bot Settings when minting from the bot.
 
-> 💡 **Public mints need neither.** A public stage mints with no voucher, so no key or proxy is involved. This choice only appears on **WL/signed** stages.
+## Selection and results
 
-> When keys are registered, **OpenSea API is the default**, and you can switch to **Default (proxy)** when creating the task.
+* There is no WL-check result or eligibility badge, and guessed eligibility never blocks wallet selection or Start.
+* If an actual proof, voucher, or other value required to build calldata cannot be obtained, that wallet receives a factual preparation/execution failure.
+* Once submitted, the transaction hash is preserved and the same receipt is reconciled. A new nonce is not created automatically for a pending transaction.
+* **Minted** is shown only when the successful receipt proves the expected NFT contract, recipient, and quantity.
+* If receipt status succeeds but the exact NFT Transfer cannot be proven, the result is **Mint unverified**.
 
-## General steps (common to all WL mints)
+## Custom contracts
 
-1. **Make sure the app is the latest version** (bottom-left).
-2. **Create the task and check the log first**: Run it to confirm the log message looks correct.
-3. **Stop and Run again 3–5 minutes before mint time**: projects sometimes change settings at the last minute; this reloads the latest data.
-4. **Prepare manual minting as backup**: if minting starts but your task log doesn't change to "pending" within 5–10 seconds, mint manually on the project site.
-
-> 💡 **Check WL wallets**: [Wallets] → select wallets → **Whitelist check** to see which wallets are on a drop's WL in advance.
-
-## Custom contract WL (advanced)
-
-A custom-contract WL (not a launchpad) usually has a **per-wallet signature/proof.** In that case:
-
-* If the operator provides separate instructions (module/hex), follow them.
-* Or you must obtain your exact proof and put it in the arguments/hex (harder).
-
-> ⚠️ The most common WL mistakes are **trying with a non-WL wallet** or **a wrong proof**. Always verify with the log before running.
+For a custom contract requiring a wallet-specific proof/signature, prefer the route resolved by Smart Mint. If it cannot be resolved, enter the exact ABI/function arguments or calldata supplied by the project in an advanced task. Nogada does not guess arbitrary calldata semantics or silently change quantity or launch behavior.
 
 Next → [Gas Settings Explained](gas.md)

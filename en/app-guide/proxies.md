@@ -1,13 +1,14 @@
 # Proxies
 
-Proxies hide your real IP so requests don't all come from the same place. **Most regular mints don't need them**, but they help when you have many wallets or do website-based tasks.
+Proxies route mint lookup, voucher requests, and transaction propagation through a user-selected network path. **Most direct contract mints do not need one.**
 
 ![proxies](../images/proxies.png)
 
 ## When do you need them?
 
-* When using dozens/hundreds of wallets or accounts for **website tasks (WL sites, Twitter, Discord)**: coming from one IP can trigger bot detection, bans, or suspensions, so proxies distribute them across different IPs.
-* If you just mint to a contract, you usually **don't need them.**
+* Use them when many wallets request signed/voucher data at the same time and the API route needs distribution.
+* Selecting a proxy group pins that task to its route. If the selected proxy fails, Nogada reports the failure instead of silently switching to a direct connection.
+* A direct contract mint often has a shorter path without a proxy.
 
 ## Format
 
@@ -29,7 +30,7 @@ You can paste many, one per line.
 
 ## Proxy types (briefly)
 
-* **Residential**: real home IPs. Billed per GB, usable while data remains. Slower. Beginner-friendly.
-* **ISP**: faster and more stable, usually billed per IP per month.
+* **Residential**: useful when varied IPs are needed, but latency may be higher.
+* **ISP**: often has steadier latency and connections, with large provider-to-provider differences.
 
 Recommended providers & how to buy → [Proxy links](../resources/proxies.md)

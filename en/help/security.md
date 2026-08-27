@@ -2,10 +2,10 @@
 
 Core principles for using an NFT bot safely. **Please read this.**
 
-## 1. Private keys stay on your PC
+## 1. Desktop app private keys stay on your PC
 
-* Imported wallets' private keys are **encrypted with Windows DPAPI and stored only on this PC**.
-* Our server never receives or stores private keys.
+* Desktop app wallet keys are **encrypted with Windows DPAPI and stored only on this PC**.
+* License and update services never receive or store desktop app wallet keys. The separate Telegram bot does not use or sync them.
 * **Export key** is the only feature that displays a private key on screen; keep it away from others, recordings, and streams.
 
 ## 2. Always mint with a burner (small) wallet
@@ -15,11 +15,11 @@ Core principles for using an NFT bot safely. **Please read this.**
 
 ## 3. The Telegram bot wallet is also a burner
 
-* The Telegram **bot wallet is kept on the server** for burner use (to run 24/7). **Don't put large funds in it.**
+* Telegram **bot wallet keys are encrypted in server custody** so the bot can sign 24/7. These are separate from desktop app wallets. **Don't put large funds in them.**
 
-## 4. Don't expose your pairing code / keys
+## 4. Don't expose email verification codes or keys
 
-* The Telegram **pairing code is like a password.** Never expose it while recording or streaming — anyone who sees it can connect to your bot and drain the bot wallet.
+* Never expose the eight-digit **email verification code**, private keys, or exported keys while recording or streaming. App pairing codes are no longer used.
 * Don't share your **license key** either (it's 1-device, so others can't use it anyway, but avoid exposure).
 
 ## 5. Beware phishing: official links only
@@ -34,6 +34,6 @@ Core principles for using an NFT bot safely. **Please read this.**
 | Mint with a burner wallet | Mint with your main/vault wallet |
 | Keep big assets in an unconnected vault | Store big funds in bot/burner wallets |
 | Download only from official links | Click DMs / unfamiliar links |
-| Keep pairing code & keys private | Expose code/keys while streaming |
+| Keep verification codes & keys private | Expose codes/keys while streaming |
 
 > Nothing is 100% safe in web3. These habits are the surest way to protect your assets.

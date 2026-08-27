@@ -4,7 +4,7 @@ description: Nogada, an EVM NFT minting bot. Fast, safe, and easy to use.
 
 # About Nogada
 
-**Nogada** is a **Windows desktop app** for minting NFTs quickly on Ethereum and major L2 chains. Mint with many wallets at once, control gas precisely, and manage funds, track PnL, and even run everything remotely from Telegram, all in one place.
+**Nogada** provides a fast NFT-minting **Windows desktop app** and a standalone **Telegram bot** for Ethereum and major L2 chains. Each product runs its own wallets, tasks, RPCs, and proxies; neither controls or synchronizes with the other.
 
 > 💡 New here? Just follow these 3 steps to get started → [Install](getting-started/installation.md) → [Activate License](getting-started/license.md) → [First-Time Setup](getting-started/first-setup.md)
 
@@ -15,7 +15,7 @@ description: Nogada, an EVM NFT minting bot. Fast, safe, and easy to use.
 * **Marketplace support**: mint via OpenSea / Seaport / Transient (launchpads)
 * **Fund management**: spread ETH from one wallet to many (Disperse), gather it back (Consolidate)
 * **PnL tracking**: turn minting cost & profit into a clean card image
-* **Telegram bot**: mint and manage wallets 24/7 from Telegram, even with the app closed
+* **Telegram bot**: mint 24/7 with bot-only wallets and tasks, without installing or connecting the app
 * **Auto-update**: the app updates itself when a new version ships
 
 ## Supported chains
@@ -28,11 +28,12 @@ Not on the list? You can add a **custom EVM chain**.
 
 ## 🔐 Are my wallets safe?
 
-**Your private keys never leave your PC.**
+**Desktop app wallet keys never leave your PC.**
 
-* Imported wallets' private keys are **encrypted with Windows DPAPI and stored only on your PC**.
-* Our server **never receives or stores private keys.** Only the Nogada app on your PC can decrypt them to sign minting transactions.
-* Core features like minting and wallets run **entirely on your PC.** (The server is only for license verification, updates, and the Telegram bot.)
+* Desktop app wallet keys are **encrypted with Windows DPAPI and stored only on your PC**.
+* License and update services never receive or store desktop app wallet keys. Only the Nogada app on your PC can decrypt them to sign minting transactions.
+* The standalone Telegram bot uses separate bot wallets. Their keys are encrypted in server custody so the bot can sign 24/7; they never sync with desktop app wallets.
+* Core desktop app features like minting and wallets run **entirely on your PC.**
 
 > ⚠️ **That said, nothing is 100% safe in web3.** Keep large assets in a **vault wallet** that never connects to any dApp, and always use a **burner (small-balance) wallet** for minting and events. That's the best habit.
 

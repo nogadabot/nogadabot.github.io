@@ -16,9 +16,9 @@ Fires your transaction to **several RPCs at once** to land in a block faster.
 * **Settings → Engine → Multi-RPC broadcast** → on
 * > ⚠️ When you create a task, don't forget to **check the RPCs that task should use** (otherwise it runs on the public RPC).
 
-### ⭐ Pre-set Quick Fire defaults
-For time-critical mints (live mints), picking wallets · RPC every time is too slow.
-* **Settings → Quick Fire**: pre-assign default wallets · RPC → fire in one click
+### ⭐ Pre-set Quick task defaults
+For time-critical mints, pre-selecting wallets and RPCs makes task setup faster.
+* **Settings → Quick task setup**: save default wallets and RPCs → create the task, then open **Tasks** and press **Start** to broadcast
 * Details → [Tasks](../app-guide/tasks.md)
 
 ## ⚙️ Stability · advanced (situational)
@@ -53,11 +53,11 @@ Details → [Settings → Integrations](../app-guide/settings.md)
 Get mint success/failure posted to Discord → **Settings → Integrations → Discord webhook**
 
 ### Run on startup
-Launch the app **minimized at login** so the bot · alerts · auto-backup are always running → **Settings → General → Run on startup**
+Launch the desktop app **minimized at login** if you want app features ready immediately → **Settings → General → Run on startup**. The Telegram bot runs independently.
 
-### Telegram bot (runs 24/7 even with the app closed)
-Mint and manage wallets from your phone while away → details → [Telegram Bot](../telegram/telegram-bot.md)
+### Telegram bot (standalone 24/7)
+Use bot-only wallets and tasks without installing or connecting the app → [Telegram Bot](../telegram/telegram-bot.md)
 
 ---
 
-> ✅ TL;DR: **competitive mint = the ⭐ three (paid RPC · multi-RPC · Quick Fire)** first. Alerts/convenience can wait. None of this is mandatory.
+> ✅ TL;DR: **competitive mint = the ⭐ three (paid RPC · multi-RPC · Quick task setup)** first. Alerts/convenience can wait. None of this is mandatory.

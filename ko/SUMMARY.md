@@ -28,8 +28,9 @@
 
 ## 🎯 민팅 가이드
 
+* [Smart Mint: 링크에서 작업까지](minting/smart-mint.md)
 * [민트 방식, 즉시·안전·스팸 (완전정복)](minting/modes.md)
-* [화이트리스트(WL) 민트](minting/whitelist.md)
+* [서명·Allowlist 민트](minting/whitelist.md)
 * [퍼블릭 민트](minting/public.md)
 * [가스 설정 완전정복](minting/gas.md)
 * [트랜잭션 부스트 (speedup)](minting/boost.md)

@@ -6,7 +6,7 @@ Manage the wallets you mint with. Create or import wallets, view balances, and m
 
 ![Wallets, close-up](../images/wallets-detail.png)
 
-> 🔍 *Close-up: **Add wallets** (generate / import) and **New bot wallet** (runs 24/7).*
+> 🔍 *Close-up: **Add wallets** to generate or import wallets used only by the app.*
 
 ## Top
 
@@ -14,14 +14,7 @@ Manage the wallets you mint with. Create or import wallets, view balances, and m
 * **Show ERC-20 balance**: enter a token address to show that token's balance as a column.
 * **Add wallet**: add wallets.
 
-## 🤖 Bot Wallet (server): for Telegram
-
-The **Bot Wallet (server)** section at the top is a Telegram-only wallet that **runs 24/7 even with the app closed.**
-
-* **Create bot wallet**: make a wallet for minting via Telegram.
-* **Hide / Refresh**: toggle address visibility / refresh balance.
-
-> 🔐 The bot wallet is a **burner (small-balance) wallet kept on the server** (so it can run 24/7). It's separate from regular in-app wallets (whose keys live only on your PC). **Don't put large funds in it.** → [Telegram Bot](../telegram/telegram-bot.md)
+Telegram bot wallets never appear on this screen. Create, import, and manage them separately under **💼 Wallets** in the bot. You may register the same address in both products, but no data is shared. → [Telegram Bot](../telegram/telegram-bot.md)
 
 ## Groups & wallet list
 
@@ -36,14 +29,13 @@ The **Bot Wallet (server)** section at the top is a Telegram-only wallet that **
 | **Generate** | Create N new wallets (keys stored automatically) |
 | **Import** | Paste a wallet's **private key** to import (multiple lines = multiple wallets) |
 | **Manage Funds** | Move funds between wallets (below) |
-| **Whitelist check** | Check whether selected wallets are on a drop's WL |
 | **Refresh balances** | Reload balances |
 
 ![Import keys modal](../images/wallet-import.png)
 
 > *The **Add wallets → Paste keys** modal: one private key per line, then **Import**.*
 
-> 🔐 **Private keys are stored encrypted on your PC only** (never sent to the server). Still, use a **burner wallet** for minting.
+> 🔐 **Desktop app wallet keys are encrypted with Windows DPAPI and stored only on your PC**; license and update services never receive them. Telegram bot wallets are separate and use encrypted server custody. Use a **burner wallet** for minting in either product.
 
 ## 💸 Manage Funds (Disperse / Consolidate)
 

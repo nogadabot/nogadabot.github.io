@@ -1,36 +1,18 @@
-# Proxies (recommended + buy)
+# Choosing a proxy
 
-Proxies spread your requests across multiple IPs to avoid bot detection and bans. **Most regular mints don't need them**; they help when you have many wallets or do website-based tasks.
+A proxy is not a required purchase. Direct contract minting usually has a shorter path without one. Consider proxies only when many wallets call a signed/voucher API at once or when you intentionally require a specific egress route.
 
-## Types
+## Check before choosing
 
-* **Residential**: real home IPs. Billed per GB, usable while data remains. Slower (high ping). Beginner-friendly; good for WL sites / bulk tasks.
-* **ISP**: faster and more stable. Usually billed per IP per month. Good for reliability-sensitive tasks like running Discord.
+* It can reach the target-chain RPCs and required API domains.
+* Latency and failure rate are stable in the app's **Test all** result.
+* Region, concurrent connections, traffic limits, and authentication fit your use.
+* Its failure behavior matches the task's fail-closed route policy; Nogada will not silently switch to direct.
 
-> 💡 It's good to have both, but **Residential** is a fine start.
+Format:
 
-## Residential picks
-
-* **Birdproxies**: [birdproxies.com](https://birdproxies.com), reliable for web3 sites, data never expires.
-* **Primed Proxies**: [primedproxies.com](https://www.primedproxies.com/residential)
-* **ProxyCue**: [proxycue.com](https://proxycue.com)
-* **Zesty Proxies**: [zestystore.com](https://zestystore.com/proxies/pricing/resis/premium)
-
-## ISP picks
-
-* **StatProxies**: [statproxies.com](https://www.statproxies.com), pricier but more reliable, unlimited data.
-* **HexProxy**: [hexproxy.com](https://hexproxy.com/pricing)
-
-## Proxy testing
-
-* **Testmyproxies**: [testmyproxies.com](https://testmyproxies.com), check if bought proxies are alive/fast.
-
-## Format
-
-Enter proxies in the Nogada [Proxies] screen in this format:
-
-```
+```text
 host:port:username:password
 ```
 
-> ⚠️ Links/pricing change often. If a link is down, search for the provider name. Check reputation before buying.
+Providers, pricing, and terms change frequently. Check current reputation and refund terms, then test a small amount before committing.

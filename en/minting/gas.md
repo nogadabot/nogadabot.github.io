@@ -1,42 +1,37 @@
-# Gas Settings Explained
+# Gas Settings
 
-Gas settings decide your minting **success rate and cost**. Once you grasp the idea, it's not hard.
+Gas affects transaction inclusion probability and maximum cost. A high value never guarantees ordering or mint success.
 
-## Two gas modes
+## Auto and Custom
 
-### 🔄 Auto
+### Auto
 
-The app **raises gas automatically to match market conditions** (looks at pending transactions and sets the priority fee a bit higher).
+During task preparation, Nogada computes send fees from the current network base fee and priority suggestion. Scheduled tasks prepare the value before launch and add no new lookup after T0.
 
-* **When**: ample supply or less competitive mints, non-urgent mints.
-* Pro: no thinking needed. Con: occasionally a bit pricier than necessary.
+Auto does not keep raising an already-submitted transaction. Each nonce launches once; there is no automatic RBF or automatic fee escalation.
 
-### 🎯 Custom
+### Custom
 
-You set the **Max fee** and **Priority fee** directly.
+You set **Max fee** and **Priority fee** directly. The task preserves the caps and tip you chose. Stable, whose chain rules do not use priority, sends tip as 0.
 
-* **When**: hyped mints, low supply, gas wars, high-profit mints.
-* You decide the value, preview cost with the [gas calculator](../app-guide/tools.md) first.
-* For a **slow/guaranteed mint**, keep Max moderate and **Priority around 0.1** = cheapest mint.
+## Gas Limit
 
-> In Nogada, set the defaults for **auto tip multiplier** and **minimum priority (gwei)** in [Settings → Engine](../app-guide/settings.md), and adjust per task.
+Gas Limit caps the computation a transaction may consume.
 
-## ⚠️ Leave Gas Limit blank
+* Blank or 0 estimates it during task preparation.
+* A manual value is used exactly as configured.
+* Too low can revert out of gas; lowering the limit does not reduce the price of gas actually consumed.
 
-* Gas Limit is the "upper bound of work for this transaction." **Lowering it does NOT save fees.**
-* **Leave it blank or 0** so the app estimates it safely.
-* Setting it too low yourself causes **"out of gas" failure**: you **lose the gas fee.** Don't touch it unless you're an expert.
+## Cost display
 
-## Keep enough balance
+The displayed estimate is a maximum or projection based on selected gas and Gas Limit. Receipt cost can differ with actual usage and base fee. A low-balance estimate is information only and never blocks Start; the network makes the final decision.
 
-When using high custom gas, keep **20–50% more ETH than the estimate** in the wallet. Complex contracts can require a larger gas limit and more ETH, and if it falls short, the transaction won't go through at all.
+## Boost
 
-## Flashbots (advanced)
+To change gas on a submitted transaction, press **Boost** on the task. Boost is a user-requested replacement at the same nonce and never runs automatically. Nogada does not replace a transaction that is already mined or whose exact target cannot be verified.
 
-In [Settings → Engine](../app-guide/settings.md), enabling Flashbots bundles submits transactions directly to block builders instead of the public mempool (anti-frontrunning, etc.). Leave it default if unsure.
+## Flashbots
 
-## There's no perfect answer
-
-Low-supply FCFS (100–300 items, done in 1–2 blocks) depends on **everyone's gas, RPC speed, internet, and the project's API state**: sometimes it comes down to milliseconds. There's no "input this and you'll always succeed." Build your own instinct with experience.
+When selected on Ethereum mainnet, Flashbots submits through a supported private bundle path rather than the public mempool. A private-path failure never silently falls back to public propagation.
 
 Next → [Transaction Boost](boost.md)

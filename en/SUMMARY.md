@@ -28,8 +28,9 @@
 
 ## 🎯 Minting Guide
 
+* [Smart Mint: from link to task](minting/smart-mint.md)
 * [Mint Modes, Instant·Safe·Spam (explained)](minting/modes.md)
-* [Whitelist (WL) Mint](minting/whitelist.md)
+* [Signed and Allowlist Mints](minting/whitelist.md)
 * [Public Mint](minting/public.md)
 * [Gas Settings Explained](minting/gas.md)
 * [Transaction Boost (speedup)](minting/boost.md)

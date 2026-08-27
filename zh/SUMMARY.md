@@ -28,8 +28,9 @@
 
 ## 🎯 铸造指南
 
+* [智能铸造：从链接到任务](minting/smart-mint.md)
 * [铸造方式：即时·安全·连发（完全攻略）](minting/modes.md)
-* [白名单（WL）铸造](minting/whitelist.md)
+* [签名与 Allowlist 铸造](minting/whitelist.md)
 * [公开铸造](minting/public.md)
 * [Gas 设置完全攻略](minting/gas.md)
 * [交易加速（speedup）](minting/boost.md)
