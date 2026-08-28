@@ -5,10 +5,11 @@ Newest version first. The app auto-updates to the latest version every time you 
 ## v0.9.35
 
 - Smart Mint now resolves supported project mint sites and direct contracts that use verified Blockscout ABIs and on-chain group minting, including Robinhood Chain. Group price, start state, supply, and collection sold-out status come from contract facts without blocking the user's phase choice or launch.
-- Contract ABI lookup now uses the chain selected by the user across supported EVM explorers and verified-source fallbacks. Smart Mint requires an explicit chain choice, and the task editor automatically loads verified callable functions after a valid contract is entered.
-- Minted NFTs are always received by the wallet that signs the mint transaction. Separate mint-recipient controls were removed from the app and bot, and older tasks that target another recipient stop before broadcast.
+- Contract ABI lookup now uses the selected chain across supported EVM explorers and verified-source fallbacks. Smart Mint requires an explicit chain choice, while the task editor loads verified callable functions automatically after a valid contract is entered.
+- Minted NFTs now always belong to the wallet that signs the mint transaction. Separate mint-recipient controls were removed from the app and bot, and older tasks that target another recipient stop before broadcast.
 - The task editor's RPC picker no longer stacks group headers over endpoint names and URLs. Long RPC names, addresses, connection state, and selection controls remain readable on every chain.
-- Telegram Smart Mint now starts with a link or contract address only. The next step always asks the user to confirm the chain and then choose the exact phase. Quantity, launch mode, schedule, and gas are available as buttons on the normal mint-settings screen; the legacy one-line command remains available for experienced users.
+- Telegram Smart Mint now starts with only a link or contract address, then always asks the user to confirm the chain before lookup. Exact phase, quantity, launch mode, schedule, and gas are configured with buttons in the normal setup flow; the legacy one-line command remains available for experienced users.
+- Future SeaDrop GTD and FCFS tasks now keep the exact signed or allowlist mint function from setup through voucher arrival, so a valid T0 voucher is broadcast instead of being mistaken for a changed mint method.
 - Telegram phase, created-task, and terminal-result cards now show the essential price, limit, schedule, wallet, success, failure, pending, mint-count, and short transaction-link facts without repeated nonce or custody explanations.
 
 ## v0.9.34
