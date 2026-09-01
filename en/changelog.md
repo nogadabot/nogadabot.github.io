@@ -2,6 +2,15 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.37
+
+- Telegram Smart Mint now starts when you send only a mint link or contract address. The compact setup lets you confirm or change wallets, chain, phase, quantity, launch mode, schedule, and gas with buttons before creating the task.
+- The app no longer asks users to enter an expected NFT contract or expected mint quantity. Confirmed transactions now distinguish a verified mint, contradictory mint evidence, and insufficient evidence, while showing the actual minted quantity found on-chain.
+- Telegram task details and retry notices are shorter and focus on launch settings, the actual transaction state, and duplicate-mint risk. Smart Mint vouchers and the selected wallet scope remain intact when settings are changed.
+- If a project moves the selected phase after a Smart Mint task is created, an untouched automatic schedule now follows that same exact phase in both the app and bot. Times edited by the user are never overwritten.
+- Task results now use plain language, RPC groups clearly say when only that group will be used, and Smart Mint or ABI lookup failures show short recovery guidance instead of raw internal errors.
+- Contract function lookup now loads verified ABIs even when a public explorer rejects generic client requests. App and Telegram Smart Mint use the task's selected RPC pool and move to the next node when one endpoint is unavailable or rate-limits a batch. Queued bot tasks also tolerate slower RPC preparation and retry incomplete warmups promptly before launch.
+
 ## v0.9.36
 
 - Captured mint transactions that previously delivered an NFT to an address other than the signing wallet can no longer create or restart a task. Normal mint routes remain signer-only, while advanced ABI and Hex calls keep their literal calldata without offering a separate mint-recipient setting.
