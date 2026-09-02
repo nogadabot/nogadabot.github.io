@@ -2,6 +2,11 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.38
+
+- Scheduled spam mints now prepare no-batch gas reads in parallel and give a single RPC the full bounded pre-open window, reducing missed launches without adding an earlier query.
+- The Telegram bot now reports an underfunded mint wallet as an insufficient-balance problem instead of incorrectly telling the user to change gas options.
+
 ## v0.9.37
 
 - Telegram Smart Mint now starts when you send only a mint link or contract address. The compact setup lets you confirm or change wallets, chain, phase, quantity, launch mode, schedule, and gas with buttons before creating the task.
