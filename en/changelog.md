@@ -2,6 +2,13 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.39
+
+- The desktop dashboard now brings together local readiness, the next task, issues and confirmed results. Navigation groups advanced tools while keeping existing settings and actions accessible.
+- Task quantities, network-adjusted countdowns, token costs and unconfirmed results are clearer. Dashboard loading failures distinguish unavailable data from the last saved view.
+- Telegram Smart Mint, task lists and reports use consistent sections and clearer buttons. Step-by-step quantity, schedule and gas settings preserve all mint options.
+- Task deletion now checks ownership and handles journal cleanup safely. Frontend loading and dependencies were updated to reduce bundle size and fix loading errors.
+
 ## v0.9.38
 
 - Scheduled spam mints now prepare no-batch gas reads in parallel and give a single RPC the full bounded pre-open window, reducing missed launches without adding an earlier query.
