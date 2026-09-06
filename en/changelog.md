@@ -2,6 +2,15 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.40
+
+- Wallet, RPC and task loading now distinguishes unavailable, pending, stale and genuinely empty data. Retry reloads data without replaying Start.
+- Manual Boost changes reach each running wallet in order and retain the chosen fees across private replacements and the next nonce. Automatic fee escalation remains disabled.
+- Telegram task results are stored durably and resume after delivery failures or server restarts without repeating the mint. Recipient checks and per-part progress protect delayed reports; an interrupted acknowledgement can still cause a duplicate part.
+- Smart Mint and manual ABI/Hex entries are clearly distinguished. Creating the first task group continues into the editor, PnL calculation precedes optional card styling, and text contrast and desktop menu behavior are improved.
+- Telegram task lists are more compact while preserving details and controls. Bot wallets support selected-chain native balances, and RPC settings provide safe details, connection checks and deletion confirmation. Delayed replies recheck the active login.
+- App and bot labels now name numeric units, per-wallet scope, and blank or zero defaults. Native withdrawals reject invalid addresses or chains and cannot reuse an input session after the login changes.
+
 ## v0.9.39
 
 - The desktop dashboard now brings together local readiness, the next task, issues and confirmed results. Navigation groups advanced tools while keeping existing settings and actions accessible.
