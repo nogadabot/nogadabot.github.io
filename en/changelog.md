@@ -2,9 +2,16 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.42
+
+- Telegram's main menu is simpler and Supply Watch now clearly describes total-supply increases instead of mint-open alerts.
+- Bot private-key exports are automatically removed from Telegram after about 60 seconds when message tracking is available, with a clear manual-delete fallback.
+- Settings, Quick Task, Proxy, NFT and Smart Mint screens now distinguish loading failures from genuinely empty or disabled states and provide a direct Retry action.
+- Dashboard watch updates no longer overlap, saved RPC overrides survive hiding and re-showing a chain, and keyboard navigation is improved across selectable settings.
+
 ## v0.9.41
 
-- Telegram Smart Mint now accepts an exact SeaDrop signed voucher without requiring a second OpenSea phase lookup. The signed stage, window, price and wallet limit stay bound to the supplied calldata.
+- Telegram Smart Mint now automatically fetches each wallet's SeaDrop signed mint data when a GTD or FCFS phase opens. It uses the anonymous OpenSea flow by default or your configured OpenSea Drops API key, then broadcasts as soon as the data is available while preserving the exact signed stage, window, price and wallet limit.
 - Eligibility checker modules now fail closed when an API omits or changes its eligibility fields, and the Admin screen can manage the exact phase-eligibility field used by each module.
 
 ## v0.9.40
