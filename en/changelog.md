@@ -2,6 +2,11 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.41
+
+- Telegram Smart Mint now accepts an exact SeaDrop signed voucher without requiring a second OpenSea phase lookup. The signed stage, window, price and wallet limit stay bound to the supplied calldata.
+- Eligibility checker modules now fail closed when an API omits or changes its eligibility fields, and the Admin screen can manage the exact phase-eligibility field used by each module.
+
 ## v0.9.40
 
 - Wallet, RPC and task loading now distinguishes unavailable, pending, stale and genuinely empty data. Retry reloads data without replaying Start.
