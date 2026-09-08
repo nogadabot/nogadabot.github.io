@@ -2,6 +2,14 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
 
+## v0.9.43
+
+- Tasks now keep STATUS compact and use a separate RESULT area for confirmed mint evidence, transaction links, readable failure reasons and a wallet-level result summary without crowding row actions.
+- Task details include a Broadcast Flight Recorder: first broadcast and RPC acceptance are shown in milliseconds, while on-chain confirmation is shown in seconds from the recorded run evidence.
+- Wallets can open a clear deposit QR card with network, address and copy controls. App notification settings independently control Windows alerts for mint outcomes and Supply Watch events.
+- Supply Watch v2 reports factual supply increases, percentage milestones and sudden mint-rate acceleration without starting a mint. Telegram has its own independent result and Supply Watch notification controls plus saved local timezone scheduling with second-level countdowns.
+- Rapid-fire minting now stops after a reverted transaction is confirmed as sold out. Telegram also preserves more specific gas, fee and tip failure guidance instead of collapsing those errors into a generic gas message.
+
 ## v0.9.42
 
 - Telegram's main menu is simpler and Supply Watch now clearly describes total-supply increases instead of mint-open alerts.
