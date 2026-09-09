@@ -1,37 +1,18 @@
-# Gas Settings
+# Gas settings
+Gas affects transaction cost and network acceptance or processing. Higher gas does not guarantee mint success or ordering.
 
-Gas affects transaction inclusion probability and maximum cost. A high value never guarantees ordering or mint success.
+| Field | Meaning |
+|---|---|
+| Gas Limit | Maximum gas the transaction may consume |
+| Max Fee | Maximum fee per unit of gas |
+| Priority Fee / Tip | Priority component on chains that support it |
+| Auto | Calculated from network information during preparation |
+| Custom | Values chosen by the user |
 
-## Auto and Custom
+**Gwei is a price unit.** Lowering Gas Limit does not lower that unit price, and an insufficient limit can cause an out-of-gas failure. Check the meaning of blank/zero values and the selected chain's support.
 
-### Auto
+Auto gas does not continually replace a sent transaction with a more expensive one. The app's [Boost](boost.md) is an explicit user-requested replacement.
 
-During task preparation, Nogada computes send fees from the current network base fee and priority suggestion. Scheduled tasks prepare the value before launch and add no new lookup after T0.
+Estimated and actual receipt costs can differ. Do not combine an ERC-20 mint payment with native-coin gas as though they used the same unit.
 
-Auto does not keep raising an already-submitted transaction. Each nonce launches once; there is no automatic RBF or automatic fee escalation.
-
-### Custom
-
-You set **Max fee** and **Priority fee** directly. The task preserves the caps and tip you chose. Stable, whose chain rules do not use priority, sends tip as 0.
-
-## Gas Limit
-
-Gas Limit caps the computation a transaction may consume.
-
-* Blank or 0 estimates it during task preparation.
-* A manual value is used exactly as configured.
-* Too low can revert out of gas; lowering the limit does not reduce the price of gas actually consumed.
-
-## Cost display
-
-The displayed estimate is a maximum or projection based on selected gas and Gas Limit. Receipt cost can differ with actual usage and base fee. A low-balance estimate is information only and never blocks Start; the network makes the final decision.
-
-## Boost
-
-To change gas on a submitted transaction, press **Boost** on the task. Boost is a user-requested replacement at the same nonce and never runs automatically. Nogada does not replace a transaction that is already mined or whose exact target cannot be verified.
-
-## Flashbots
-
-When selected on Ethereum mainnet, Flashbots submits through a supported private bundle path rather than the public mempool. A private-path failure never silently falls back to public propagation.
-
-Next → [Transaction Boost](boost.md)
+Supported Flashbots routes on Ethereum mainnet use private submission. Builder acceptance is not block inclusion and does not imply silent public fallback after failure.

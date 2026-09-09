@@ -1,54 +1,18 @@
 # Smart Mint: from link to task
+Smart Mint resolves a project link or contract into minting-task settings. Resolving a link or creating a task does not submit a transaction.
 
-Smart Mint resolves a user-supplied mint target into a task draft. **Resolving or choosing a phase never broadcasts**; the created task launches only from Start in Tasks.
+## Basic flow
+1. Enter a project mint link, OpenSea link, explorer link or contract address.
+2. Confirm the chain where the contract is deployed. In the bot, select the chain yourself.
+3. Choose the exact phase published by the project.
+4. Review wallets, quantity per wallet, total target, price, gas and schedule.
+5. Create the task, then press **Start** from the task list.
 
-## Accepted inputs
+Do not substitute GTD, FCFS and Public phases based only on their names. Prices, times, wallet limits and signature requirements can differ. Missing information is not treated as Public or ended.
 
-* NFT or minter contract address
-* Etherscan-style block-explorer URL
-* OpenSea collection, item, or assets URL
-* Marketplace or launchpad URL
-* Official project mint-site URL
+## If automatic lookup fails
+Check the project's official collection link, contract and chain. If the route still cannot be resolved, use a verifiable ABI, function arguments or exact calldata in the [task editor](../app-guide/tasks.md). Another wallet's signature or proof may not work for your wallet.
 
-## Workflow
+Normal signed-mint users do not need to paste vouchers manually. Supported routes retrieve [wallet-specific execution data](whitelist.md) automatically.
 
-1. Choose the contract's deployment chain, paste a link or contract, and select **Resolve mint route**.
-2. If the project registered multiple phases, they appear with their exact names. Choose one.
-3. Review chain, transaction target, NFT target, wallets, quantity per wallet, total target quantity, value, gas, and schedule.
-4. Select **Create task**.
-5. Open **Tasks**, select the task, and press **Start**.
-
-There is no “Auto (best phase)”. Nogada does not choose a phase on the user's behalf.
-
-Direct contract lookup uses the chain you explicitly selected and searches supported EVM explorer and verified-source fallbacks, including Blockscout and Sourcify. A verified ABI loads callable functions automatically in the task editor. If no ABI is available, Nogada distinguishes an existing contract from an address with no contract code or a chain/RPC that could not be checked instead of treating every failure as the same error.
-
-## Telegram fast path
-
-In the Telegram bot, tap **Smart Mint** or send `/mint`. A single bot wallet is selected automatically; with multiple wallets, choose the execution scope. Then send only a supported project-mint, marketplace/OpenSea, explorer, launchpad URL, or `0x` address. Choose the chain with a button, then choose the exact project phase.
-
-After phase selection, use the mint-settings buttons to set quantity per wallet, launch mode, schedule, and gas, then create the task. A future phase pre-fills its published start and end times when available. The legacy one-line flags remain an optional power-user route.
-
-## Phase truth
-
-* Exact phase names from API, on-chain, or project data are preserved.
-* A phase with no index or name is never rewritten as Public index 0.
-* Current, upcoming, or ended appears only when complete, reliable timing supports it.
-* Missing or conflicting timing remains unknown instead of being guessed.
-* Eligibility/WL badges are not shown and guessed eligibility never blocks selection or Start.
-
-## If a link cannot be resolved
-
-A valid link can still be protected by client rendering, region restrictions, bot protection, or missing public metadata. Try, in order:
-
-1. The project's OpenSea collection or block-explorer URL
-2. The actual minter/NFT contract and exact chain
-3. Fetch ABI in the task editor
-4. Exact function arguments or raw calldata published by the project
-
-Nogada never invents a Public phase or contract merely because lookup failed.
-
-## Quantity and result
-
-Quantity is requested per wallet and total target multiplies it by selected wallet count. A known per-transaction cap is handled with exact nonce chunks, never a silent reduction. The signing wallet always receives the mint, and **Minted** appears only when the receipt proves the expected NFT contract, signing wallet, and quantity.
-
-Next → [Tasks](../app-guide/tasks.md)
+Review the actual target, phase, quantity and value in the created task. Saved settings and transaction evidence take precedence over guesses.

@@ -1,28 +1,10 @@
-# 가스 트래커 & 유용한 도구
+# 탐색기와 기술 자료
+- [Etherscan Gas Tracker](https://etherscan.io/gastracker): Ethereum 가스 참고
+- [Etherscan](https://etherscan.io): Ethereum 거래·영수증·컨트랙트 확인
+- [Blockscout 문서](https://docs.blockscout.com): 지원 탐색기 사용 안내
+- [OpenSea 개발자 문서](https://docs.opensea.io): API와 지원 기능 확인
+- [Ethereum 개발자 문서](https://ethereum.org/developers/docs/): 거래·가스·스마트 컨트랙트 개념
 
-민팅할 때 곁에 두면 좋은 외부 도구들입니다.
+체인이 다르면 해당 체인의 공식 탐색기를 사용하세요. 다른 거래에서 복사한 calldata는 지갑·가격·수량·서명·유효기간이 다를 수 있습니다. 도구나 AI의 설명만으로 그대로 실행하지 말고 실제 호출 내용을 확인하세요.
 
-## ⛽ 가스 시세 확인
-
-* **Etherscan Gas Tracker**: [etherscan.io/gastracker](https://etherscan.io/gastracker), 이더리움 실시간 가스.
-* **Blocknative Gas Estimator**: [blocknative.com](https://www.blocknative.com), 가스 예측.
-
-> 💡 Nogada 자체 [가스 계산기](../app-guide/tools.md)와 하단 상태줄의 실시간 가스도 함께 보세요.
-
-## 🔍 컨트랙트 읽기
-
-* **Etherscan**: [etherscan.io](https://etherscan.io), 컨트랙트의 민팅 함수(Write Contract), 다른 사람의 민팅 트랜잭션 입력 데이터(hex)를 확인. 민팅 함수/hex를 복사할 때 필수.
-
-> 💡 함수·hex가 헷갈리면 **ChatGPT / Claude**에 "이 컨트랙트의 민팅 함수와 인자가 뭐야?"라고 물어보세요. 요즘 AI는 컨트랙트를 잘 읽습니다.
-
-## 📊 지갑/NFT 추적
-
-* **NFTBank**: [nftbank.ai](https://nftbank.ai), 지갑의 NFT 포트폴리오·가치 추적.
-
-> 💡 Nogada 안에서도 [NFT 보유](../app-guide/nft.md)와 [손익(PnL)](../app-guide/pnl.md)으로 확인할 수 있습니다.
-
-## 🌐 무료 RPC
-
-* **Chainlist**: [chainlist.org](https://chainlist.org), 체인별 공개 RPC 주소 모음.
-
-> ⚠️ 외부 사이트 링크는 수시로 바뀝니다. 접속이 안 되면 이름으로 검색하세요.
+앱 안의 계산은 [도구](../app-guide/tools.md), 실제 결과는 [결과 요약](../app-guide/results.md)에서 확인합니다.

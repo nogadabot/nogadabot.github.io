@@ -1,50 +1,20 @@
-# Settings
+# App settings
+The current settings sections are **General, Language, Integrations, Launch engine, Chains · RPC, License and Quick task setup**. A saved setting belongs to the app on this PC unless its description says otherwise.
 
-Configure app behavior and API keys. There are **7 tabs** on the left.
+## General and language
+Adjust zoom, startup behavior, privacy and Windows notification preferences. Choose English, Korean or Simplified Chinese; the app remembers that choice locally. The app displays local times using Windows time-zone settings, not the Telegram bot's preference.
 
-## General
+**Next update:** first submission, RPC acceptance and on-chain receipt notifications are separate options and default to off. Mint result categories remain separate.
 
-* **UI scale**: zoom the whole UI 70–140% (saved on this PC).
-* **Run on startup**: auto-launch the desktop app minimized at Windows login. It has no effect on whether the Telegram bot runs.
-* **Browser extension**: connect the Nogada Capture extension (detected: Chrome/Edge).
-* **Logs**: open the folder where task/engine output is recorded (for troubleshooting).
-* **Check/Apply update** · **Factory reset**: use carefully.
+## Integrations
+OpenSea keys can serve signed mint data as well as supported market operations. Alchemy data endpoints are chain-specific and support relevant NFT/PnL queries. An Etherscan V2 key expands ABI lookup and is also required by the existing Stable NFT lookup route; this does not imply support for all Stable market features. Webhooks apply to the corresponding notification feature.
 
-## Language
+An API key is not universally required or universally unnecessary. Follow the feature's actual request and error message. App keys are not copied to the bot.
 
-* Switch **English / 한국어 / 简体中文**. The whole app changes instantly.
+## Launch engine and Chains · RPC
+Review gas defaults, broadcast settings, supported private submission options, visible chains and public RPC overrides. Do not treat every blank or zero field as “unlimited”; read that field's description. Auto gas does not automatically increase fees on a transaction already sent.
 
-## Integrations: API keys
+## License and quick setup
+License controls manage app activation and device binding. Quick-task defaults help create new tasks; they do not automatically start them. Check the saved task before pressing Start.
 
-> These are **optional**. **Minting works without keys.** Each key enables an extra feature.
-
-| Key | Used for | Get it at |
-|---|---|---|
-| **OpenSea API key** (≤5) | listing status · best offers · listing/accept | docs.opensea.io |
-| **Alchemy URL** (per chain) | NFT holdings · PnL | [alchemy.com](https://www.alchemy.com) |
-| **Etherscan key** | Fetch ABI · explorer lookups | [etherscan.io](https://etherscan.io) |
-| **Captcha keys** (CapMonster/CapSolver/2captcha) | auto-solve captcha (only some mints) | each provider |
-| **Discord webhook** | mint success/fail alerts to Discord | Discord channel settings |
-
-More links → [Resources](../resources/nodes.md)
-
-## Engine: minting behavior
-
-* **Gas**: auto tip multiplier (×), minimum priority (gwei floor).
-* **Flashbots**: bundle on/off, window/priority/max, reputation key (copy/reset).
-* **Spam guardrail (sec)**: safety window for spam minting (blank = off).
-* **Multi-RPC broadcast**: send transactions to several RPCs at once (faster).
-
-## Network
-
-* **Per-chain public RPC override**: replace the default public RPC.
-* **Show/hide chains**: hide chains you don't use.
-
-## License
-
-* **Activate / Deactivate (release device)**: release here when switching PCs, then activate on the new one.
-* **HWID**: this machine's identifier (copyable).
-
-## Quick task setup
-
-* **Quick task wallets / RPCs**: save the defaults used when creating a quick task. This only creates a task; open **Tasks** and press **Start** to broadcast it.
+Updates and data reset are different actions. A refresh is not a reset, and deleting local data is not a routine fix for a failed lookup.

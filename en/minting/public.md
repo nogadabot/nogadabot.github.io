@@ -1,31 +1,13 @@
-# Public Mint
+# Public mints
+Select the actual Public phase published by the project. An incomplete phase is not automatically treated as Public.
 
-A public mint is a route the project has opened for anyone to call. Nogada never invents a Public phase from an unnamed or indexless phase.
+1. Enter the link or contract in Smart Mint.
+2. Check the chain and the Public phase's price, time and quantity conditions.
+3. Save wallets, quantity, gas and schedule, then create a task.
+4. Press Start from the task.
 
-## Create with Smart Mint
+If automatic lookup is unavailable, use a [manual ABI/Hex task](../app-guide/tasks.md). Check the actual quantity in the arguments/calldata and the value per transaction. Changing receipt-verification quantity alone does not change the call.
 
-1. Paste a contract, block-explorer, OpenSea collection/item/assets, marketplace, launchpad, or project mint link into **Smart Mint**.
-2. Review the exact phase names registered by the project and any verifiable time and price.
-3. Choose the phase, wallets, quantity per wallet, gas, and start time.
-4. Select **Create task**.
-5. Open **Tasks**, select the created task, and press **Start**.
+A free mint can still require gas. RPC acceptance or a successful receipt status alone does not prove that an NFT was received; check [the result](../app-guide/results.md).
 
-Current, upcoming, and ended states appear only when complete, reliable timing supports them. Incomplete timing remains unknown; it is never guessed as Public or Ended.
-
-## Create directly from a contract
-
-When automatic resolution is unavailable, use **Tasks → + New task**.
-
-1. Verify the actual chain and transaction target contract.
-2. Use **Fetch ABI** to choose the mint function, or enter the exact signature/arguments or raw calldata.
-3. Enter the **requested quantity per wallet** and the **total native-token value sent in one transaction**.
-4. If a router/shared minter emits NFTs from another contract, enter the **expected NFT contract**.
-5. Choose wallets and RPCs, create the task, then launch from **Start in Tasks**.
-
-Expected quantity for ABI/Hex does not change calldata or value. Nogada also does not guess arbitrary calldata semantics to block a launch.
-
-## Success truth
-
-After submission, Nogada reconciles the same transaction receipt. **Minted** requires a successful receipt proving the exact expected NFT contract, signing wallet, and Transfer quantity. If receipt status succeeds but the NFT result cannot be proven, it is **Mint unverified**.
-
-Next → [Mint Modes](modes.md) · [Gas Settings](gas.md)
+Next: [Modes](modes.md) · [Gas](gas.md)

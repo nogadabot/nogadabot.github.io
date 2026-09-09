@@ -1,52 +1,51 @@
-# Table of contents
+# Contents
 
-* [About Nogada](README.md)
+* [About and version coverage](README.md)
 
-## 🚀 Getting Started
+## Getting started
 
-* [⬇️ Download & Install](getting-started/download.md)
-* [1. Installation](getting-started/installation.md)
-* [2. Activate Your License](getting-started/license.md)
-* [3. First-Time Setup (5 min)](getting-started/first-setup.md)
-* [4. Recommended Settings (optional)](getting-started/recommended-settings.md)
+* [Download](getting-started/download.md)
+* [Installation](getting-started/installation.md)
+* [License and sign-in](getting-started/license.md)
+* [Initial app setup](getting-started/first-setup.md)
+* [Optional settings](getting-started/recommended-settings.md)
 
-## 📋 What's New
+## Using the app
 
-* [What changed, by version](changelog.md)
-
-## 📖 Screen-by-Screen Guide
-
-* [Dashboard](app-guide/dashboard.md)
-* [Tasks, the heart of minting](app-guide/tasks.md)
-* [Wallets](app-guide/wallets.md)
-* [NFT (Holdings · Market)](app-guide/nft.md)
-* [PnL (Profit & Loss)](app-guide/pnl.md)
-* [RPC](app-guide/rpc.md)
+* [Dashboard and navigation](app-guide/dashboard.md)
+* [Tasks and Start](app-guide/tasks.md)
+* [Results and flight timing](app-guide/results.md)
+* [Wallets, deposits and funds](app-guide/wallets.md)
+* [Market and NFTs](app-guide/nft.md)
+* [PnL](app-guide/pnl.md)
+* [RPC connections](app-guide/rpc.md)
 * [Proxies](app-guide/proxies.md)
-* [Tools (Gas Calculator)](app-guide/tools.md)
-* [Settings](app-guide/settings.md)
+* [Cost and time tools](app-guide/tools.md)
+* [Settings and integrations](app-guide/settings.md)
 
-## 🎯 Minting Guide
+## Minting setup
 
-* [Smart Mint: from link to task](minting/smart-mint.md)
-* [Mint Modes, Instant·Safe·Spam (explained)](minting/modes.md)
-* [Signed and Allowlist Mints](minting/whitelist.md)
-* [Public Mint](minting/public.md)
-* [Gas Settings Explained](minting/gas.md)
-* [Transaction Boost (speedup)](minting/boost.md)
+* [Smart Mint](minting/smart-mint.md)
+* [Instant, Safe and Spam](minting/modes.md)
+* [Public mints](minting/public.md)
+* [Signed and allowlist mints](minting/whitelist.md)
+* [Gas settings](minting/gas.md)
+* [Boost fee replacement](minting/boost.md)
 
-## 🤖 Telegram Bot
+## Telegram bot
 
-* [Using the Telegram Bot](telegram/telegram-bot.md)
+* [Bot setup, tasks and results](telegram/telegram-bot.md)
+* [Bot wallets and deposits](telegram/wallets.md)
+* [Time zones and schedules](telegram/timezone.md)
+* [Personal notifications](telegram/notifications.md)
+* [Supply Watch](telegram/supply-watch.md)
 
-## 🔗 Resources & Links
+## Help and resources
 
-* [RPC / Nodes (recommended + buy)](resources/nodes.md)
-* [Proxies (recommended + buy)](resources/proxies.md)
-* [Gas Trackers & Useful Tools](resources/tools.md)
-
-## ❓ Help
-
-* [FAQ](help/faq.md)
 * [Troubleshooting](help/troubleshooting.md)
-* [Security & Safety](help/security.md)
+* [FAQ](help/faq.md)
+* [Keys, data and execution](help/security.md)
+* [RPC resources](resources/nodes.md)
+* [Proxy selection](resources/proxies.md)
+* [Technical references](resources/tools.md)
+* [Release history](changelog.md)

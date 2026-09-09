@@ -1,16 +1,16 @@
-# PnL (Profit & Loss)
+# PnL
+Select a chain, collection and wallets to calculate the costs and proceeds supported by the available data. Check **the results and data coverage** before styling a share card.
 
-Calculates your minting cost and profit, and turns it into a **shareable card image**.
+1. Choose the chain and collection contract.
+2. Select the wallets to include.
+3. Check the required data integration and calculate.
+4. Review missing or unverified items, then customize a card if you want.
 
-![pnl](../images/pnl.png)
+Realized PnL, gas, spending and proceeds are different measures. Do not assume every chain, market and external transfer is fully covered. A failed or incomplete query is not a complete zero-value result.
 
-## How to use
+Background and card settings affect presentation only, not transactions or mint outcomes. Review wallet and amount details before sharing.
 
-1. **Collection**: enter the chain + contract address to calculate PnL for.
-2. **Wallets**: check the wallets (group) to include.
-3. **(Optional) Card background**: use the default, or upload your own background to one of the 3 image slots (PNG/JPG/WebP, up to 10MB). Slots are stored on this PC only.
-4. **Calculate**: the result is rendered as a **PnL card** (realized P&L / ROI / gas / total spent / proceeds).
+See [Settings](settings.md) for integrations and [Result summary](results.md) for actual mint outcomes.
 
-> ⚙️ PnL calculation also needs an **Alchemy URL**. Add one per chain in [Settings → Setup](../app-guide/settings.md).
-
-> 💡 Green = profit, red = loss. Just screenshot the card to share it.
+## Export requirements
+Incomplete calculations can be viewed, but copying or downloading a card is restricted. Resolve the missing-data notices and obtain a complete result before exporting. Styling a card does not make its data complete.

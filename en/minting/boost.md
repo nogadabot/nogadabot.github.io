@@ -1,25 +1,12 @@
-# Transaction Boost (speedup)
+# Boost: a user-requested fee replacement
+The app's **Boost** control requests a higher-fee replacement for a pending transaction using the same nonce. It never runs automatically.
 
-When a minting transaction you sent **takes too long to land**, resend it at higher gas.
+1. Check the transaction state and target wallets.
+2. Review the gas values and scope in the Boost screen.
+3. After execution, inspect acceptance and receipts for the original and replacement transactions.
 
-## When to use
+Boost does not turn a confirmed transaction back into a pending one or increase the requested mint quantity. The network may reject the replacement, or the original transaction may confirm first.
 
-* When a task/transaction stays **pending** after running
-* When gas was set too low to land in a block
+Distinguish a gas preview from executing Boost. Follow the current screen's units and limits rather than copying old numeric examples.
 
-## How to use
-
-1. On the [Tasks] screen, select the pending task/transaction.
-2. Click the **Boost (🚀 rocket)** button.
-3. The app **resends the same transaction at a higher priority fee.**
-
-> 💡 In some versions you can type the boost gas directly. Format examples:
-> * `300 150` → Max 300, Priority 150
-> * `300` → both Max and Priority 300
-
-## Notes
-
-* Boost **resends an already-sent transaction at a higher cost.** Gas cost goes up.
-* You can't boost a transaction that's already confirmed (success or failure is final).
-
-> 💡 For a competitive mint, setting [gas](gas.md) high enough from the start beats boosting. Boost is a rescue for when it lands slower than expected.
+The bot and app are independent. The app's Boost button does not control bot tasks. Review [pending and unverified outcomes](../app-guide/results.md) before deciding to run again.

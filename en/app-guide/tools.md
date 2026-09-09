@@ -1,31 +1,12 @@
-# Tools (Gas Calculator · Time Converter)
+# Cost and time tools
+Open **Advanced → Tools** to calculate gas costs and convert times. Using the calculator does not submit a transaction.
 
-Helper tools to **estimate cost and time before minting.**
+## Gas costs
+Compare estimates using mint price, quantity, gas price and gas limit. **Gwei is a gas-price unit; Gas Limit caps gas usage.** The native coin and an ERC-20 mint payment may use different units.
 
-![tools](../images/tools.png)
+The result is an estimate or upper bound based on your inputs. Actual gas usage and network fees can differ; a fixed extra percentage is not guaranteed to cover every transaction.
 
-## ⛽ Gas Planner
+## Time conversion
+Distinguish Unix timestamps in seconds from milliseconds, and compare UTC with your PC's local time. When using a converted value in a schedule, check the input field's time convention.
 
-Estimates how much ETH per wallet a mint will cost.
-
-1. **NFT price (ETH)**: price per mint (0 if free).
-2. **Quantity per wallet**: how many each wallet mints.
-3. **Gas price**: pick a button or type your own:
-   * **Current**: current price as-is
-   * **Current ×1.5 / ×2**: a bit / a lot higher (competitive)
-   * **Spike ×5**: for gas wars
-   * **Custom (gwei)**: your own value
-4. **Total per wallet**: computed **live** from the above (mint cost + gas).
-
-> 💡 Keep **20–50% more ETH than this number** in each wallet to be safe; complex contracts can use more gas.
-
-* **Advanced / Reference table**: expand a per-gas-price cost table.
-
-## 🕐 Time Converter
-
-Converts **Unix timestamp ↔ your local time** both ways. Useful when a project announces "mint starts at Unix 169…s" and you want it in your exact local time.
-
-* Enter Unix seconds → your local time
-* (and vice versa) · **Copy** button to copy the result
-
-> 💡 Knowing the drop time to the second makes a real difference in FCFS mints.
+The bot's personal time-zone setting does not change Windows time. See [Bot time zones](../telegram/timezone.md).

@@ -1,6 +1,6 @@
 # What's New
 
-Newest version first. The app auto-updates to the latest version every time you open it — see [Download](getting-started/download.md) to install.
+Newest version first. These entries describe each release at the time it shipped. See [the guide overview](README.md) for current instructions and [Download](getting-started/download.md) for installation and updates.
 
 ## v0.9.43
 

@@ -1,26 +1,13 @@
-# RPC / 노드 (추천 + 구매)
+# RPC 자료
+RPC 선택은 이름이나 요금제만으로 결정하기보다 실제 사용할 체인과 호출로 테스트하세요. 유료 서비스에도 호출량·동시성·트래픽 한도가 있습니다.
 
-RPC는 민팅 속도·성공률에 직접 영향을 줍니다. 무료로 시작하고, 경쟁 민트가 잦아지면 유료 전용 RPC를 마련하세요.
+## 공식 자료
+- [Alchemy 문서](https://www.alchemy.com/docs)
+- [Infura 문서](https://docs.metamask.io/services/)
+- [QuickNode 문서](https://www.quicknode.com/docs)
+- [dRPC 문서](https://drpc.org/docs)
+- [Chainlist](https://chainlist.org): 체인과 RPC 정보를 찾는 참고 목록
 
-## 무료 (시작용)
+이 목록은 속도·가격 순위나 구매 추천이 아닙니다. 제공사의 지원 체인, 초당 요청 수, 일일·월간 제한, timeout과 실제 거래 전파 지원을 확인하세요. Chainlist에 있는 URL도 공식 프로젝트 자료와 체인 ID를 대조하세요.
 
-* **Chainlist**: [chainlist.org](https://chainlist.org)
-  원하는 체인을 검색해 공개 RPC 주소를 복사한 뒤 Nogada [RPC] 화면에 붙여넣으세요. 핑이 낮은 것만 골라 쓰세요.
-
-## 유료 (경쟁 민트에 강력 추천)
-
-| 제공사 | 방식 | 특징 |
-|---|---|---|
-| **Alchemy**: [alchemy.com](https://www.alchemy.com) | 사용한 만큼 과금 (카드 등록) | 지갑 50개면 보통 월 $1~5. 계정당 RPC URL 다수 발급. 가장 무난. |
-| **DRPC**: [drpc.org](https://drpc.org) | 크레딧 충전 | 속도 제한 없음. 소액 충전으로 오래 씀. 계정당 URL 다수. |
-| **Ankr**: [ankr.com](https://www.ankr.com) | 크레딧 충전 | 큰 인프라. |
-| **QuickNode**: [quicknode.com](https://www.quicknode.com) | 월 구독 | 안정적. |
-| **Infura**: [infura.io](https://www.infura.io) | 무료/유료 | 이더리움 표준. |
-
-## TIP
-
-* **체인마다 잘 되는 제공사가 다릅니다.** 1~3개를 미리 준비해 두고, [RPC] 화면의 **테스트**로 가장 빠른 걸 고르세요.
-* 저공급 선착순(FCFS) 민트에서는 RPC 속도·안정성이 중요합니다. 그런 경우에는 유료 전용 RPC가 유리합니다.
-* 100% 정답은 없습니다. 직접 테스트한 경험이 최고의 기준입니다.
-
-> ⚠️ 링크/요금은 수시로 바뀝니다. 접속이 안 되면 제공사명으로 검색하세요.
+앱에서 등록하고 확인하는 방법은 [RPC 연결](../app-guide/rpc.md)을 참고하세요.

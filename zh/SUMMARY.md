@@ -1,52 +1,51 @@
-# 目录 (Table of contents)
+# 目录
 
-* [Nogada 简介](README.md)
+* [简介与适用版本](README.md)
 
-## 🚀 快速开始
+## 开始使用
 
-* [⬇️ 下载 & 安装](getting-started/download.md)
-* [1. 安装步骤](getting-started/installation.md)
-* [2. 激活许可证](getting-started/license.md)
-* [3. 初始必要设置（5分钟）](getting-started/first-setup.md)
-* [4. 推荐附加设置（可选）](getting-started/recommended-settings.md)
+* [下载](getting-started/download.md)
+* [安装与首次运行](getting-started/installation.md)
+* [许可证与登录](getting-started/license.md)
+* [应用初始设置](getting-started/first-setup.md)
+* [按需设置](getting-started/recommended-settings.md)
 
-## 📋 更新日志
+## 应用使用方法
 
-* [各版本变更内容](changelog.md)
+* [仪表盘与菜单](app-guide/dashboard.md)
+* [任务与 Start](app-guide/tasks.md)
+* [结果汇总与广播耗时](app-guide/results.md)
+* [钱包、充值与资金](app-guide/wallets.md)
+* [市场与 NFT](app-guide/nft.md)
+* [盈亏](app-guide/pnl.md)
+* [RPC 连接](app-guide/rpc.md)
+* [代理](app-guide/proxies.md)
+* [费用与时间工具](app-guide/tools.md)
+* [个人设置与集成](app-guide/settings.md)
 
-## 📖 各界面使用说明
+## 铸造设置
 
-* [仪表盘](app-guide/dashboard.md)
-* [任务（Tasks），铸造的核心](app-guide/tasks.md)
-* [钱包（Wallets）](app-guide/wallets.md)
-* [NFT（持有 · 市场）](app-guide/nft.md)
-* [损益（PnL）](app-guide/pnl.md)
-* [RPC](app-guide/rpc.md)
-* [代理（Proxies）](app-guide/proxies.md)
-* [工具（Gas 计算器）](app-guide/tools.md)
-* [设置（Settings）](app-guide/settings.md)
-
-## 🎯 铸造指南
-
-* [智能铸造：从链接到任务](minting/smart-mint.md)
-* [铸造方式：即时·安全·连发（完全攻略）](minting/modes.md)
-* [签名与 Allowlist 铸造](minting/whitelist.md)
+* [Smart Mint](minting/smart-mint.md)
+* [立即、模拟与连发](minting/modes.md)
 * [公开铸造](minting/public.md)
-* [Gas 设置完全攻略](minting/gas.md)
-* [交易加速（speedup）](minting/boost.md)
+* [签名与白名单铸造](minting/whitelist.md)
+* [Gas 设置](minting/gas.md)
+* [Boost 费用替换](minting/boost.md)
 
-## 🤖 Telegram 机器人
+## Telegram 机器人
 
-* [Telegram 机器人使用说明](telegram/telegram-bot.md)
+* [机器人入门、任务与结果](telegram/telegram-bot.md)
+* [机器人钱包与充值](telegram/wallets.md)
+* [时区与预约](telegram/timezone.md)
+* [个人通知设置](telegram/notifications.md)
+* [供应量监测](telegram/supply-watch.md)
 
-## 🔗 资源 & 推荐链接
+## 帮助与资料
 
-* [RPC / 节点（推荐 + 购买）](resources/nodes.md)
-* [代理（推荐 + 购买）](resources/proxies.md)
-* [Gas 追踪器 & 实用工具](resources/tools.md)
-
-## ❓ 帮助
-
-* [常见问题（FAQ）](help/faq.md)
-* [问题排查（安装 · 运行 · 铸造）](help/troubleshooting.md)
-* [安全 & 安全守则](help/security.md)
+* [故障排查](help/troubleshooting.md)
+* [常见问题](help/faq.md)
+* [密钥、数据与执行](help/security.md)
+* [RPC 资料](resources/nodes.md)
+* [代理选择](resources/proxies.md)
+* [技术资料](resources/tools.md)
+* [更新记录](changelog.md)

@@ -1,34 +1,13 @@
-# 1. Installation
+# Installation and first launch
+1. Get the official installer from [Download](download.md).
+2. Open it and follow the installation steps.
+3. Launch Nogada from the Start menu or desktop shortcut.
+4. Read the notices shown in the app and activate your license.
 
-Nogada is a desktop app for Windows 10/11. Installation takes about 2–3 minutes.
+Nogada is a Windows desktop app with a minimum window width of 1024px. If the layout feels cramped, check the app zoom and Windows display scaling. This is not a mobile-app installation.
 
-## 1) Get the installer
+If Windows shows a warning, verify the file source and warning details first. The app's update verification and Windows file-reputation checks are separate mechanisms. If installation remains blocked, send the operator the warning and Windows version, with keys and verification codes hidden.
 
-Download the setup file from the **download link your operator provides**.
+PC sleep can affect scheduled app tasks. To run on the server without the app, set up the [Telegram bot](../telegram/telegram-bot.md) separately.
 
-* `Nogada-Setup-x.x.x.exe`, the **installer** (recommended). Double-click and it installs automatically.
-
-> 💡 **If the download is blocked or fails**: your browser or antivirus (Windows Defender) may block "an app from an unknown publisher." This is common for new, unsigned apps. See "Getting past the warning" below.
-
-## 2) Get past the warning (this is normal)
-
-On first run you may see a blue **"Windows protected your PC" (SmartScreen)** warning.
-
-1. Click **More info**.
-2. Click the **Run anyway** button that appears.
-
-> 💡 If antivirus deletes or blocks the file: add Nogada to your antivirus **exclusion/allow list**, or temporarily disable the antivirus during install. Turn it back on afterward.
-
-## 3) Run the installer
-
-Follow the wizard (Next → Next → Install). When done, a **Nogada** icon appears on your desktop / Start menu.
-
-## 4) First launch
-
-When you open Nogada, the **license key screen** appears first. No key yet? → [2. Activate Your License](license.md).
-
-## 5) Auto-update
-
-Once installed, **you don't have to think about it again.** When a new version ships, the app downloads and updates automatically on launch. (The current version is shown at the bottom-left of the app.)
-
-> ✅ **Summary**: Get installer → get past the warning (More info → Run anyway) → install → enter license → done. Updates are automatic after that.
+Next: [License activation](license.md)

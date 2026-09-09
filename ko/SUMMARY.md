@@ -1,52 +1,51 @@
-# 목차 (Table of contents)
+# 목차
 
-* [Nogada 소개](README.md)
+* [소개와 적용 버전](README.md)
 
-## 🚀 시작하기
+## 시작하기
 
-* [⬇️ 다운로드 & 설치](getting-started/download.md)
-* [1. 설치하기](getting-started/installation.md)
-* [2. 라이선스 활성화](getting-started/license.md)
-* [3. 초기 필수 세팅 (5분)](getting-started/first-setup.md)
-* [4. 추천 부가 세팅 (선택)](getting-started/recommended-settings.md)
+* [다운로드](getting-started/download.md)
+* [설치와 첫 실행](getting-started/installation.md)
+* [라이선스·로그인](getting-started/license.md)
+* [앱 초기 설정](getting-started/first-setup.md)
+* [필요할 때 추가하는 설정](getting-started/recommended-settings.md)
 
-## 📋 변경사항
+## 앱 사용법
 
-* [무엇이 바뀌었나, 버전별](changelog.md)
+* [대시보드와 메뉴](app-guide/dashboard.md)
+* [작업과 Start](app-guide/tasks.md)
+* [결과 요약·발사 기록](app-guide/results.md)
+* [지갑·입금 QR·자금 관리](app-guide/wallets.md)
+* [마켓과 NFT](app-guide/nft.md)
+* [손익(PnL)](app-guide/pnl.md)
+* [RPC 연결](app-guide/rpc.md)
+* [프록시](app-guide/proxies.md)
+* [비용·시간 도구](app-guide/tools.md)
+* [개인 설정·연동](app-guide/settings.md)
 
-## 📖 화면별 사용법
+## 민팅 설정
 
-* [대시보드](app-guide/dashboard.md)
-* [작업 (Tasks), 민팅의 핵심](app-guide/tasks.md)
-* [지갑 (Wallets)](app-guide/wallets.md)
-* [NFT (보유 · 마켓)](app-guide/nft.md)
-* [손익 (PnL)](app-guide/pnl.md)
-* [RPC](app-guide/rpc.md)
-* [프록시 (Proxies)](app-guide/proxies.md)
-* [도구 (가스 계산기)](app-guide/tools.md)
-* [설정 (Settings)](app-guide/settings.md)
+* [Smart Mint](minting/smart-mint.md)
+* [즉시·안전·연사](minting/modes.md)
+* [퍼블릭 민팅](minting/public.md)
+* [서명·Allowlist 민팅](minting/whitelist.md)
+* [가스 설정](minting/gas.md)
+* [Boost 가스 교체](minting/boost.md)
 
-## 🎯 민팅 가이드
+## Telegram 봇
 
-* [Smart Mint: 링크에서 작업까지](minting/smart-mint.md)
-* [민트 방식, 즉시·안전·스팸 (완전정복)](minting/modes.md)
-* [서명·Allowlist 민트](minting/whitelist.md)
-* [퍼블릭 민트](minting/public.md)
-* [가스 설정 완전정복](minting/gas.md)
-* [트랜잭션 부스트 (speedup)](minting/boost.md)
+* [봇 시작·작업·결과 조회](telegram/telegram-bot.md)
+* [봇 지갑과 입금](telegram/wallets.md)
+* [시간대와 예약](telegram/timezone.md)
+* [개인 알림 설정](telegram/notifications.md)
+* [공급량 감시](telegram/supply-watch.md)
 
-## 🤖 텔레그램 봇
+## 도움말과 자료
 
-* [텔레그램 봇 사용법](telegram/telegram-bot.md)
-
-## 🔗 리소스 & 추천 링크
-
-* [RPC / 노드 (추천 + 구매)](resources/nodes.md)
-* [프록시 (추천 + 구매)](resources/proxies.md)
-* [가스 트래커 & 유용한 도구](resources/tools.md)
-
-## ❓ 도움말
-
-* [자주 묻는 질문 (FAQ)](help/faq.md)
-* [문제 해결 (설치 · 실행 · 민팅)](help/troubleshooting.md)
-* [보안 & 안전 수칙](help/security.md)
+* [문제 해결](help/troubleshooting.md)
+* [자주 묻는 질문](help/faq.md)
+* [키·데이터·실행 범위](help/security.md)
+* [RPC 자료](resources/nodes.md)
+* [프록시 선택 기준](resources/proxies.md)
+* [탐색기·기술 자료](resources/tools.md)
+* [업데이트 기록](changelog.md)

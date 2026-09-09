@@ -1,45 +1,24 @@
-# FAQ
+# Frequently asked questions
+## Does the bot work while the app is closed?
+Yes. Bot tasks run independently on the server. App tasks require the app and PC to remain running.
 
-## Which chains are supported?
+## Does my bot time zone change other users' times?
+No. It is stored per private chat ID. The app follows your PC's Windows time zone. See [Time zones](../telegram/timezone.md).
 
-Ethereum mainnet (L1) and major L2/EVM chains, **Arbitrum, Optimism, Base, Polygon, BNB Chain, Avalanche, Linea, Abstract, Zora, Blast, Scroll** and more. You can add custom EVM chains too.
+## Does creating a Smart Mint task send it immediately?
+No. Create the task, then press Start. For a scheduled run, press Start in advance.
 
-## Are my wallets 100% safe?
+## Must I paste a signed voucher?
+Supported standard OpenSea signed routes fetch it automatically. Unsupported custom routes require the correct execution data. See [Signed mints](../minting/whitelist.md).
 
-Wallet safety is the top priority. Desktop app wallet **private keys are encrypted with Windows DPAPI and stored on your PC**; license and update services never receive them. Only the Nogada app on your PC decrypts them to sign mints. The standalone Telegram bot uses separate bot-wallet keys encrypted in server custody for 24/7 signing; those wallets never sync with the app.
+## Is a free mint completely free?
+A zero mint price can still require gas. Check ERC-20 payments separately from native-coin gas.
 
-That said, nothing is 100% safe in web3. Keep large assets in a **vault wallet** that never touches dApps, and use a **burner (small) wallet** for minting/events. → [Security](security.md)
+## Does unverified mean failed?
+It means the result could not be verified. Do not turn it into zero, failure or success by assumption; inspect the existing transaction and evidence.
 
-## Do I need to prepare my own RPC node?
+## Can I use every EVM chain?
+Check the actual chain list and feature support. A listed chain does not guarantee all market or NFT-data routes.
 
-Yes, you need an RPC. **Free** via [Chainlist](https://chainlist.org) public RPCs, and **paid dedicated RPC** (Alchemy/DRPC etc.) for competitive mints. Other EVM chains (Arb/Base etc.) require your own RPC. → [RPC links](../resources/nodes.md)
-
-## I'm new: is it hard to use?
-
-No. Follow the 3 [Getting Started](../getting-started/installation.md) steps and the [Minting Guide](../minting/public.md) to mint in a few clicks. Success rate, though, depends on many variables (gas, competition, project conditions).
-
-## How do I buy a license?
-
-Pay for a subscription on the operator's **Whop page**. → [Activate Your License](../getting-started/license.md)
-
-## Where do I get my license key after paying?
-
-It's **emailed automatically to your purchase email** (check spam). If you didn't get it, send `/redeem youremail` to **@NOGADA\_Mint\_Bot** on Telegram.
-
-## Can I use it on multiple devices?
-
-No, **1 license = 1 PC**. To switch, deactivate (release device) on the old PC, then activate on the new one.
-
-## Refunds?
-
-Only for **install-blocking problems**. Minting success/failure isn't guaranteed (gas, remaining supply, etc.) and isn't refundable.
-
-## Do I really need captcha/proxies?
-
-No. **Minting itself works without captcha, proxies, or API keys.** Captcha is for some protected mints; proxies are for website tasks with many accounts.
-
-## Do you guarantee minting success?
-
-No. Low-supply FCFS is decided by everyone's gas, RPC speed, internet, and project API state, sometimes within milliseconds. Better gas/RPC prep raises your odds.
-
-> More help → [Troubleshooting](troubleshooting.md) · [Security](security.md)
+## Why is a documented button missing?
+Check [version coverage](../README.md). Features marked Next update are not public yet. For purchase, license and device conditions, see [Activation](../getting-started/license.md).

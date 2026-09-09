@@ -1,18 +1,10 @@
 # Choosing a proxy
+A proxy is not a required purchase for every user. First check whether your task needs the [proxy settings](../app-guide/proxies.md).
 
-A proxy is not a required purchase. Direct contract minting usually has a shorter path without one. Consider proxies only when many wallets call a signed/voucher API at once or when you intentionally require a specific egress route.
+- Connectivity to the required RPC and mint-data APIs
+- Consistent latency and failure rates
+- Concurrent-connection and traffic limits, plus authentication format
+- Whether the requested route and region are maintained
+- The provider's current usage, pricing and refund terms
 
-## Check before choosing
-
-* It can reach the target-chain RPCs and required API domains.
-* Latency and failure rate are stable in the app's **Test all** result.
-* Region, concurrent connections, traffic limits, and authentication fit your use.
-* Its failure behavior matches the task's fail-closed route policy; Nogada will not silently switch to direct.
-
-Format:
-
-```text
-host:port:username:password
-```
-
-Providers, pricing, and terms change frequently. Check current reputation and refund terms, then test a small amount before committing.
+Labels such as Residential or ISP do not guarantee speed or reliability. Test the actual route. Do not publish proxy URLs containing credentials.

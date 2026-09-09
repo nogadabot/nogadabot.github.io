@@ -1,28 +1,10 @@
-# Gas 追踪器与实用工具
+# 区块浏览器与技术资料
+- [Etherscan Gas Tracker](https://etherscan.io/gastracker)：Ethereum Gas 参考
+- [Etherscan](https://etherscan.io)：查询 Ethereum 交易、回执与合约
+- [Blockscout 文档](https://docs.blockscout.com)：区块浏览器使用说明
+- [OpenSea 开发者文档](https://docs.opensea.io)：API 与支持的功能
+- [Ethereum 开发者文档](https://ethereum.org/developers/docs/)：交易、Gas 和合约概念
 
-铸造时放在手边很有用的外部工具。
+不同链应使用对应的官方浏览器。复制其他交易的 calldata 时，其中的钱包、价格、数量、签名或有效期可能不同。请核对实际调用，不要仅凭工具或 AI 的说明就直接执行。
 
-## ⛽ 查看 Gas 行情
-
-* **Etherscan Gas Tracker**：[etherscan.io/gastracker](https://etherscan.io/gastracker)，以太坊实时 Gas。
-* **Blocknative Gas Estimator**：[blocknative.com](https://www.blocknative.com)，Gas 预测。
-
-> 💡 也可同时参考 Nogada 内置的 [Gas 计算器](../app-guide/tools.md) 以及底部状态栏的实时 Gas 数据。
-
-## 🔍 读取合约
-
-* **Etherscan**：[etherscan.io](https://etherscan.io)，查看合约的铸造函数（Write Contract）以及他人铸造交易的输入数据（hex）。复制铸造函数/hex 时必备。
-
-> 💡 函数或 hex 看不懂时，请向 **ChatGPT / Claude** 提问："这个合约的铸造函数和参数是什么？"现在的 AI 很擅长解读合约。
-
-## 📊 钱包 / NFT 追踪
-
-* **NFTBank**：[nftbank.ai](https://nftbank.ai)，追踪钱包的 NFT 持仓与价值。
-
-> 💡 在 Nogada 内部也可通过 [NFT 持仓](../app-guide/nft.md) 和 [盈亏（PnL）](../app-guide/pnl.md) 进行查看。
-
-## 🌐 免费 RPC
-
-* **Chainlist**：[chainlist.org](https://chainlist.org)，各链公开 RPC 地址汇总。
-
-> ⚠️ 外部网站链接随时可能变更。若无法访问，请按名称搜索。
+应用内计算参见[工具](../app-guide/tools.md)，已记录的执行结果参见[结果汇总](../app-guide/results.md)。

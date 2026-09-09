@@ -1,26 +1,14 @@
-# NFT (Holdings · Market)
+# Market and NFTs
+View NFTs for a selected chain and wallet group, and manage supported OpenSea/Seaport orders. If the list cannot load, check provider settings and the query error first. A failed lookup does not mean the wallets own no NFTs.
 
-View NFTs you've minted, and buy/sell on OpenSea. There are two tabs at the top: **Holdings / Market**.
+## Holdings
+Select the chain and wallets, then refresh. Configure supported chain-specific NFT data in **Settings → Integrations**. When transferring NFTs, distinguish the token, quantity, source wallet, destination and chain.
 
-![nft](../images/nft.png)
+## Orders and purchases
+Supported routes offer listing creation/cancellation, offer inspection/acceptance, floor sweeps and sniping. A preview is not an executed order. Check currency, price, quantity, fees, gas and target NFTs on the execution screen.
 
-## Common
+**Cancel selected listings** and **cancel all for a wallet/group** have different scopes. Cancel-all also affects that wallet's orders that are not selected or visible. Check each wallet's cancellation transaction and failed/pending results before retrying.
 
-* **Chain selector / Group selector / Refresh**: choose which chain & wallet group to view, and refresh.
+A chain appearing in the selector does not prove that every market or NFT-data route is supported. Follow the guidance for unavailable or unsupported routes.
 
-## 📦 Holdings tab
-
-Shows the NFTs your wallets hold.
-
-> ⚙️ To load holdings, you need an **Alchemy URL**. Add one per chain in [Settings → Setup](../app-guide/settings.md). (Without it, you'll see "Alchemy URL not configured".)
-
-## 🏷️ Market tab
-
-For OpenSea listings & offers. (Most actions need an **OpenSea API key**. → [Settings](../app-guide/settings.md))
-
-* **Live listings**: matches your loaded NFTs against OpenSea's open orders. "Re-check" to refresh.
-* **Cancel All (per group)**: cancel all open listings of every wallet in a group at once (one transaction per wallet). Each group shows its wallet count.
-* **Collection best offer**: preview the current best offer per collection.
-* (Create Listing / Accept Offer are also available here.)
-
-> 💡 **If you only mint, you can ignore this screen.** It's an advanced screen for selling or managing minted NFTs on OpenSea.
+Market actions are separate from [Start on a minting task](tasks.md).

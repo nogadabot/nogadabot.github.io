@@ -1,46 +1,18 @@
 # Troubleshooting
+## Lists are empty or keep loading
+Distinguish a failed query, last known data and a genuinely empty list. Retry the read instead of resetting wallet or task data. Refreshing a list is not the same as starting a mint.
 
-## Download won't work / the file disappears
+## A task does not start
+Check the schedule, selected wallets, chain/RPC, actual phase and displayed error. Gas-limit, max-fee and tip failures refer to different settings. Correct the relevant value rather than repeatedly pressing Start while preparation is pending.
 
-* Antivirus (Windows Defender) or the browser often blocks it. Try downloading the **zip** version, or temporarily allow/exclude it in your antivirus and retry.
-* If a download link is blocked, copy it and **open it in a new tab**.
+## A transaction stays pending
+Inspect its existing hash and receipt first. RPC acceptance is not proof of inclusion. Another Start may create another transaction. If using the app's [Boost](../minting/boost.md), verify the exact pending target and fees.
 
-## The installer won't run
+## The receipt succeeded, but the mint is unverified
+A successful transaction can still lack verified evidence for the expected NFT contract, recipient or quantity. Check the explorer and [Result summary](../app-guide/results.md). An unverified result is not automatically minted again.
 
-* Blue SmartScreen warning → **More info → Run anyway**.
-* Still blocked: **right-click the file → Properties → check "Unblock" → Apply**.
-* Add Nogada to your antivirus **exclusion/allow list**.
+## Installation or authentication fails
+Check the official download source and Windows warning. For licensing, verify the purchase email, code expiry and device limit. Disabling antivirus or deleting data is not the default remedy.
 
-## Activation fails
-
-* Make sure you pasted the key **exactly, no spaces** (`NOGADA-XXXX-XXXX-XXXX-XXXX`).
-* Check your internet (activation needs server verification).
-* If it says "in use on another device" → deactivate on that device or ask the operator to reset it.
-
-## I didn't get my license key
-
-* Check your **email spam folder**.
-* Send `/redeem purchase-email` to **@NOGADA\_Mint\_Bot** on Telegram.
-* If "key not found", confirm the purchase email matches. Still failing → contact the operator.
-
-## Minting transactions won't go out
-
-* Is the **wallet balance** enough (mint price + gas, 20–50% buffer)?
-* Is an **RPC** connected and checked on the task? Test it on the [RPC] screen.
-* Is **gas** too low? See [Gas Guide](../minting/gas.md).
-* **Leave Gas Limit blank**: setting it too low causes "out of gas" failure.
-
-## Transaction stays pending
-
-* Use the **Boost (🚀)** button to re-fire at higher gas. → [Boost](../minting/boost.md)
-
-## Fetch ABI doesn't work
-
-* ABI lookup uses the chain you selected. It checks supported verified explorer sources, including catalog explorers and Blockscout, and then Sourcify. An **Etherscan API key** in [Settings → Integrations](../app-guide/settings.md) improves Etherscan v2 coverage but is not the only lookup route.
-* The result distinguishes a contract with no verified ABI, an address with no contract code, and a chain/RPC that could not be checked. If the contract exists but has no verified ABI, enter the exact function signature/arguments or hex manually.
-
-## Minting started but my task isn't responding
-
-* If the log doesn't change to "pending" within 5–10 seconds after starting, **mint manually on the project site** (backup). Projects sometimes change settings at the last minute.
-
-> If none of these help, **contact the operator with a screenshot**. Steps can vary by Windows version / antivirus.
+## Contacting support
+Provide the app version, chain, task number, time, displayed error and a relevant screenshot. Hide private keys, verification codes, license keys and complete RPC credentials.

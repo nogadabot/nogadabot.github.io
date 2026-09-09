@@ -1,80 +1,31 @@
-# Tasks: where every app mint starts
+# Tasks and Start
+A task saves the chain, contract, phase, wallets, quantity, gas and schedule. **Creating a task and running it are separate actions.**
 
-A task stores what to mint, which wallets to use, and the quantity, gas, and timing. Dashboard remains the first screen, but **every app mint transaction launches only after a task is created and Start is pressed in Tasks**.
+## Create and run
+1. Create a task through [Smart Mint](../minting/smart-mint.md) or the manual ABI/Hex editor.
+2. Review its saved settings in the task group.
+3. Press Start to run now, or press it in advance to prepare a scheduled run.
+4. Check Status and Result; open logs or Result summary when needed.
 
-## Easiest way to create a task
+Group start/stop, bulk editing, duplication and deletion apply to the targets shown on screen. Deleting a task does not cancel transactions already sent. When editing a running task, check the notice explaining when the new settings take effect.
 
-1. Paste a contract, block-explorer, OpenSea collection/item/assets, marketplace, launchpad, or project mint link into **Smart Mint**.
-2. If the project registered multiple phases, choose one by its exact name.
-3. Review wallets, quantity per wallet, gas, start time, and required options.
-4. Select **Create task**.
-5. Open **Tasks**, select the created task, and press **Start**.
+## Quantities and amounts
+**Quantity per wallet**, **selected wallets** and **total target quantity** are different values. A known per-transaction limit may split the exact requested amount into multiple transactions, each potentially requiring gas.
 
-Moving between Smart Mint and Tasks is the intended flow. Resolving Smart Mint or using **Quick task** creates a task; neither broadcasts automatically.
+For manual ABI/Hex tasks, function arguments or calldata define the actual mint quantity. Transaction value is the **total native-coin amount sent with one transaction**, not the price per NFT. Advanced receipt settings specify the NFT contract and quantity to verify; they do not rewrite calldata. The signing wallet receives the mint.
 
-## Task screen
+## Status and Result
+Status remains short; Result shows failure reasons, transaction links and on-chain evidence. See [Reading results](results.md) to distinguish minted, failed, pending and unverified outcomes.
 
-* **Group rail**: organize tasks by project or strategy.
-* **+ New task**: open the manual/advanced task editor.
-* **Quick task**: create a task with wallets and RPCs saved in Settings. Launch it from Start.
-* **Start/Stop group**: request Start or Stop for all applicable tasks in a group.
-* **Bulk edit**: change shared settings on selected tasks.
-* **Row Start/Stop/Boost/log/edit/clone/delete**: control an individual task.
+Balance or eligibility estimates are preparation information, not guarantees. If a sent transaction remains pending, inspect that transaction before starting another run. Pressing Start again can send new transactions from the same wallets and mint duplicates.
 
-Readiness is explanatory information. Balance, predicted failure, or guessed eligibility never blocks Start or selection. The Start request is stored first and launches automatically once required preparation finishes.
+See [Mint modes](../minting/modes.md) and [Boost](../minting/boost.md).
 
-## Manual contract, ABI, and Hex tasks
-
-When automatic lookup is insufficient, use **+ New task**.
-
-| Field | Meaning |
+## Editing and retry tools
+| Feature | What to check |
 |---|---|
-| Chain | Chain where the transaction will be sent |
-| Transaction target | Contract being called; it may be a router/shared minter |
-| ABI function and arguments | Choose from fetched ABI or enter the exact signature/arguments |
-| Raw calldata | Send user-supplied hex unchanged |
-| Transaction value | **Total native-token value sent in one transaction**, not a per-item price |
+| Retry failed wallets | Creates a new idle task for the failed wallets. Review it and press Start separately. |
+| Task templates | Save and load reusable task settings. Check the current chain, target, price and quantity after applying one. |
+| Compare and restore saved versions | Review changes and restore earlier settings. For a running task, follow the notice about when restored settings take effect. |
 
-### Receipt verification (advanced)
-
-The collapsed advanced section verifies the confirmed result; it does not configure the mint call. **NFT contract to verify** tells the receipt scanner which contract's Transfer events count when the transaction target is a router/shared minter. When blank, the transaction target is used. **Minted quantity to verify** is the number of matching NFTs required for the Minted result. It never changes ABI arguments, raw calldata, value, transaction count, or the actual mint request. The signing wallet is always the expected recipient and is not configurable.
-
-For ABI/Hex, the actual mint quantity comes from the exact function arguments or raw calldata. Only a provable quantity conflict on a protocol-bound route such as SeaDrop is reported before sending; Nogada does not guess arbitrary calldata semantics to block a launch.
-
-## Wallets and exact quantity
-
-* The screen distinguishes **quantity per wallet**, selected wallet count, and **total target quantity**.
-* If a known per-transaction cap applies, the exact request is split across nonces. Quantity is never silently reduced.
-* Multiple app tasks are coordinated by the app's nonce coordinator.
-* You may use the same wallet concurrently in the standalone Telegram bot. The app does not block this, but warns that the two products do not share nonce state and can collide.
-
-## Execution modes
-
-| Mode | Behavior |
-|---|---|
-| Instant | Send the user-selected transaction immediately without simulation |
-| Safe | Only when selected by the user, eth_call the same call and send once for wallets without an actual simulated revert |
-| Spam | Repeat until Stop, a user cap, or an exact NFT mint receipt is confirmed |
-
-Safe is an optional transaction simulation, not an eligibility classifier. Use Instant or scheduled execution when lowest first-broadcast latency matters.
-
-## Schedule and launch
-
-Press Start early to arm a scheduled task. Wallet keys, RPC connections, gas, nonce, approvals, and deterministic calldata are prepared ahead of time. At the selected time, the first raw transaction is propagated without adding a new online check. There is no automatic RBF or automatic fee escalation; only a user-pressed **Boost** replaces gas during execution.
-
-## Result states
-
-| State | Meaning |
-|---|---|
-| Preparing/queued | Start is stored and preparation or scheduled time is pending |
-| Submitted/pending | A transaction hash exists and the same receipt is being reconciled |
-| Minted | A successful receipt proves the expected NFT contract, signing wallet, and exact quantity |
-| Failed | An on-chain revert or launch failure is confirmed |
-| Mint unverified | Receipt status succeeded, but the exact NFT Transfer was not proven |
-| Partial | Completed, failed, pending, or unverified wallet/chunk results are mixed |
-
-A pending transaction never creates a new nonce automatically. Unverified tasks are also excluded from automatic, group, and bulk reruns. You may explicitly press Start again on that row, but the app warns that every execution wallet may send a new transaction and duplicate the mint.
-
-## Check before launch
-
-Review selected wallets, quantity per wallet, total target quantity, value per transaction, total maximum value, chain, transaction target, phase, and any advanced receipt-verification target/count. A changed chain, target, value, selected phase, or quantity in protocol-bound calldata is an intent-integrity mismatch and will not launch. The signing wallet is the fixed mint recipient. Guessed eligibility, balance, price, or same-wallet app/bot use is never a blocking reason.
+Stop requests an end to further unsent work. It does not cancel a transaction already submitted to the chain.

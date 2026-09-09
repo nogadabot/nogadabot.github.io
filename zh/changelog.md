@@ -1,6 +1,6 @@
 # 更新日志
 
-最新版本显示在最上方。每次打开应用都会自动更新到最新版本 — 安装请参阅 [下载](getting-started/download.md)。
+最新版本列在最上方。以下内容是各版本发布时的记录；当前使用方法请看[指南简介](README.md)，安装与更新请看[下载](getting-started/download.md)。
 
 ## v0.9.43
 
