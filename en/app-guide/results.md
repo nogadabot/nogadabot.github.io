@@ -24,7 +24,7 @@ Use **Result summary** in the current task group. It collects the wallet-level r
 
 ## Flight Recorder
 
-In task details, the first submission attempt and RPC acceptance use **ms**. On-chain receipt timing uses **s**: 142 ms is 0.142 seconds; 7.811 s is 7.811 seconds. An unrecorded value stays blank or is marked as unrecorded—it is not zero latency.
+In task details, the first submission attempt and RPC acceptance use **ms**. On-chain receipt timing uses **s**: 142 ms is 0.142 seconds; 7.811 s is 7.811 seconds. An unrecorded value stays blank or is marked as unrecorded. It is not zero latency.
 
 An accepted submission does not prove inclusion or a successful mint. Timing is based on recorded observations, not a promise about blockchain processing speed.
 
