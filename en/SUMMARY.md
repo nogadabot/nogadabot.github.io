@@ -1,51 +1,70 @@
-# Contents
+# Table of contents
 
-* [About and version coverage](README.md)
+* [About Nogada](README.md)
 
 ## Getting started
 
-* [Download](getting-started/download.md)
-* [Installation](getting-started/installation.md)
-* [License and sign-in](getting-started/license.md)
-* [Initial app setup](getting-started/first-setup.md)
-* [Optional settings](getting-started/recommended-settings.md)
+* [Install and first run](getting-started/install.md)
+* [License](getting-started/license.md)
+* [Five-minute first setup](getting-started/first-setup.md)
+* [Windows VPS and remote access](getting-started/vps.md)
 
-## Using the app
+## Basic setup
 
-* [Dashboard and navigation](app-guide/dashboard.md)
-* [Tasks and Start](app-guide/tasks.md)
-* [Results and flight timing](app-guide/results.md)
-* [Wallets, deposits and funds](app-guide/wallets.md)
-* [Market and NFTs](app-guide/nft.md)
-* [PnL](app-guide/pnl.md)
-* [RPC connections](app-guide/rpc.md)
-* [Proxies](app-guide/proxies.md)
-* [Cost and time tools](app-guide/tools.md)
-* [Settings and integrations](app-guide/settings.md)
+* [Wallets](setup/wallets.md)
+* [RPC](setup/rpc.md)
+* [Proxies](setup/proxies.md)
+* [Social accounts](setup/accounts.md)
+* [OpenSea API key](setup/opensea-api.md)
+* [Settings](setup/settings.md)
 
-## Minting setup
+## Onchain tasks
 
-* [Smart Mint](minting/smart-mint.md)
-* [Instant, Safe and Spam](minting/modes.md)
-* [Public mints](minting/public.md)
-* [Signed and allowlist mints](minting/whitelist.md)
-* [Gas settings](minting/gas.md)
-* [Boost fee replacement](minting/boost.md)
+* [Tasks and modules](tasks/overview.md)
+* [Smart Mint](tasks/smart-mint.md)
+* [Create a task](tasks/onchain.md)
+* [Task modes](tasks/modes.md)
+* [OpenSea drops](tasks/opensea.md)
+* [Gas](tasks/gas.md)
+* [Boost](tasks/boost.md)
 
-## Telegram bot
+## Social tasks
 
-* [Bot setup, tasks and results](telegram/telegram-bot.md)
-* [Bot wallets and deposits](telegram/wallets.md)
-* [Time zones and schedules](telegram/timezone.md)
-* [Personal notifications](telegram/notifications.md)
-* [Supply Watch](telegram/supply-watch.md)
+* [Social tasks](social/overview.md)
+* [Answer templates and social modules](social/templates-modules.md)
 
-## Help and resources
+## NFTs and tools
 
-* [Troubleshooting](help/troubleshooting.md)
-* [FAQ](help/faq.md)
-* [Keys, data and execution](help/security.md)
-* [RPC resources](resources/nodes.md)
-* [Proxy selection](resources/proxies.md)
-* [Technical references](resources/tools.md)
-* [Release history](changelog.md)
+* [Whitelists](tools/whitelists.md)
+* [Holdings](tools/nfts.md)
+* [Viewer](tools/viewer.md)
+* [P&L](tools/pnl.md)
+* [Contracts](tools/contracts.md)
+* [Calculator](tools/calculator.md)
+* [Capture extension](tools/extension.md)
+
+## Market
+
+* [Dashboard](market/dashboard.md)
+* [Market](market/market.md)
+* [Mint Calendar](market/calendar.md)
+* [Early Calls](market/early-calls.md)
+* [Drop discovery](market/discovery.md)
+
+## Reference
+
+* [Supported chains](reference/chains.md)
+* [Add a custom chain](reference/custom-chains.md)
+* [Backup, restore, and moving](reference/backup-restore.md)
+* [Local data and exports](reference/data-storage.md)
+* [App updates](reference/updates.md)
+* [Security and privacy](reference/security.md)
+* [Troubleshooting](reference/troubleshooting.md)
+* [FAQ](reference/faq.md)
+
+## External resources
+
+* [RPC providers](resources/nodes.md)
+* [Choosing proxies](resources/proxies.md)
+* [Useful external tools](resources/tools.md)
+* [Changelog](changelog.md)

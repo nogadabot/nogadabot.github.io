@@ -1,0 +1,6 @@
+{
+  "name": "nogada-guide-site",
+  "private": true,
+  "scripts": { "build": "node build.cjs" },
+  "dependencies": { "marked": "15.0.12" }
+}

@@ -1,13 +1,18 @@
-# RPC resources
-Evaluate providers using the chain and requests you will actually use, not their names or plan prices alone. Paid services also impose request, concurrency or traffic limits.
+# RPC providers
 
-## Official documentation
-- [Alchemy](https://www.alchemy.com/docs)
-- [Infura](https://docs.metamask.io/services/)
-- [QuickNode](https://www.quicknode.com/docs)
-- [dRPC](https://drpc.org/docs)
-- [Chainlist](https://chainlist.org): a directory for finding chain and RPC information
+For a competitive mint, use a provider's RPC. They usually have a free plan, and the paid plans are cheap and rarely hit limits.
 
-This is not a ranking or purchasing recommendation. Check supported chains, requests per second, daily/monthly limits, timeouts and transaction-submission support. Cross-check directory entries against the project's official information and chain ID.
+| Provider | Plan |
+| --- | --- |
+| [Alchemy](https://www.alchemy.com) | Free plan, usage-based billing |
+| [DRPC](https://drpc.org) | Free plan, prepaid credits |
+| [Ankr](https://www.ankr.com) | Free plan, prepaid credits |
+| [QuickNode](https://www.quicknode.com) | Free plan, monthly subscription |
 
-See [RPC connections](../app-guide/rpc.md) for app setup and testing.
+You can find public RPC addresses on [Chainlist](https://chainlist.org).
+
+- The provider that works well differs by chain. Prepare several and compare them with the test in the **RPC** menu.
+- P&L calculation needs an Alchemy address. [P&L](../tools/pnl.md)
+- Prices and terms change often. Check the provider's site.
+
+To learn how to add them, see [RPC](../setup/rpc.md).

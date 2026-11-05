@@ -1,25 +1,54 @@
-# Nogada 사용 가이드
+---
+description: Nogada는 NFT 민팅과 그 뒤의 일을 한 앱에서 처리하는 Windows 데스크톱 앱입니다.
+---
 
-Nogada는 EVM NFT 민팅을 위한 **Windows 앱**과 **독립 Telegram 봇**입니다. 앱은 사용자 PC에서, 봇은 서버에서 실행됩니다.
+# Nogada 소개
 
-| 구분 | Windows 앱 | Telegram 봇 |
-|---|---|---|
-| 지갑·작업·RPC·프록시 | 이 PC의 앱 설정 | 봇에 별도로 등록한 설정 |
-| 지갑 키 보관 | Windows DPAPI로 로컬 암호화 | 서버에서 암호화 |
-| 시간대 | 사용자 PC의 Windows 시간대 | 개인 채팅별로 선택하고 서버에 저장 |
-| 실행 유지 | 앱과 PC가 실행 중이어야 함 | 앱을 꺼도 봇 작업은 독립 실행 |
+Nogada는 Windows 데스크톱 앱입니다. 여러 지갑으로 NFT를 민팅하고, 민팅한 NFT를 관리하고, 시장을 보고, 소셜 작업까지 한 곳에서 처리합니다. 설치하기 전에 2분만 읽어 보세요.
 
-같은 주소를 양쪽에 넣을 수 있지만 지갑·작업·nonce·설정은 동기화되지 않습니다.
+앱이 하는 일은 크게 둘입니다.
 
-## 원하는 작업부터 시작하세요
+- **온체인**: 민팅, 거래 실행, NFT와 자금 전송을 지갑 수 제한 없이 여러 EVM 체인에서 합니다.
+- **오프체인**: Google 폼, X, Discord, 화이트리스트 신청 같은 소셜 작업을 여러 계정으로 처리합니다.
 
-- 처음 앱을 설치한다면: [다운로드](getting-started/download.md) → [활성화](getting-started/license.md) → [초기 설정](getting-started/first-setup.md)
-- 민팅을 준비한다면: [Smart Mint](minting/smart-mint.md) → [작업과 Start](app-guide/tasks.md) → [결과 확인](app-guide/results.md)
-- 앱 없이 사용한다면: [Telegram 시작하기](telegram/telegram-bot.md)
-- 실패하거나 조회가 멈췄다면: [문제 해결](help/troubleshooting.md)
+여기에 NFT 관리, 손익 카드, 마켓 차트, 민트 캘린더, 얼리 콜, 드롭 발견, 가스 계산기, 브라우저 캡처 확장이 붙어 있습니다.
 
-## 적용 버전
+## 메뉴 한눈에 보기
 
-공개 버전 **v0.9.43**을 기준으로 설명합니다. **다음 업데이트**로 표시한 내용은 구현 후 검증 중인 기능이며 아직 공개 앱·봇에 반영되지 않았습니다. 기능이 보이지 않으면 먼저 [업데이트 기록](changelog.md)과 앱 버전을 확인하세요.
+왼쪽 메뉴는 넷으로 나뉩니다.
 
-일반 메뉴에서는 Drops를 숨겼습니다. 공급량 감시는 별도 관측 기능이며 민팅을 자동 시작하지 않습니다. 이 가이드에 없는 기능을 지원한다고 추정하지 말고 실제 체인·페이즈와 화면의 안내를 확인하세요.
+| 묶음 | 메뉴 | 쓰임 |
+| --- | --- | --- |
+| 민팅 | [대시보드](market/dashboard.md) | 지금 시장과 얼리 콜을 봅니다 |
+| | [스마트 민트](tasks/smart-mint.md) | 링크만 넣으면 민팅 경로를 찾아 작업을 만듭니다 |
+| | [작업](tasks/overview.md) | 민팅과 소셜 작업을 만들고 실행하는 곳입니다 |
+| | [얼리 콜](market/early-calls.md) | 운영자가 고른 민팅 전 프로젝트입니다 |
+| | [발견](market/discovery.md) | 새로 올라온 드롭을 스캔합니다 |
+| 내 자산 | [지갑](setup/wallets.md) | 지갑을 만들고 가져오고 자금을 옮깁니다 |
+| | [계정](setup/accounts.md) | 소셜 작업에 쓰는 Google, X, Discord 계정입니다 |
+| | [NFT](tools/nfts.md) | 보유 NFT, 손익, 뷰어가 있습니다 |
+| | [마켓](market/market.md) | 컬렉션 시세, 차트, 알림, 민트 캘린더입니다 |
+| 연결 | [RPC](setup/rpc.md) | 체인에 닿는 길입니다. 모든 온체인 작업이 여기를 지납니다 |
+| | [프록시](setup/proxies.md) | 사이트 요청을 나눠 보내는 IP입니다 |
+| | [OS API](setup/opensea-api.md) | OpenSea API 키를 관리합니다 |
+| | [화이트리스트](tools/whitelists.md) | 지갑 자격을 확인하고 모아 둡니다 |
+| | [컨트랙트](tools/contracts.md) | EIP-7702 번들러와 지갑 위임을 관리합니다 |
+| 도구 | [계산기](tools/calculator.md) | 유닉스 시간 변환과 가스 비용 계산입니다 |
+| | [설정](setup/settings.md) | 언어, 키, 발사 엔진, 체인 설정입니다 |
+
+## 내 지갑은 안전한가요
+
+지갑 개인키는 이 PC에만 저장되고 Windows DPAPI로 암호화됩니다. 라이선스 서버와 마켓 서버는 개인키를 받지 않습니다. 서명은 언제나 이 PC에서 합니다. 자세한 내용은 [보안과 개인정보](reference/security.md)에 있습니다.
+
+그래도 민팅에는 소액 지갑을 쓰고, 큰 자산은 앱에 넣지 않은 지갑에 두세요.
+
+## 어디서부터 볼까요
+
+처음이면 아래 순서대로 보면 됩니다.
+
+1. [설치와 첫 실행](getting-started/install.md)
+2. [라이선스](getting-started/license.md)
+3. [처음 5분 세팅](getting-started/first-setup.md)
+4. [스마트 민트](tasks/smart-mint.md)
+
+막히면 [문제 해결](reference/troubleshooting.md)과 [자주 묻는 질문](reference/faq.md)을 보세요.

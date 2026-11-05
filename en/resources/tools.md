@@ -1,10 +1,7 @@
-# Explorers and technical references
-- [Etherscan Gas Tracker](https://etherscan.io/gastracker): Ethereum gas reference
-- [Etherscan](https://etherscan.io): Ethereum transactions, receipts and contracts
-- [Blockscout documentation](https://docs.blockscout.com): explorer guidance
-- [OpenSea developer documentation](https://docs.opensea.io): APIs and supported features
-- [Ethereum developer documentation](https://ethereum.org/developers/docs/): transaction, gas and contract concepts
+# Useful external tools
 
-Use the official explorer for the selected chain. Calldata copied from another transaction may contain a different wallet, price, quantity, signature or expiry. Verify the actual call rather than executing a tool's or AI's explanation blindly.
+- [Etherscan Gas Tracker](https://etherscan.io/gastracker): Live gas on Ethereum. The status bar at the bottom of the app also shows gas.
+- [Etherscan](https://etherscan.io): Look up a contract's mint function and other people's mint transaction data. Use it for the function and Hex in [Create a task](../tasks/onchain.md).
+- [Chainlist](https://chainlist.org): Public RPC addresses by chain.
 
-Use the app's [Tools](../app-guide/tools.md) for calculations and [Result summary](../app-guide/results.md) for recorded outcomes.
+External links can change. If one does not open, search for it by name.

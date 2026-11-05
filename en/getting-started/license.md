@@ -1,18 +1,31 @@
-# License activation
-Use the license supplied with your purchase. If the email is missing, check the spam folder and the address used for the purchase.
+# License
 
-## App
-Enter the key on the app's **activation screen**. **Settings → License** shows status, sign-out and device-release controls. Do not include the key in public chats or screenshots.
+You need a license key to use Nogada. A key looks like `NOGADA-XXXX-XXXX-XXXX-XXXX`.
 
-When moving to another PC, follow the device-release instructions in the existing app. Device limits, subscriptions and refunds follow the current terms of the product you purchased; this guide does not define separate terms.
+## Buying and getting a key
 
-## Telegram
-Open the official [@NOGADA_Mint_Bot](https://t.me/NOGADA_Mint_Bot).
+You pay on the operator's sales page (Whop). When the payment is done, the key is sent to the email you bought with. Check your spam folder too. If the key does not arrive, contact the operator and include the email you bought with.
 
-1. Send `/redeem your-purchase-email`.
-2. Check that email for an eight-digit verification code.
-3. Send the code before it expires, for example `/redeem 12345678`.
+## Activation
 
-Entering an email alone does not complete verification. App pairing is not required. If the chat binding changes, old buttons or pending inputs may require a new authenticated session.
+1. When you start the app, the license screen appears.
+2. Paste the key and click Activate.
+3. When the status bar at the bottom shows **License** and a green dot, you are done.
 
-If verification fails, check the purchase email, code expiry and license status. Do not send the full code or key in a support request.
+After activation, the state is saved on this PC, so you do not have to enter the key each time you start the app.
+
+## One key, one PC
+
+One key is tied to one PC. The server records the tie.
+
+When you change PCs, do this.
+
+1. On the current PC, make a backup with **Settings → General → Backup & Restore**. See [Backup, restore, and moving](../reference/backup-restore.md).
+2. Ask the operator for a **Reset device** on the key.
+3. Activate on the new PC and restore the backup.
+
+**Settings → General → Log Out** clears the license state on this PC only. It stops running tasks and returns to the license screen, and it does not release the device tie on the server. So logging out alone does not let you activate on another PC.
+
+## Refunds
+
+We can help with a refund only when the app cannot be installed at all. Mint success or failure depends on gas, competition, and the project's situation. It is not guaranteed and is not eligible for a refund.

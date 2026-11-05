@@ -1,51 +1,70 @@
 # 목차
 
-* [소개와 적용 버전](README.md)
+* [Nogada 소개](README.md)
 
 ## 시작하기
 
-* [다운로드](getting-started/download.md)
-* [설치와 첫 실행](getting-started/installation.md)
-* [라이선스·로그인](getting-started/license.md)
-* [앱 초기 설정](getting-started/first-setup.md)
-* [필요할 때 추가하는 설정](getting-started/recommended-settings.md)
+* [설치와 첫 실행](getting-started/install.md)
+* [라이선스](getting-started/license.md)
+* [처음 5분 세팅](getting-started/first-setup.md)
+* [Windows VPS와 원격 접속](getting-started/vps.md)
 
-## 앱 사용법
+## 기본 설정
 
-* [대시보드와 메뉴](app-guide/dashboard.md)
-* [작업과 Start](app-guide/tasks.md)
-* [결과 요약·발사 기록](app-guide/results.md)
-* [지갑·입금 QR·자금 관리](app-guide/wallets.md)
-* [마켓과 NFT](app-guide/nft.md)
-* [손익(PnL)](app-guide/pnl.md)
-* [RPC 연결](app-guide/rpc.md)
-* [프록시](app-guide/proxies.md)
-* [비용·시간 도구](app-guide/tools.md)
-* [개인 설정·연동](app-guide/settings.md)
+* [지갑](setup/wallets.md)
+* [RPC](setup/rpc.md)
+* [프록시](setup/proxies.md)
+* [소셜 계정](setup/accounts.md)
+* [OpenSea API 키](setup/opensea-api.md)
+* [설정](setup/settings.md)
 
-## 민팅 설정
+## 온체인 작업
 
-* [Smart Mint](minting/smart-mint.md)
-* [즉시·안전·연사](minting/modes.md)
-* [퍼블릭 민팅](minting/public.md)
-* [서명·Allowlist 민팅](minting/whitelist.md)
-* [가스 설정](minting/gas.md)
-* [Boost 가스 교체](minting/boost.md)
+* [작업과 모듈](tasks/overview.md)
+* [스마트 민트](tasks/smart-mint.md)
+* [작업 만들기](tasks/onchain.md)
+* [작업 방식](tasks/modes.md)
+* [OpenSea 드롭](tasks/opensea.md)
+* [가스](tasks/gas.md)
+* [부스트](tasks/boost.md)
 
-## Telegram 봇
+## 소셜 작업
 
-* [봇 시작·작업·결과 조회](telegram/telegram-bot.md)
-* [봇 지갑과 입금](telegram/wallets.md)
-* [시간대와 예약](telegram/timezone.md)
-* [개인 알림 설정](telegram/notifications.md)
-* [공급량 감시](telegram/supply-watch.md)
+* [소셜 작업](social/overview.md)
+* [답변 템플릿과 소셜 모듈](social/templates-modules.md)
 
-## 도움말과 자료
+## NFT와 도구
 
-* [문제 해결](help/troubleshooting.md)
-* [자주 묻는 질문](help/faq.md)
-* [키·데이터·실행 범위](help/security.md)
-* [RPC 자료](resources/nodes.md)
-* [프록시 선택 기준](resources/proxies.md)
-* [탐색기·기술 자료](resources/tools.md)
-* [업데이트 기록](changelog.md)
+* [화이트리스트](tools/whitelists.md)
+* [보유 NFT](tools/nfts.md)
+* [뷰어](tools/viewer.md)
+* [손익](tools/pnl.md)
+* [컨트랙트](tools/contracts.md)
+* [계산기](tools/calculator.md)
+* [캡처 확장](tools/extension.md)
+
+## 시장
+
+* [대시보드](market/dashboard.md)
+* [마켓](market/market.md)
+* [민트 캘린더](market/calendar.md)
+* [얼리 콜](market/early-calls.md)
+* [드롭 발견](market/discovery.md)
+
+## 참고
+
+* [지원 체인](reference/chains.md)
+* [사용자 체인 추가](reference/custom-chains.md)
+* [백업, 복원, 이전](reference/backup-restore.md)
+* [로컬 데이터와 내보내기](reference/data-storage.md)
+* [앱 업데이트](reference/updates.md)
+* [보안과 개인정보](reference/security.md)
+* [문제 해결](reference/troubleshooting.md)
+* [자주 묻는 질문](reference/faq.md)
+
+## 외부 자료
+
+* [RPC 제공사](resources/nodes.md)
+* [프록시 고르기](resources/proxies.md)
+* [유용한 외부 도구](resources/tools.md)
+* [변경 사항](changelog.md)

@@ -1,51 +1,70 @@
 # 目录
 
-* [简介与适用版本](README.md)
+* [Nogada 简介](README.md)
 
 ## 开始使用
 
-* [下载](getting-started/download.md)
-* [安装与首次运行](getting-started/installation.md)
-* [许可证与登录](getting-started/license.md)
-* [应用初始设置](getting-started/first-setup.md)
-* [按需设置](getting-started/recommended-settings.md)
+* [安装与首次运行](getting-started/install.md)
+* [许可证](getting-started/license.md)
+* [前 5 分钟设置](getting-started/first-setup.md)
+* [Windows VPS 与远程连接](getting-started/vps.md)
 
-## 应用使用方法
+## 基础设置
 
-* [仪表盘与菜单](app-guide/dashboard.md)
-* [任务与 Start](app-guide/tasks.md)
-* [结果汇总与广播耗时](app-guide/results.md)
-* [钱包、充值与资金](app-guide/wallets.md)
-* [市场与 NFT](app-guide/nft.md)
-* [盈亏](app-guide/pnl.md)
-* [RPC 连接](app-guide/rpc.md)
-* [代理](app-guide/proxies.md)
-* [费用与时间工具](app-guide/tools.md)
-* [个人设置与集成](app-guide/settings.md)
+* [钱包](setup/wallets.md)
+* [RPC](setup/rpc.md)
+* [代理](setup/proxies.md)
+* [社交账户](setup/accounts.md)
+* [OpenSea API 密钥](setup/opensea-api.md)
+* [设置](setup/settings.md)
 
-## 铸造设置
+## 链上任务
 
-* [Smart Mint](minting/smart-mint.md)
-* [立即、模拟与连发](minting/modes.md)
-* [公开铸造](minting/public.md)
-* [签名与白名单铸造](minting/whitelist.md)
-* [Gas 设置](minting/gas.md)
-* [Boost 费用替换](minting/boost.md)
+* [任务与模块](tasks/overview.md)
+* [智能铸造](tasks/smart-mint.md)
+* [创建任务](tasks/onchain.md)
+* [任务模式](tasks/modes.md)
+* [OpenSea Drop](tasks/opensea.md)
+* [Gas](tasks/gas.md)
+* [加速](tasks/boost.md)
 
-## Telegram 机器人
+## 社交任务
 
-* [机器人入门、任务与结果](telegram/telegram-bot.md)
-* [机器人钱包与充值](telegram/wallets.md)
-* [时区与预约](telegram/timezone.md)
-* [个人通知设置](telegram/notifications.md)
-* [供应量监测](telegram/supply-watch.md)
+* [社交任务](social/overview.md)
+* [答案模板与社交模块](social/templates-modules.md)
 
-## 帮助与资料
+## NFT 与工具
 
-* [故障排查](help/troubleshooting.md)
-* [常见问题](help/faq.md)
-* [密钥、数据与执行](help/security.md)
-* [RPC 资料](resources/nodes.md)
-* [代理选择](resources/proxies.md)
-* [技术资料](resources/tools.md)
-* [更新记录](changelog.md)
+* [白名单](tools/whitelists.md)
+* [持仓 NFT](tools/nfts.md)
+* [查看器](tools/viewer.md)
+* [盈亏](tools/pnl.md)
+* [合约](tools/contracts.md)
+* [计算器](tools/calculator.md)
+* [捕获扩展](tools/extension.md)
+
+## 市场
+
+* [仪表盘](market/dashboard.md)
+* [市场](market/market.md)
+* [铸造日历](market/calendar.md)
+* [早期项目](market/early-calls.md)
+* [Drop 发现](market/discovery.md)
+
+## 参考
+
+* [支持的链](reference/chains.md)
+* [添加自定义链](reference/custom-chains.md)
+* [备份、恢复与迁移](reference/backup-restore.md)
+* [本地数据与导出](reference/data-storage.md)
+* [应用更新](reference/updates.md)
+* [安全与隐私](reference/security.md)
+* [故障排查](reference/troubleshooting.md)
+* [常见问题](reference/faq.md)
+
+## 外部资料
+
+* [RPC 提供商](resources/nodes.md)
+* [如何选择代理](resources/proxies.md)
+* [实用外部工具](resources/tools.md)
+* [变更记录](changelog.md)
