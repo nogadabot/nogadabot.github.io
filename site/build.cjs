@@ -6,7 +6,7 @@ const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, '_site');
 const LANGS = ['en', 'ko', 'zh'];
 const LANG_NAMES = { en: 'EN', ko: '한국어', zh: '中文' };
-const BUY_URL = 'https://whop.com/nogada/products/nadaga-bot/';
+const BUY_URL = 'https://nogada-lic.duckdns.org/buy';
 
 const TEXT = {
   en: {

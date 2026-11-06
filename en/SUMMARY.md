@@ -1,70 +1,48 @@
 # Table of contents
 
-* [About Nogada](README.md)
+* [Nogada Guide](README.md)
 
 ## Getting started
 
-* [Install and first run](getting-started/install.md)
+* [Download and first launch](getting-started/install.md)
 * [License](getting-started/license.md)
-* [Five-minute first setup](getting-started/first-setup.md)
-* [Windows VPS and remote access](getting-started/vps.md)
+* [The screen](getting-started/screen.md)
+* [Your first mint, step by step](getting-started/first-setup.md)
 
-## Basic setup
+## Before you mint
 
-* [Wallets](setup/wallets.md)
-* [RPC](setup/rpc.md)
-* [Proxies](setup/proxies.md)
-* [Social accounts](setup/accounts.md)
-* [OpenSea API key](setup/opensea-api.md)
-* [Settings](setup/settings.md)
+* [Wallets](prepare/wallet-groups.md)
+* [Dispersing and consolidating funds](prepare/funding.md)
+* [RPCs and chains](prepare/rpc-and-chains.md)
+* [Proxies](prepare/proxy-groups.md)
+* [OpenSea API keys](prepare/opensea-keys.md)
 
-## Onchain tasks
+## Minting
 
-* [Tasks and modules](tasks/overview.md)
 * [Smart Mint](tasks/smart-mint.md)
-* [Create a task](tasks/onchain.md)
-* [Task modes](tasks/modes.md)
-* [OpenSea drops](tasks/opensea.md)
-* [Gas](tasks/gas.md)
-* [Boost](tasks/boost.md)
+* [Creating a task by hand](tasks/task-form.md)
+* [Running tasks and Boost](tasks/running.md)
+* [Bundles and contracts](tasks/bundles.md)
+* [Whitelists](tasks/whitelists.md)
+* [Early Calls and Discovery](tasks/early-calls.md)
 
-## Social tasks
+## NFTs and market
 
-* [Social tasks](social/overview.md)
-* [Answer templates and social modules](social/templates-modules.md)
+* [The NFT menu](after/nft-menu.md)
+* [Market](after/market.md)
+* [Mint Calendar](after/mint-calendar.md)
 
-## NFTs and tools
+## Social
 
-* [Whitelists](tools/whitelists.md)
-* [Holdings](tools/nfts.md)
-* [Viewer](tools/viewer.md)
-* [P&L](tools/pnl.md)
-* [Contracts](tools/contracts.md)
-* [Calculator](tools/calculator.md)
-* [Capture extension](tools/extension.md)
+* [Accounts and social tasks](social/accounts-and-social.md)
 
-## Market
+## Tools and settings
 
-* [Dashboard](market/dashboard.md)
-* [Market](market/market.md)
-* [Mint Calendar](market/calendar.md)
-* [Early Calls](market/early-calls.md)
-* [Drop discovery](market/discovery.md)
+* [Calculator](app/calculator.md)
+* [Settings](app/settings-tabs.md)
+* [Backup and data](app/backup-and-data.md)
 
-## Reference
+## Help
 
-* [Supported chains](reference/chains.md)
-* [Add a custom chain](reference/custom-chains.md)
-* [Backup, restore, and moving](reference/backup-restore.md)
-* [Local data and exports](reference/data-storage.md)
-* [App updates](reference/updates.md)
-* [Security and privacy](reference/security.md)
-* [Troubleshooting](reference/troubleshooting.md)
-* [FAQ](reference/faq.md)
-
-## External resources
-
-* [RPC providers](resources/nodes.md)
-* [Choosing proxies](resources/proxies.md)
-* [Useful external tools](resources/tools.md)
+* [When you are stuck](help/when-stuck.md)
 * [Changelog](changelog.md)

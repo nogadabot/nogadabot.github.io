@@ -1,54 +1,44 @@
----
-description: Nogada is a Windows desktop app that handles NFT minting and everything after it in one place.
----
+# Nogada Guide
 
-# About Nogada
+Nogada is an NFT minting app for Windows PCs. It mints the same drop from many wallets at once, lists or sends what you minted, and shows the market and your P&L, all in one app. It supports Ethereum and other EVM chains.
 
-Nogada is a Windows desktop app. You can mint NFTs with many wallets, manage the NFTs you minted, watch the market, and run social tasks, all in one place. Take two minutes to read this page before you install.
+![Dashboard](images/dashboard.png)
 
-The app does two main things.
+## What you can do with it
 
-- **Onchain**: Minting, running transactions, and sending NFTs and funds, with no limit on the number of wallets, on many EVM chains.
-- **Offchain**: Social tasks such as Google Forms, X, Discord, and whitelist applications, run with many accounts.
+| You want to | Use |
+|---|---|
+| Make a task from just a mint link | [Smart Mint](tasks/smart-mint.md) |
+| Pick the contract and function yourself | [Tasks](tasks/task-form.md) |
+| Fire on time, retry until it works, raise gas | [Running tasks and Boost](tasks/running.md) |
+| Mint from many wallets in one transaction | [Bundles and contracts](tasks/bundles.md) |
+| See whether your wallets are on an allowlist | [Whitelists](tasks/whitelists.md) |
+| List, unlist, send NFTs, accept offers | [The NFT menu](after/nft-menu.md) |
+| Collection prices, charts, alerts | [Market](after/market.md) |
+| Upcoming mints | [Mint Calendar](after/mint-calendar.md), [Early Calls](tasks/early-calls.md) |
 
-The app also includes NFT management, P&L cards, market charts, a mint calendar, Early Calls, drop discovery, a gas calculator, and a browser capture extension.
+## New here?
 
-## The menu at a glance
+Read these in order and you will get from launching the app to your first task without getting stuck.
 
-The left menu is split into four groups.
-
-| Group | Menu | What it is for |
-| --- | --- | --- |
-| Minting | [Dashboard](market/dashboard.md) | See the current market and Early Calls |
-| | [Smart Mint](tasks/smart-mint.md) | Paste a link and the app finds the mint route and creates the tasks |
-| | [Tasks](tasks/overview.md) | Where you create and run mint and social tasks |
-| | [Early Calls](market/early-calls.md) | Projects picked by the operator before they mint |
-| | [Discovery](market/discovery.md) | Scans for newly posted drops |
-| Assets | [Wallets](setup/wallets.md) | Create and import wallets and move funds |
-| | [Accounts](setup/accounts.md) | The Google, X, and Discord accounts used for social tasks |
-| | [NFT](tools/nfts.md) | Holdings, P&L, and the viewer |
-| | [Market](market/market.md) | Collection prices, charts, alerts, and the mint calendar |
-| Connections | [RPC](setup/rpc.md) | The way to reach the chains. Every onchain task goes through it |
-| | [Proxies](setup/proxies.md) | IPs that spread your requests to sites |
-| | [OS API](setup/opensea-api.md) | Manages your OpenSea API keys |
-| | [Whitelists](tools/whitelists.md) | Check wallet eligibility and keep the results |
-| | [Contracts](tools/contracts.md) | Manage the EIP-7702 bundler and wallet delegation |
-| Tools | [Calculator](tools/calculator.md) | Unix time conversion and gas cost calculation |
-| | [Settings](setup/settings.md) | Language, keys, the fire engine, and chain settings |
-
-## Is my wallet safe?
-
-Wallet private keys are stored only on this PC and are encrypted with Windows DPAPI. The license server and the market server never receive private keys. Signing always happens on this PC. Details are in [Security and privacy](reference/security.md).
-
-Even so, use small-balance wallets for minting, and keep large assets in wallets you have not put into the app.
-
-## Where to start
-
-If you are new, read these in order.
-
-1. [Install and first run](getting-started/install.md)
+1. [Download and first launch](getting-started/install.md)
 2. [License](getting-started/license.md)
-3. [Five-minute first setup](getting-started/first-setup.md)
+3. [Your first mint, step by step](getting-started/first-setup.md)
 4. [Smart Mint](tasks/smart-mint.md)
 
-If you get stuck, see [Troubleshooting](reference/troubleshooting.md) and the [FAQ](reference/faq.md).
+## How the guide is laid out
+
+The guide follows the order you use the app in.
+
+- **Getting started**: installing, the license, reading the screen, the short path to a first task.
+- **Before you mint**: wallets, funds, RPCs, proxies and OpenSea API keys to have ready.
+- **Minting**: every way to make and run tasks.
+- **NFTs and market**: the screens you use after minting.
+- **Social**, **Tools and settings**, **Help**: look things up when you need them.
+
+## Good to know first
+
+- Private keys are stored only on this PC, encrypted with your Windows account. Transactions are always signed on this PC.
+- Tasks run inside the app. Close the app and scheduled tasks do not run.
+- A successful mint depends on gas, competition and the project, so the app cannot promise one.
+- The app's text can be English, Korean or Chinese. Pick it in **Settings → General → Language**.

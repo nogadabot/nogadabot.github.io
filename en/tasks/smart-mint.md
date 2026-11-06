@@ -1,59 +1,97 @@
 # Smart Mint
 
-This screen finds the mint contract, mint data, price, and phases from a single link and creates tasks. It is unique to Nogada. Looking up or picking a phase does not fire anything. You start from the Tasks screen.
+Smart Mint makes a mint task from a single link. The app finds the mint contract, the data to call, the price and the phases; you only choose wallets and a launch method. You start the task afterwards from **Tasks**.
 
-![smart-mint](../images/smart-mint.png)
+The screen goes top to bottom in four steps.
 
-## What you can enter
+## 1. Project confirmation
 
-- A contract address
-- An explorer link
-- A marketplace or launchpad link
-- A link to the project's mint site
-- A mint transaction hash, or an explorer transaction link
+![Smart Mint lookup result](../images/smart-mint-result.png)
 
-You pick the chain yourself. The same address can exist on several chains, so the app never changes it on its own.
+Put one of these into **Paste a mint link, contract address or transaction hash**:
 
-## Steps
+- the project's mint page, a launchpad link or a marketplace link
+- the contract address or the contract's explorer link
+- the hash or explorer link of a transaction where someone minted that drop
 
-1. Pick a chain, paste your input, and click **Resolve mint route**.
-2. Pick a phase in **Phase selection**. The phases appear with the names the project used. The app does not pick for you.
-3. In **Execution settings**, set the wallets, quantity, gas, launch method, proxy, and post-mint actions.
-4. In **Final review**, check the details and create the task.
-5. Click Start on the **Tasks** screen.
+Pick the **Chain** yourself. The same address can exist on several chains, so the app never switches it on its own.
 
-## What the screen shows
+If you have the allowlist file, add it under **Allowlist file (optional)**. It takes CSV or OpenZeppelin JSON up to 4 MiB and is checked against the Merkle root on chain now.
 
-- **Mint function**: Shows the function it found and the evidence. If there are several candidates, pick one from the list.
-- **Price**: Shows where it was read from. A green value is a reference value. For a drop that mints directly from the contract, enter the price and look up again.
-- **Not revealed** and **Not confirmed yet**: Values the project publishes at the open are never guessed. They are shown as not revealed. They are filled in when you look up again after the open.
-- **Route lookup sources**: Shows which sources were read and what failed.
+Click **Resolve mint route** and you see it go through reading the link, checking the contract and preparing the mint data. If several contracts match the link, it asks which one to look up. If you pasted a transaction hash, a field appears to pick the wallets to check against that transaction.
 
-## Allowlist file
+## 2. Phase selection
 
-If a phase uses a Merkle approach, you can put a CSV or OpenZeppelin JSON in **Allowlist file (optional)**. The limit is 4 MiB. The app checks the proofs against the current onchain root.
+You see the project's name and platform, the mint function, the supply and the list of phases. Each phase shows its price (**free** when free), the per-wallet limit and the time. Click the phase you want to mint.
 
-## Launch method
+You may see:
+
+- **A warning that the source is unverified**: the contract code is not publicly verified, so the app cannot read what it does. You can still mint, but check that the project is one you trust.
+- **The mint price could not be read**: enter the mint price per token and click **Look up with this price**. The same field appears when the price it read is only a reference. A price you enter is used as is until the task fires.
+- **Native fee**: when a fee paid next to the token price cannot be confirmed, you are asked for the fee per token. Enter 0 if there is none.
+- **The sale is not open yet**: before it opens, the chain will not confirm the mint call. The app looks it up again on its own and fills it in after opening.
+- ERC-1155 drops have a **Token ID** field. Empty uses the link's ID. 0 is a real ID.
+
+## 3. Execution settings
+
+![Execution settings](../images/smart-mint-settings.png)
+
+| Field | What you set |
+|---|---|
+| Wallet group | The wallet group to mint with. |
+| Quantity per wallet | How many each wallet mints. If the drop has a per-wallet limit, it shows too. |
+| Wallets for this task | Tick the wallets in the group to use. Each wallet's balance and check result (for example, simulation passed) shows next to it. |
+| Gas (blank = auto) | Gas limit, max fee, priority fee. Empty lets the app decide; a value is used as entered. |
+| Estimated total | Transaction value plus estimated gas for all ticked wallets. The real gas is set when it fires. |
+| Launch method | See the table below. |
+| Proxy group | The proxies for the launch and mint data requests. Empty connects directly. |
+
+### Launch method
 
 | Method | What it does |
-| --- | --- |
-| Instant ×1 | Sends the prepared transaction once per wallet |
-| Spam (repeated) | Repeats at the interval you set. It ends when the mint is confirmed, a limit is reached, or you stop it |
-| Safe (simulate first) | Simulates before sending, and skips only the wallets that are expected to fail |
+|---|---|
+| Instant ×1 | When the task starts, each wallet sends its prepared transaction once. |
+| Spam (repeated) | Keeps sending at the set interval. It stops when it reaches a limit (such as the end of the time range or the Spam Guardrail), gets an error that retrying will not fix, or you stop it. Without Flashbots, one landed mint does not stop it. |
+| Safe (simulate first) | Simulates before sending and skips only wallets the simulation predicts will fail. It does not guarantee success. |
 
-If you start early on a phase that is not open yet, Spam is recommended. The method does not change until you pick one yourself. A fuller comparison is in [Task modes](modes.md).
+Spam adds the **Retry interval per wallet** field: the shortest gap before one wallet sends again. Empty or 0 is the default pace.
+
+Under the launch method you see when Spam stops and the current **Spam Guardrail** (seconds from when Spam starts, or off). **Change it in Settings** next to it opens the **Settings → Fire Engine → Tasks → Spam Guardrail** field.
+
+When the phase opens later, **Recommended** appears next to Spam. It means Spam fits if you start early and want to send the moment it opens. The launch method does not change until you pick it yourself.
+
+### Drops that need a signature
+
+Drops where each wallet must get signed mint data, such as an OpenSea allowlist, add a **Mint data source** field.
+
+- **Default (proxy)**: fetches the mint data over proxy IPs. A registered OpenSea API key is used instead only when the IPs are blocked or no data comes back.
+- **OpenSea API**: fetches each wallet's data with your OpenSea API key. No proxies needed, but each key has its own request limit. You cannot pick it without a key.
+
+Highlight's signed drops show a field to paste each wallet's signed mint data from highlight.xyz. Leave it empty to fetch again when the task starts.
+
+### Two checkboxes
+
+- **Keep scheduled mint data current**: when on, scheduled tasks bring the price, phase and mint data up to date before they start. The preparation finishes before the launch time, so firing is not delayed.
+- **Sweep to a safe wallet after mint**: after a successful mint, the NFTs and leftover coin move straight to the safe wallet you enter. Not available with Spam.
+
+If the drop is paid in an ERC-20 token, an **Approve early** button appears. Without it, the app approves exactly what is needed when it is needed.
+
+## 4. Final review
+
+![Final review](../images/smart-mint-review.png)
+
+It shows the project and chain, phase, number of wallets, quantity per wallet, total quantity, launch method, gas setting and estimated total in one place. If it is right, click **Create mint task**. To read the details again, click **Refresh mint details**.
+
+Once the tasks are made, an **Open Tasks** button appears. The task's start time is when the phase opens. Start it from Tasks and it sends at that time; if the phase is already open, it sends right away. → [Running tasks and Boost](running.md)
 
 ## When the lookup fails
 
-Even a valid link may not be readable because of site protection or regional limits. Try these in order.
+| Message | What to do |
+|---|---|
+| R-RPC | It could not reach the chain or the project server. Check your [RPCs](../prepare/rpc-and-chains.md) and try again. |
+| R-LINK | It could not read the link. Check the URL or paste the mint contract address. |
+| R-RESOLVE | It could not find the mint route. Try again, or use **Use ABI / Hex** to [create a task by hand](task-form.md). |
+| No RPC endpoint for this chain | Add an RPC for that chain on the RPC screen. |
+| This address is not a contract | You pasted a wallet address. Check the mint contract address. |
 
-1. Enter the OpenSea collection link or the explorer link of the same project.
-2. Enter the real minter or NFT contract address and the exact chain.
-3. Enter the link to the project's mint page. The app can find the function name from the site's ABI.
-4. Create the task yourself with an ABI or Hex in [Create a task](onchain.md).
-
-The `(R-…)` code at the end of an error points to the cause. Send it along when you contact support.
-
-## Drops where the site gives each wallet a signature
-
-For a drop that requires a signature the app cannot build, the app tells you so. Mint on the project's site, or, if the site is supported, paste the mint site link into Smart Mint.
+**Recent resolves** at the bottom keeps the projects you looked up. Click one to look it up again; **Clear list** empties it.
