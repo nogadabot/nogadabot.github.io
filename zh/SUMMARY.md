@@ -23,8 +23,7 @@
 * [手动创建任务](tasks/task-form.md)
 * [运行任务与加速](tasks/running.md)
 * [捆绑与合约](tasks/bundles.md)
-* [白名单](tasks/whitelists.md)
-* [早期项目与发现](tasks/early-calls.md)
+* [早期项目](tasks/early-calls.md)
 
 ## NFT 与市场
 
@@ -38,7 +37,7 @@
 
 ## 工具与设置
 
-* [计算器](app/calculator.md)
+* [Gas 计算器](app/calculator.md)
 * [设置](app/settings-tabs.md)
 * [备份与数据](app/backup-and-data.md)
 

@@ -1,12 +1,12 @@
-# Calculator
+# Gas Calculator
 
-**Calculator** has a gas calculator and a Unix time converter. Neither sends anything to a chain.
+**Gas Calculator** has **Inputs** and the **Unix Time Converter** on the left and the **Cost by gas price** table on the right. Neither sends anything to a chain.
 
-![Calculator](../images/calculator.png)
+![Gas Calculator](../images/calculator.png)
 
-## Gas Calculator
+## Cost by gas price
 
-Fill in four fields and you get a cost table per gas price (gwei), in rows from 1 to 1000 gwei.
+Fill in the four fields of **Inputs** and you get a cost table per gas price (gwei), in rows from 1 to 1000 gwei.
 
 | Field | What goes in |
 |---|---|
@@ -24,10 +24,10 @@ The table's columns are worked out like this.
 | Avg Cost / NFT | Avg Usage ÷ NFT amount |
 | Avg Fail | price × 40,000 gas. A rough figure for the gas lost when a transaction fails. |
 
-When the ETH price is available, an **ETH / USD** switch appears on the left to show dollars too.
+When the ETH price is available, an **ETH / USD** switch appears next to the **Inputs** heading to show dollars too.
 
 To decide how much to put in each wallet, read **Balance Needed** on the row for the gas price you will use and enter it as **Target Balance Per Wallet** in [Manage Funds](../prepare/funding.md).
 
 ## Unix Time Converter
 
-A task's **Timestamp** field takes Unix time. In the converter below, pick **Local Date & Time** to get the **Unix Timestamp**, or enter a number to get the date. **Set to now** fills in the current time, and the copy button copies the number.
+A task's **Timestamp** field takes Unix time. In the converter at the bottom left, pick **Local Date & Time** to get the **Unix Timestamp**, or enter a number to get the date. **Set to now** fills in the current time, and the copy button copies the number.

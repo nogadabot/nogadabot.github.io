@@ -23,8 +23,7 @@
 * [작업 직접 만들기](tasks/task-form.md)
 * [작업 실행과 부스트](tasks/running.md)
 * [번들과 컨트랙트](tasks/bundles.md)
-* [화이트리스트](tasks/whitelists.md)
-* [얼리 콜과 드롭 발견](tasks/early-calls.md)
+* [얼리 콜](tasks/early-calls.md)
 
 ## NFT와 마켓
 
@@ -38,7 +37,7 @@
 
 ## 도구와 설정
 
-* [계산기](app/calculator.md)
+* [가스 계산기](app/calculator.md)
 * [설정](app/settings-tabs.md)
 * [백업과 데이터](app/backup-and-data.md)
 

@@ -23,8 +23,7 @@
 * [Creating a task by hand](tasks/task-form.md)
 * [Running tasks and Boost](tasks/running.md)
 * [Bundles and contracts](tasks/bundles.md)
-* [Whitelists](tasks/whitelists.md)
-* [Early Calls and Discovery](tasks/early-calls.md)
+* [Early Calls](tasks/early-calls.md)
 
 ## NFTs and market
 
@@ -38,7 +37,7 @@
 
 ## Tools and settings
 
-* [Calculator](app/calculator.md)
+* [Gas Calculator](app/calculator.md)
 * [Settings](app/settings-tabs.md)
 * [Backup and data](app/backup-and-data.md)
 

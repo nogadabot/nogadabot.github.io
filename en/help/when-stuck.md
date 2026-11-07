@@ -75,7 +75,7 @@ All of the task's RPCs reported they ran out. Top up with the RPC provider or ad
 The price OpenSea gave at fire time was above the task's **Price per NFT**. If that price is right, raise Price per NFT.
 
 **It says OpenSea rejected this wallet**
-The wallet may not be eligible, may be short of funds, or there may be a temporary error. The app retries a few times and then stops. Check eligibility with the Whitelist Checker first.
+The wallet may not be eligible, may be short of funds, or there may be a temporary error. The app retries a few times and then stops.
 
 **I cannot edit a task**
 A running task cannot be edited. Stop it first.

@@ -10,7 +10,6 @@ Proxies spread the requests you send to sites over many IPs. With many wallets, 
 |---|---|
 | Smart Mint's **Proxy Group** | For drops where each wallet needs signed mint data, spreads those requests over the group's IPs. This PC asks directly only when every proxy fails. |
 | The task window's **Proxy Group** | Shows when you put a launchpad link in the contract field. Used for requests to that launchpad (mint data and so on). |
-| **Settings → Fire Engine → Whitelist Checker Proxies** | Sends the Whitelist Checker's OpenSea sign-in and eligibility requests through proxies. |
 | A proxy on **Accounts** | The IP each account uses in social tasks. |
 
 ## Adding proxies

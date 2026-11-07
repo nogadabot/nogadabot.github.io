@@ -12,7 +12,6 @@ Nogada 是在 Windows 电脑上运行的 NFT 铸造应用。它可以用多个�
 | 自己选择合约和函数创建任务 | [任务](tasks/task-form.md) |
 | 准时发射、失败后重试、提高 Gas | [运行任务与加速](tasks/running.md) |
 | 把多个钱包的铸造打包成一笔交易 | [捆绑与合约](tasks/bundles.md) |
-| 查看自己的钱包是否在白名单里 | [白名单](tasks/whitelists.md) |
 | 上架、下架、转出 NFT，接受报价 | [NFT 菜单](after/nft-menu.md) |
 | 系列价格、图表、提醒 | [市场](after/market.md) |
 | 即将开始的铸造 | [铸造日历](after/mint-calendar.md)、[早期项目](tasks/early-calls.md) |

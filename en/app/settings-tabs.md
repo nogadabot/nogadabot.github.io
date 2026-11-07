@@ -6,7 +6,7 @@
 |---|---|
 | General | Language, updates, Backup & Restore, data export, application logs, log out, wipe all data |
 | Integrations | Captcha solver keys, Market Hub, PnL Alchemy URLs, Etherscan API key, Discord webhook, capture browser extension |
-| Fire Engine | Task defaults, OpenSea Early Start, NFT Buying, Whitelist Checker Proxies, Broadcast, Flashbots, chains |
+| Fire Engine | Task defaults, OpenSea Early Start, NFT Buying, Broadcast, Flashbots, chains |
 | Quick Task Settings | Quick task wallets and RPCs per chain |
 | Key Templates | Answer templates for social tasks |
 
@@ -62,10 +62,9 @@ What the lightning button on Tasks uses.
 - **Captcha Solver API Keys**: CapMonster, CapSolver, 2captcha, AnySolver, for social tasks that meet a captcha.
 - **Nogada Capture Browser Extension**: a separate add-on for Chrome or Edge. On supported explorers it picks up a transaction and opens a task window in the app with it filled in. Get it with **Download Extension**, unzip it, turn on Developer mode at `chrome://extensions`, and add the folder with **Load unpacked**. If the browser button gets no reaction from the app, click **Re-register protocol handler**.
 
-## Buying in the Viewer and checking whitelists (Fire Engine)
+## Buying in the Viewer (Fire Engine)
 
 - **NFT Buying**: the **Buy Wallet** and **Buy Max Fee** for the Viewer's bulk buy. Without a buy wallet, the Viewer cannot buy. → [The NFT menu](../after/nft-menu.md)
-- **Whitelist Checker Proxies**: the proxy group the Whitelist Checker goes through when it signs wallets in to OpenSea and asks about eligibility. → [Whitelists](../tasks/whitelists.md)
 
 ## Language and updates (General)
 

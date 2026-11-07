@@ -14,7 +14,6 @@ The menu has five sections, roughly in the order you use them.
 | | Smart Mint | Makes mint tasks from a link or address. |
 | | Tasks | Create, start and stop tasks. While tasks are running, a count shows next to the item. |
 | | Early Calls | Pre-mint projects picked by the operator. |
-| | Discovery | Finds new SeaDrop drops on chain and collects them. |
 | Assets | Wallets | Your minting wallets, in groups. |
 | | Accounts | The Gmail, X and Discord identities social tasks run as. |
 | | NFT | Holdings, P&L and the Viewer. |
@@ -22,9 +21,8 @@ The menu has five sections, roughly in the order you use them.
 | Connections | RPC | Node addresses the app sends transactions through. |
 | | Proxies | Spread site requests over many IPs. |
 | | OS API | OpenSea API keys. |
-| | Whitelists | Check and track your wallets' allowlist spots. |
 | | Contracts | EIP-7702 contracts for bundles. |
-| Tools | Calculator | Gas costs and Unix time conversion. |
+| Tools | Gas Calculator | Gas costs and Unix time conversion. |
 | | Settings | App-wide settings such as language, updates, backup and the fire engine. |
 
 ## Top bar

@@ -12,7 +12,6 @@ Nogada는 Windows PC에서 돌리는 NFT 민팅 앱입니다. 여러 지갑으�
 | 컨트랙트와 함수를 직접 골라 작업 만들기 | [작업](tasks/task-form.md) |
 | 정각에 쏘기, 실패하면 다시 쏘기, 가스 올리기 | [작업 실행과 부스트](tasks/running.md) |
 | 지갑 여러 개를 한 거래로 묶어 민팅 | [번들과 컨트랙트](tasks/bundles.md) |
-| 내 지갑들이 화이트리스트에 있는지 보기 | [화이트리스트](tasks/whitelists.md) |
 | 민팅한 NFT 올리기, 내리기, 보내기, 오퍼 수락 | [NFT 메뉴](after/nft-menu.md) |
 | 컬렉션 시세, 차트, 알림 | [마켓](after/market.md) |
 | 다가오는 민팅 일정 | [민트 캘린더](after/mint-calendar.md), [얼리 콜](tasks/early-calls.md) |

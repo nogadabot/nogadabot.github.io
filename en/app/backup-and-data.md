@@ -23,7 +23,6 @@ Copying the data folder instead does not work: wallets, accounts, RPCs, proxies 
 | P&L card backgrounds | Yes |
 | RPCs, proxies | Yes |
 | OpenSea API keys on OS API | No. Add them again. |
-| Whitelist Manager entries | Yes |
 | App settings | Yes |
 | License activation | No. Activate the key on the new PC. |
 

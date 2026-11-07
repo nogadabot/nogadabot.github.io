@@ -30,5 +30,3 @@ Expand **Calendar wallet Connect for My allowlists** and connect a wallet; then 
 - Connecting means signing an OpenSea login message. It is not a transaction, so there is no gas.
 - By connecting you agree to OpenSea's Terms of Service and Privacy Policy.
 - Closing the app disconnects it, and the login expires after a day.
-
-To check many wallets at once, use the [Whitelist Checker](../tasks/whitelists.md).

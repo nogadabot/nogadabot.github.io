@@ -12,7 +12,6 @@ Nogada is an NFT minting app for Windows PCs. It mints the same drop from many w
 | Pick the contract and function yourself | [Tasks](tasks/task-form.md) |
 | Fire on time, retry until it works, raise gas | [Running tasks and Boost](tasks/running.md) |
 | Mint from many wallets in one transaction | [Bundles and contracts](tasks/bundles.md) |
-| See whether your wallets are on an allowlist | [Whitelists](tasks/whitelists.md) |
 | List, unlist, send NFTs, accept offers | [The NFT menu](after/nft-menu.md) |
 | Collection prices, charts, alerts | [Market](after/market.md) |
 | Upcoming mints | [Mint Calendar](after/mint-calendar.md), [Early Calls](tasks/early-calls.md) |
