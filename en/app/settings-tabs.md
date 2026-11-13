@@ -1,6 +1,6 @@
 # Settings
 
-**Settings** has five tabs on the left.
+**Settings** has five tabs along the top.
 
 | Tab | Holds |
 |---|---|

@@ -9,11 +9,11 @@ Tasks pick wallets by group, so you make a group first and put wallets in it.
 1. In **Wallets**, click **+ New Group**.
 2. Enter a name and click **Create**. Splitting groups by purpose or chain makes them easy to pick when you create tasks.
 
-The group chip shows the group's total balance and number of wallets. Hover over the chip for the rename and delete buttons. Deleting a group deletes the wallets in it.
+Groups sit side by side as tabs above the list, and each tab shows the group's total balance and number of wallets. Hover over a tab for the rename and delete buttons. Deleting a group deletes the wallets in it.
 
 ## Add wallets
 
-Use the two buttons at the top right.
+Use **Generate Keys** and **Import Keys** at the top right of the list.
 
 **Import Keys** adds wallets you already have. Paste one per line, either `name,private key` or just the private key. The name is optional. The window shows how many lines it can read; click the import button to add them.
 

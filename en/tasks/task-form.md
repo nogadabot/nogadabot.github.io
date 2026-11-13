@@ -24,7 +24,7 @@ The timing fields:
 | Delay | The pause (ms) before trying again, or before the next transaction in Spam. New tasks get **Settings → Fire Engine → Default Delay**. |
 | Nonce | Normally left empty (automatic). Type a number only to force one particular nonce. With Spam on, this field turns into **Max Tx**; empty means no cap. |
 
-To turn a date and time into Unix time, use **Unix Time Converter** in the [Calculator](../app/calculator.md). The fire time counts on this PC's clock.
+To turn a date and time into Unix time, use **Unix Time Converter** in the [Gas Calculator](../app/calculator.md). The fire time counts on this PC's clock.
 
 ## What to call
 
@@ -43,11 +43,14 @@ Put a launchpad drop link in the contract field and the window changes to fit th
 
 For an OpenSea drop you get these fields:
 
-- **OpenSea Routing**: how each wallet's signed mint data is fetched.
+- **Mode**: how each wallet's signed mint data is fetched.
   - **Normal Mode**: each wallet signs in to OpenSea and fetches it.
   - **Anonymous Mode**: fetches without signing in, through the task's proxies. An API key is used only for wallets that got nothing.
   - **OpenSea API**: fetches with the keys on OS API. You need a key to pick it.
-  - **Dual Mode**: asks through Normal Mode and the OpenSea API at the same time and uses whichever answers first. You need a key to pick it; **Route API to Proxy** makes the API requests go through proxies too.
+  - **Dual Mode**: asks through Normal Mode and the OpenSea API at the same time and uses whichever answers first. You need a key to pick it.
+  - With no key at all, the field name says **needs OpenSea API key**.
+- **API Lanes**: can be picked only with OpenSea API and Dual Mode.
+- **OpenSea Routing**: the left field is the OS API key group to use (**All** is every key), the right field the proxy group the requests go through. With Dual Mode a **Route API to Proxy** switch appears next to the field name to send the API requests through proxies too.
 - **NFT Amount**: how many each wallet mints. If there is a per-wallet limit, it shows next to the field.
 - **Price per NFT**: the highest price per NFT you will pay. If the price OpenSea gives at fire time is higher, the task stops instead of sending.
 

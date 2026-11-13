@@ -10,7 +10,7 @@ Problems sorted by stage. If nothing here helps, see "Asking for help" at the en
 |---|---|
 | Nothing happens when you double-click | Nogada may already be running, and a second launch shows nothing. Find the open window, or end `nogada.exe` in Task Manager and start it again. |
 | The file is gone, or Windows says it contains a threat | Your antivirus took it. Restore it from the antivirus history and add the app folder to its exclusions. |
-| You start it from a synced folder (such as OneDrive) or a network drive | Move the exe to a local folder such as `C:\Nogada` and start it there. |
+| You installed it in a synced folder (such as OneDrive) or on a network drive | Uninstall it and install it again in a local folder such as the default one. Wallets and tasks are outside the install folder and stay. |
 
 **It says "License Check Temporarily Unavailable"**
 It tried several times but could not reach the license server. It is usually a short connection problem. Check your internet and click **Retry Now**. Your saved key, PC binding and remaining time do not change.
@@ -63,7 +63,7 @@ No RPC is saved for that chain. It can still send through a public RPC, but for 
 Spam cannot leave the max fee, priority fee or gas limit on auto. Enter numbers in all three.
 
 **It fails for lack of funds**
-Put enough coin for the mint price and gas in the wallet and start the task again. See **Balance Needed** in the [Calculator](../app/calculator.md) for how much.
+Put enough coin for the mint price and gas in the wallet and start the task again. See **Balance Needed** in the [Gas Calculator](../app/calculator.md) for how much.
 
 **It fails with execution reverted**
 The contract refused the transaction. Often the sale is not open yet, the wallet is not eligible, or the price or quantity is wrong. To start before it opens, turn on Simulate so it sends when the try passes.
@@ -90,7 +90,7 @@ The gas may be too low. Raise it with [Boost](../tasks/running.md#boost) in the 
 
 ## NFTs and Market
 
-**The list, accept offer and cancel listing buttons do not work**
+**The list, accept offer and cancel listing buttons are off**
 They need an OpenSea API key. Add one on [OS API](../prepare/opensea-keys.md).
 
 **Holdings shows "N error(s)"**

@@ -20,7 +20,9 @@ Above the table you see the number of NFTs and token types, the number of wallet
 | Rarity | The rank inside the collection. Each tier has its own color. |
 | Owner | The wallet that holds it. |
 | Listing | The price it is listed at now. |
-| Top offer | The highest offer you can take now. |
+| Top offer | The highest offer you can take now, shown in the currency the offer comes in (for example WETH). |
+
+Without an OpenSea API key on the OS API page, the **Listing** and **Top offer** columns show **needs OpenSea API key** instead of a value.
 
 ### The bottom bar
 
@@ -31,9 +33,12 @@ Tick NFTs, or set how many to select at once with the slider and **−/+** on th
 | List Selected | Lists the selected NFTs on OpenSea. Set the price and expiry; **Adjust for fees** raises the price so that what you receive after creator and platform fees equals the number you entered. A collection's first listing sends an approval transaction first. |
 | Send Selected | Sends the selected NFTs to other addresses, either gathered to one (**Consolidate**) or split across several (**Disperse**). One transaction goes out per NFT. |
 | Accept Offer | For each selected NFT, takes the highest offer standing on it. The first accept per wallet and collection also sends a one-time approval. NFTs with no offer, or only your own, are skipped. |
-| Cancel all listings | Takes the selected NFTs' OpenSea listings down on chain. |
+| Cancel Listings (N) | Shows when some of the selected NFTs are listed. Cancels those NFTs' OpenSea listings. |
+| Cancel all listings | Stops at once every listing and offer that the wallets holding the selected NFTs made on OpenSea on this chain: all of those wallets' orders, not only the selected NFTs. One transaction goes out per wallet. |
 
-Listing, accepting offers and cancelling listings need an [OpenSea API key](../prepare/opensea-keys.md). These go on chain, so they cost gas and cannot be undone once sent.
+List Selected, Accept Offer and Cancel Listings (N) need an [OpenSea API key](../prepare/opensea-keys.md). Without one the buttons are off, and hovering over them tells you to add a key on the OS API page. These go on chain, so they cost gas and cannot be undone once sent.
+
+Cancel all listings says the listings are cancelled only once the transaction's receipt is confirmed on chain. If it is not confirmed within a short wait, it says completion is pending and keeps the progress.
 
 ### All wallets
 
@@ -42,6 +47,8 @@ Listing, accepting offers and cancelling listings need an [OpenSea API key](../p
 ![All wallets](../images/nft-holdings.png)
 
 Find NFTs by name, token ID or wallet in the search field, and narrow them by chain, collection and **Filters** (sort, traits, listing state). Each card shows the collection floor, collection offer, rarity, chain, listing state and the wallet that holds it; **Open collection** opens that collection in Market.
+
+A wallet with more than 10,000 NFTs on one chain shows the first 10,000, and a line above the cards says so.
 
 ## P&L
 

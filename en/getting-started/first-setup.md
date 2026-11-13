@@ -12,7 +12,7 @@ Start with minting-only wallets that do not hold much money.
 
 Each wallet needs enough coin for the mint price and the gas. **Wallets → Manage Funds** with **Disperse** sends from one wallet to many in the group in one go. → [Dispersing and consolidating funds](../prepare/funding.md)
 
-Not sure how much? Put the gas limit and the NFT price into the [Calculator](../app/calculator.md).
+Not sure how much? Put the gas limit and the NFT price into the [Gas Calculator](../app/calculator.md).
 
 ## 3. Add an RPC
 
@@ -20,15 +20,15 @@ Without an RPC the app sends through each chain's built-in public RPC. Public RP
 
 ## 4. Make a task with Smart Mint
 
-In **Smart Mint**, paste the mint link, the contract address, or a mint transaction hash from that drop, pick the chain, and click **Resolve mint route**.
+In **Smart Mint**, paste the mint link, the contract address, or a mint transaction hash from that drop, pick the chain, and click **Resolve mint route**. The screen shows one step at a time as tabs, and moves on to the **Phase selection** tab when the lookup is done.
 
 1. In **Phase selection**, pick the phase to mint.
-2. In **Execution settings**, choose the wallet group, the quantity per wallet and the launch method.
-3. Check **Final review** and click **Create mint task**.
+2. In the **Execution settings** tab, choose the wallet group, the quantity per wallet, the gas and the launch method. **Instant ×1** and **Spam (repeated)** need all three gas fields filled with numbers.
+3. Check the **Final review** tab and click **Create mint task**.
 
 → [Smart Mint](../tasks/smart-mint.md)
 
-For drops where each wallet needs signed mint data, such as an OpenSea allowlist, that data is fetched over proxy IPs, and a registered OpenSea API key is used instead when the IPs are blocked. With many wallets, have both ready. → [Proxies](../prepare/proxy-groups.md), [OpenSea API keys](../prepare/opensea-keys.md)
+For drops where each wallet needs signed mint data, such as an OpenSea allowlist, pick how the data is fetched in **Mode** under **Execution settings**. Anonymous Mode fetches it over proxy IPs; OpenSea API and Dual Mode use your registered OpenSea API keys. With many wallets, have both ready. → [Proxies](../prepare/proxy-groups.md), [OpenSea API keys](../prepare/opensea-keys.md)
 
 ## 5. Start it from Tasks
 

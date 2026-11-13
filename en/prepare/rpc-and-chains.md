@@ -8,6 +8,8 @@ An RPC is the node address the app uses to read a chain and send transactions. E
 
 The app still works. If you have saved no RPC for a chain, it sends through that chain's built-in public RPC and says **No RPC, public RPC fallback** at the bottom of the task window. Public RPCs are shared by many people and get blocked or slow when requests pile up. For a contested mint, add a paid RPC. The app's help recommends Alchemy, Ankr, DRPC and QuickNode.
 
+The **Built-in** tab at the front of the RPC screen holds the public RPCs the app carries for each chain. You cannot edit or delete them; **Test All** or a row's button only checks whether they answer now.
+
 ## Adding RPCs
 
 1. In **RPC**, make a group with **+ New Group**.

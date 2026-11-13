@@ -2,11 +2,11 @@
 
 The app has a menu on the left, a bar at the top, the work area in the middle and a status bar at the bottom.
 
-![Dashboard](../images/dashboard.png)
+![The menu opened](../images/menu.png)
 
 ## Left menu
 
-The menu has five sections, roughly in the order you use them.
+The menu shows only icons until you move the mouse over it; then it opens and shows the names. It has five sections, roughly in the order you use them.
 
 | Section | Item | What it does |
 |---|---|---|
@@ -56,10 +56,10 @@ Read it from the left.
 | Volume 24h | 24-hour volume against the 7-day daily average |
 | Hype 24h | Biggest 24-hour floor rise (3 or more sales) |
 
-Switch chains with the chain chips to the right of the tabs, and add another chain with **+**.
+Switch chains with the chain tabs in the panel under the tabs, and add another chain with **+**.
 
 **Early Calls** below shows cards of projects the operator picked. **Open Early Calls** takes you to the [Early Calls](../tasks/early-calls.md) screen.
 
 ## Language
 
-Pick English, 한국어 or 简体中文 in **Settings → General → Language**. It changes at once and is saved on this PC.
+The app starts in English the first time. Pick English, 한국어 or 简体中文 in **Settings → General → Language**. It changes at once and is saved on this PC.

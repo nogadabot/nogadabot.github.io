@@ -40,4 +40,4 @@ The guide follows the order you use the app in.
 - Private keys are stored only on this PC, encrypted with your Windows account. Transactions are always signed on this PC.
 - Tasks run inside the app. Close the app and scheduled tasks do not run.
 - A successful mint depends on gas, competition and the project, so the app cannot promise one.
-- The app's text can be English, Korean or Chinese. Pick it in **Settings → General → Language**.
+- The app's text can be English, Korean or Chinese. It starts in English the first time; pick another in **Settings → General → Language**.

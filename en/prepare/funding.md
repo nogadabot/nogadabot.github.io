@@ -35,4 +35,4 @@ To send from one wallet to one address, the send button on the wallet's row is q
 
 - Check the source and destinations once more. A transaction on chain cannot be undone.
 - The source wallet needs gas on top of the amount it sends.
-- For how much each wallet needs, see **Balance Needed** in the [Calculator](../app/calculator.md).
+- For how much each wallet needs, see **Balance Needed** in the [Gas Calculator](../app/calculator.md).

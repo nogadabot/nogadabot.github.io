@@ -27,6 +27,7 @@ Click an item in the agenda to see each stage's start and end, price, wallet cap
 
 Expand **Calendar wallet Connect for My allowlists** and connect a wallet; then **My allowlists** keeps only the stages that wallet is on.
 
+- Connecting needs your own OpenSea API key on the OS API page. Without one, it tells you to add a key on the OS API page first.
 - Connecting means signing an OpenSea login message. It is not a transaction, so there is no gas.
 - By connecting you agree to OpenSea's Terms of Service and Privacy Policy.
 - Closing the app disconnects it, and the login expires after a day.

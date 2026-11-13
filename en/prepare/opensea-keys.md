@@ -30,11 +30,13 @@ The **Instant** group holds short-lived keys made by the Instant key task. Tasks
 
 | Feature | Without a key |
 |---|---|
-| Listing NFTs, cancelling listings, accepting offers | Does not work. The button tells you to add a key on the OS API page. |
-| The post-mint actions **List NFT** and **Accept Offer** | Does not work. The field says it needs an OpenSea API key. |
-| Fetching Smart Mint's mint data with the OpenSea API | Cannot be picked. |
-| **OpenSea API** and **Dual Mode** in a task's OpenSea routing | Cannot be picked. |
-| The default path (proxies) for signed drops | Works. With a key, it is used instead when the IPs are blocked or no data comes back. |
+| **List Selected**, **Cancel Listings** and **Accept Offer** in Holdings | Does not work. The buttons are off, and hovering over them tells you to add a key on the OS API page. |
+| The **Listing** and **Top offer** columns of the Holdings table | Show **needs OpenSea API key** instead of a value. |
+| The post-mint actions **List NFT** and **Accept Offer** | Does not work. The field says **needs OpenSea API key**. |
+| **OpenSea API** and **Dual Mode** in the OpenSea Mode of Smart Mint and of a task | Cannot be picked. The field name says **needs OpenSea API key**. |
+| Wallet alerts in Market | The Alert Center shows no **Wallet** tab and wallet alerts do not run. Saved wallet alerts are not deleted; they come back when you add a key again. |
+| Connecting My allowlists in the Mint Calendar | Does not work. Trying to connect tells you to add a key on the OS API page first. |
+| **Normal Mode** and **Anonymous Mode** for signed drops | Works. |
 | Market prices and charts | Works. They come from the Nogada server. |
 
 ## Many wallets, several keys

@@ -1,22 +1,30 @@
 # Download and first launch
 
-Nogada is a single program file, `nogada.exe`. There is no setup wizard: you download it and run it.
+Nogada comes as an installer. It installs for your Windows account only, without administrator rights. The installed app is called **Nogada App**.
 
 ## From download to the main screen
 
-1. Download `nogada.exe` with **Download the app**, either on the payment confirmation screen or on [My license](https://nogada-lic.duckdns.org/dashboard). Buying a key is covered in [License](license.md).
-2. Double-click the file. Windows may show a blue warning because the program is new to it; click **More info**, then **Run anyway**.
-3. The license screen comes up. Paste your key and click **Activate**. This first activation needs the internet.
+1. Download the installer, `nogada-setup-<version>.exe`, with **Download the app**, either on the payment confirmation screen or on the key card of [My license](https://nogada-lic.duckdns.org/dashboard). The button shows only while the license is in its period. Buying a key is covered in [License](license.md).
+2. Double-click the installer. Windows may show a blue warning because the program is new to it; click **More info**, then **Run anyway**.
+3. The installer is in English for everyone. Follow its steps. The install folder is `%LOCALAPPDATA%\Programs\Nogada App` unless you change it during the install.
+4. Start the app with **Nogada App** on the desktop or in the Start menu.
+5. The license screen comes up. Paste your key and click **Activate**. This first activation needs the internet.
 
-When the menu shows on the left, you are in.
+When the menu shows on the left, you are in. The app starts in English; to change the language, go to **Settings → General → Language**.
 
 ## Where files go
 
 | What | Where | Note |
 |---|---|---|
-| `nogada.exe` | A folder you choose, for example `C:\Nogada` | A plain local folder works best. Synced folders such as OneDrive, and network drives, cause trouble. |
-| Records (logs) | A `logs` folder made next to the exe | Move the exe around and a new `logs` folder appears at each place. |
-| Wallets, tasks, settings | `%LOCALAPPDATA%\nogada` | Not next to the exe, so swapping in a newer exe keeps everything. |
+| The program | The install folder (by default `%LOCALAPPDATA%\Programs\Nogada App`) | A plain local folder works best. Synced folders such as OneDrive, and network drives, cause trouble. |
+| Records (logs) | A `logs` folder inside the install folder | It is made next to the program. |
+| Wallets, tasks, settings | `%LOCALAPPDATA%\nogada` | Outside the install folder, so a new version or uninstalling the app keeps everything. |
+
+## Installing again or uninstalling
+
+- While the app is running, installing and uninstalling stop and ask you to close it. Close the app and try again.
+- Installing again goes to the folder you picked the first time.
+- Uninstalling **Nogada App** from the apps list in Windows Settings removes only the installed program files. The `logs` folder and `%LOCALAPPDATA%\nogada` (wallets, keys, tasks) stay. To remove the data from this PC too, use **Settings → General → Wipe All Data** in the app before uninstalling. → [Backup and data](../app/backup-and-data.md)
 
 ## Things the app does by itself
 
@@ -39,7 +47,7 @@ Things to watch:
 
 - The X on the Remote Desktop window only disconnects you; Nogada keeps going inside the VPS. Choosing sign out or restart inside the VPS ends that Windows session, and Nogada with it.
 - Scheduled tasks fire by the VPS's own clock, so turn on Windows time sync there. A difference shown next to the clock in the app's status bar means that clock is off.
-- Before giving the VPS back, take a [backup](../app/backup-and-data.md) and run **Settings → General → Wipe All Data**. Deleting only the exe leaves your wallets on its disk.
+- Before giving the VPS back, take a [backup](../app/backup-and-data.md) and run **Settings → General → Wipe All Data**. Deleting only the app leaves your wallets on its disk.
 
 ## If it does not open
 

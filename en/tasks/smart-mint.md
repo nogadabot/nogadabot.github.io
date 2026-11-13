@@ -2,11 +2,11 @@
 
 Smart Mint makes a mint task from a single link. The app finds the mint contract, the data to call, the price and the phases; you only choose wallets and a launch method. You start the task afterwards from **Tasks**.
 
-The screen goes top to bottom in four steps.
+The screen shows one step at a time as four tabs (**Project confirmation**, **Phase selection**, **Execution settings**, **Final review**). Until a lookup is done only the first tab works; when it is done, the screen moves on to the **Phase selection** tab. After that you can click the tabs to go back and forth.
 
 ## 1. Project confirmation
 
-![Smart Mint lookup result](../images/smart-mint-result.png)
+![Smart Mint project confirmation](../images/smart-mint-link.png)
 
 Put one of these into **Paste a mint link, contract address or transaction hash**:
 
@@ -18,9 +18,11 @@ Pick the **Chain** yourself. The same address can exist on several chains, so th
 
 If you have the allowlist file, add it under **Allowlist file (optional)**. It takes CSV or OpenZeppelin JSON up to 4 MiB and is checked against the Merkle root on chain now.
 
-Click **Resolve mint route** and you see it go through reading the link, checking the contract and preparing the mint data. If several contracts match the link, it asks which one to look up. If you pasted a transaction hash, a field appears to pick the wallets to check against that transaction.
+Click **Resolve mint route**, or press Enter in the field, and **Resolving…** shows while it looks the drop up. If several contracts match the link, it asks which one to look up. If you pasted a transaction hash, a field appears to pick the wallets to check against that transaction.
 
 ## 2. Phase selection
+
+![Smart Mint phase selection](../images/smart-mint-result.png)
 
 You see the project's name and platform, the mint function, the supply and the list of phases. Each phase shows its price (**free** when free), the per-wallet limit and the time. Click the phase you want to mint.
 
@@ -41,10 +43,16 @@ You may see:
 | Wallet group | The wallet group to mint with. |
 | Quantity per wallet | How many each wallet mints. If the drop has a per-wallet limit, it shows too. |
 | Wallets for this task | Tick the wallets in the group to use. Each wallet's balance and check result (for example, simulation passed) shows next to it. |
-| Gas (blank = auto) | Gas limit, max fee, priority fee. Empty lets the app decide; a value is used as entered. |
+| Gas | Gas limit, max fee, priority fee. See "The gas fields" below. |
 | Estimated total | Transaction value plus estimated gas for all ticked wallets. The real gas is set when it fires. |
 | Launch method | See the table below. |
-| Proxy group | The proxies for the launch and mint data requests. Empty connects directly. |
+| Mode | Only for OpenSea drops. See "Mode for OpenSea drops" below. |
+| Proxy group | Shows only when you have made at least one proxy group. Signed mint data requests go through that group's proxies (up to 20 wallets per IP), and this PC asks directly only when every proxy fails. Transactions always go from this PC. The default is **No proxy (direct)**. |
+
+### The gas fields
+
+- With **Instant ×1** and **Spam (repeated)** the heading says **Gas (required)**. The gas limit, max fee and priority fee must all be numbers before the task can be made.
+- With **Safe (simulate first)** it becomes **Gas (blank = auto)**. Empty lets the app decide; a value is used as entered.
 
 ### Launch method
 
@@ -60,12 +68,13 @@ Under the launch method you see when Spam stops and the current **Spam Guardrail
 
 When the phase opens later, **Recommended** appears next to Spam. It means Spam fits if you start early and want to send the moment it opens. The launch method does not change until you pick it yourself.
 
-### Drops that need a signature
+### Mode for OpenSea drops
 
-Drops where each wallet must get signed mint data, such as an OpenSea allowlist, add a **Mint data source** field.
+OpenSea drops have a **Mode** field. It sets how each wallet's signed mint data is fetched.
 
-- **Default (proxy)**: fetches the mint data over proxy IPs. A registered OpenSea API key is used instead only when the IPs are blocked or no data comes back.
-- **OpenSea API**: fetches each wallet's data with your OpenSea API key. No proxies needed, but each key has its own request limit. You cannot pick it without a key.
+- With a public phase picked, the field is locked and the task uses the mode the app gives it: **OpenSea API** when your registered OpenSea API keys can fetch that drop, otherwise **Normal Mode**.
+- With a phase that is not public (an allowlist and so on), the field starts empty at **Choose a mode**, and the task cannot be made until you pick one.
+- The choices are **OpenSea API**, **Dual Mode**, **Normal Mode** and **Anonymous Mode**. The first two can be picked only when your OpenSea API keys can fetch that drop. With no key at all, the field name says **needs OpenSea API key**. What each mode does is under "If you put in a launchpad link" in [Create a task by hand](task-form.md).
 
 Highlight's signed drops show a field to paste each wallet's signed mint data from highlight.xyz. Leave it empty to fetch again when the task starts.
 
@@ -74,7 +83,7 @@ Highlight's signed drops show a field to paste each wallet's signed mint data fr
 - **Keep scheduled mint data current**: when on, scheduled tasks bring the price, phase and mint data up to date before they start. The preparation finishes before the launch time, so firing is not delayed.
 - **Sweep to a safe wallet after mint**: after a successful mint, the NFTs and leftover coin move straight to the safe wallet you enter. Not available with Spam.
 
-If the drop is paid in an ERC-20 token, an **Approve early** button appears. Without it, the app approves exactly what is needed when it is needed.
+For drops on the Stable chain, Spam cannot be picked and **Keep scheduled mint data current** is always on.
 
 ## 4. Final review
 
@@ -82,7 +91,9 @@ If the drop is paid in an ERC-20 token, an **Approve early** button appears. Wit
 
 It shows the project and chain, phase, number of wallets, quantity per wallet, total quantity, launch method, gas setting and estimated total in one place. If it is right, click **Create mint task**. To read the details again, click **Refresh mint details**.
 
-Once the tasks are made, an **Open Tasks** button appears. The task's start time is when the phase opens. Start it from Tasks and it sends at that time; if the phase is already open, it sends right away. → [Running tasks and Boost](running.md)
+If something is missing (a phase, wallets, the mode, the gas and so on), no task is made: the screen goes back to the step tab with that field and says why.
+
+Once the tasks are made, an **Open Tasks** button appears. A task made for a phase that opens later has the phase's opening time as its start time; start it from Tasks and it sends at that time. A task made for a phase that is already open has no start time and sends as soon as you start it. → [Running tasks and Boost](running.md)
 
 ## When the lookup fails
 

@@ -8,8 +8,12 @@ Tasks you make collect in **Tasks**, by group. Here you start and stop them, see
 
 - **EVM / Social / Modules** tabs: mint tasks are on the EVM tab. Social and Modules are covered in [Accounts and social tasks](../social/accounts-and-social.md).
 - The numbers next to the title: groups, tasks, and tasks running now.
-- **Group chips**: click one to open that group. The number on a chip is its task count, the green dot its successes and the red dot its failures. Shift-click to pick several groups, and drag to reorder.
+- **Group tabs**: the groups sit side by side as tabs above the list. Click one to open that group. The number on a tab is its task count, the green dot its successes and the red dot its failures. Shift-click to pick several groups, and drag to reorder.
+- With several groups picked, **+ New Group** turns into **Delete N**, which deletes the picked groups with the tasks in them in one go.
+- When the groups do not fit on one row, a **More groups** button appears at the end of the row; click it to reach the groups pushed out.
 - **New Task**: opens [Creating a task by hand](task-form.md).
+
+The status tabs above the list (**Pending**, **Running**, **Success**, **Failed**) show how many tasks are in each state; each click shows or hides that state. Several can be on together, and **Show/Hide All** turns all four on or off at once.
 
 The three buttons right of the search field:
 
@@ -25,7 +29,7 @@ The three buttons right of the search field:
 |---|---|
 | Target | Task name and chain. |
 | Wallet | The wallet this task uses. |
-| Status | Idle, Running, success or failure with its reason. Filter by status with the funnel in the column title. |
+| Status | Idle, Running, success or failure with its reason. A running row has an orange bar on its left. |
 | Mode | The launch method, such as Simulation or Spam. |
 | Value | The coin sent per transaction. |
 | Gas Fee | Max fee / priority fee. auto means automatic. |
