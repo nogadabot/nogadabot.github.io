@@ -6,26 +6,28 @@ const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, '_site');
 const LANGS = ['en', 'ko', 'zh'];
 const LANG_NAMES = { en: 'EN', ko: '한국어', zh: '中文' };
-const BUY_URL = 'https://nogada-lic.duckdns.org/buy';
+const BUY_URL = 'https://nogada.app/buy';
 
 const TEXT = {
   en: {
     title: 'Nogada Guide', sub: 'How to set up and use the app, from the first launch to your first mint.',
     search: 'Search the guide', noResults: 'Nothing found', prev: 'Previous', next: 'Next', onPage: 'On this page', menu: 'Menu', buy: 'Get a license',
-    stepsTitle: 'New here? Follow these four', allTitle: 'Everything in the guide',
+    stepsTitle: 'New here? Follow these four', allTitle: 'Everything in the guide', contactTitle: 'Need help? Ask the operator',
   },
   ko: {
     title: 'Nogada 가이드', sub: '첫 실행부터 첫 민팅까지, 앱을 설정하고 쓰는 법을 정리했습니다.',
     search: '가이드 검색', noResults: '찾은 내용이 없습니다', prev: '이전', next: '다음', onPage: '이 페이지', menu: '메뉴', buy: '라이선스 받기',
-    stepsTitle: '처음이면 이 네 가지부터', allTitle: '가이드 전체',
+    stepsTitle: '처음이면 이 네 가지부터', allTitle: '가이드 전체', contactTitle: '도움이 필요하면 운영자에게',
   },
   zh: {
     title: 'Nogada 指南', sub: '从首次启动到第一次铸造，这里说明如何设置和使用应用。',
     search: '搜索指南', noResults: '没有找到内容', prev: '上一页', next: '下一页', onPage: '本页内容', menu: '菜单', buy: '获取许可证',
-    stepsTitle: '第一次使用？先看这四篇', allTitle: '全部内容',
+    stepsTitle: '第一次使用？先看这四篇', allTitle: '全部内容', contactTitle: '需要帮助？联系运营者',
   },
 };
 const STEPS = ['getting-started/install.md', 'getting-started/license.md', 'getting-started/first-setup.md', 'tasks/smart-mint.md'];
+// The operator's handles on the home page. Discord has no link by name, so it is text.
+const CONTACTS = [['Discord', '@crocy.eth', ''], ['Telegram', '@min0119', 'https://t.me/min0119'], ['X (Twitter)', '@0xCrocy', 'https://x.com/0xCrocy']];
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const plain = html => html.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
@@ -168,6 +170,9 @@ async function main() {
 
     const steps = STEPS.map((file, i) => `<a class="step" href="${routeOf(lang, file)}"><i>${i + 1}</i>${esc(titles.get(file) || file)}</a>`).join('');
     const all = menu.filter(g => g.title).map(g => `<div class="index-group"><h3>${esc(g.title)}</h3>${g.items.map(i => `<a href="${routeOf(lang, i.file)}">${esc(i.title)}</a>`).join('')}</div>`).join('');
+    const contacts = CONTACTS.map(([name, handle, url]) => url
+      ? `<a class="contact" href="${url}" target="_blank" rel="noopener"><i>${esc(name)}</i>${esc(handle)}</a>`
+      : `<div class="contact"><i>${esc(name)}</i>${esc(handle)}</div>`).join('');
     const body = `<main class="home">
   <h1>${esc(t.title)}</h1>
   <p class="home-sub">${esc(t.sub)}</p>
@@ -177,6 +182,8 @@ async function main() {
   <img class="home-shot" src="/${lang}/images/tasks.png" alt="">
   <h2>${t.allTitle}</h2>
   <div class="index">${all}</div>
+  <h2>${t.contactTitle}</h2>
+  <div class="contacts">${contacts}</div>
 </main>`;
     fs.mkdirSync(path.join(OUT, lang), { recursive: true });
     fs.writeFileSync(path.join(OUT, lang, 'index.html'), shell({ lang, title: t.title, body, route: `/${lang}/`, menu, home: true }));

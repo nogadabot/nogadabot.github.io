@@ -5,7 +5,7 @@ Everything on this page is in **Settings → General**, arranged by what you are
 ## Moving to a new PC
 
 1. On the old PC, enter at least 8 characters in **Backup Password** under **Backup & Restore**, click **Export Backup**, and save the file somewhere the new PC can reach. The password is kept nowhere; without it the file cannot be opened.
-2. Click **Reset device** on [My license](https://nogada-lic.duckdns.org/dashboard) so the key can move (once every 24 hours).
+2. Click **Reset device** on [My license](https://nogada.app/dashboard) so the key can move (once every 24 hours).
 3. On the new PC, download the app and activate your key. → [Download and first launch](../getting-started/install.md)
 4. In **Backup & Restore** there, type the backup's password, click **Restore Backup** and pick the file. Check the counts it shows (wallets, tasks and so on) and click **Restore & Restart**.
 5. Redo what the backup does not carry, from the table below.

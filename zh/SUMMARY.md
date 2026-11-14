@@ -44,4 +44,5 @@
 ## 帮助
 
 * [遇到问题时](help/when-stuck.md)
+* [使用条款与隐私](help/terms-and-privacy.md)
 * [更新日志](changelog.md)

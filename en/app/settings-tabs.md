@@ -4,7 +4,7 @@
 
 | Tab | Holds |
 |---|---|
-| General | Language, updates, Backup & Restore, data export, application logs, log out, wipe all data |
+| General | Language, updates, Backup & Restore, data export, application logs, help & contact, log out, wipe all data |
 | Integrations | Captcha solver keys, Market Hub, PnL Alchemy URLs, Etherscan API key, Discord webhook, capture browser extension |
 | Fire Engine | Task defaults, OpenSea Early Start, NFT Buying, Broadcast, Flashbots, chains |
 | Quick Task Settings | Quick task wallets and RPCs per chain |
@@ -72,6 +72,7 @@ What the lightning button on Tasks uses.
 
 - **Language**: English, 한국어, 简体中文, saved on this PC.
 - **Updates**: the version you have and **Check for Update**. **Force update on startup** decides what happens when a new version is out: on, it is installed at launch; off, an **Update Now** notice lets you pick the moment. Only releases signed by Nogada are accepted.
+- **Help & Contact**: **User Guide** and **Terms & Privacy** open this guide's pages. Below them are the operator's handles: Telegram and X open in the browser, Discord copies the handle. → [Asking for help](../help/when-stuck.md#asking-for-help)
 
 The rest of the General tab (**Backup & Restore**, **Export Data**, **Application Logs**, **Log Out**, **Wipe All Data**) is in [Backup and data](backup-and-data.md).
 

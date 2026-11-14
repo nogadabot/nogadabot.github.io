@@ -17,11 +17,21 @@ It tried several times but could not reach the license server. It is usually a s
 
 **The key will not activate**
 - Check you pasted the key exactly, with no spaces before or after.
-- Check on [My license](https://nogada-lic.duckdns.org/dashboard) whether the key expired or was suspended.
+- Check on [My license](https://nogada.app/dashboard) whether the key expired or was suspended.
 - If the key is bound to another PC, use **Reset device** on My license (once every 24 hours).
+- If it says "This PC's clock is more than an hour off", see below.
+
+**It says "This PC's clock is more than an hour off"**
+The license server's answer carries the server's time, and the app does not accept it when this PC's clock is more than an hour away from it. Turn on automatic time in Windows, then try again. Your saved key stays. At launch the same reason can sit under **Technical details** of "License Check Temporarily Unavailable".
+
+**It says "Enter the key again to use it on this PC"**
+This PC has the key saved, but not a session it can open. That happens when the app's data was copied here from another PC or another Windows account. Enter the key again. The PC that used it until now stops at its next license check.
+
+**It says "This key was turned on on another PC, so its use on this PC has ended"**
+The same key was turned on somewhere with the same device ID: a copied or cloned Windows, or another Windows user on this PC. A key runs in one place at a time, so this place stopped and its running tasks stopped with it. To use it here again, enter the key; then the other place stops.
 
 **It went back to the license screen while I was using it**
-The app checks the license every 15 minutes and returns to the license screen when the server refuses the key (expired, suspended, or bound to another PC). A short internet drop alone does not send you back.
+The app checks the license every 15 minutes and returns to the license screen when the server refuses the key (expired, suspended, bound to another PC, or turned on at another place with the same device ID). A short internet drop alone does not send you back.
 
 ## Buying a license
 
@@ -110,16 +120,24 @@ Check the state of **Settings → Integrations → Market Hub** and refresh.
 
 **Do tasks run with the app closed?** No. Tasks run inside the app.
 
-**Can I use one key on two PCs?** No. One key, one PC.
+**Can I use one key on two PCs?** No. A key runs on one PC at a time. Turning it on again with the same device ID ends the earlier one, and a PC with another device ID needs **Reset device** first. → [License](../getting-started/license.md#one-key-one-pc)
 
 **It says a wallet is not eligible; why does it not stop me?** The eligibility and balances the app shows are there to help you decide. You choose whether to send, and the chain decides the result. Pick **Safe (simulate first)** in Smart Mint and wallets that would fail the simulation are skipped.
 
 **Is a successful mint guaranteed?** No. It depends on gas, RPCs, competition and the project.
 
-**Are refunds possible?** It is a digital product, so there are no refunds.
+**Are refunds possible?** It is a digital product, so there are no refunds. → [Terms and privacy](terms-and-privacy.md)
 
 ## Asking for help
 
 1. For a task problem, open that task's **⋯ → Show Logs** and click **Copy All**.
 2. In **Settings → General → Application Logs**, click **Send Logs**. Write what happened in **Reason** (optional, up to 500 characters) and send. When the upload finishes, the app shows the log bundle's ID. Wallet keys, RPC API keys and proxy credentials are never in the bundle.
-3. Send that ID and the copied task log to the operator.
+3. Send that ID and the copied task log to the operator on any of these:
+
+| Where | Operator |
+|---|---|
+| Discord | `@crocy.eth` |
+| Telegram | [@min0119](https://t.me/min0119) |
+| X (Twitter) | [@0xCrocy](https://x.com/0xCrocy) |
+
+The same handles are in the app under **Settings → General → Help & Contact**.

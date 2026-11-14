@@ -44,4 +44,5 @@
 ## Help
 
 * [When you are stuck](help/when-stuck.md)
+* [Terms and privacy](help/terms-and-privacy.md)
 * [Changelog](changelog.md)

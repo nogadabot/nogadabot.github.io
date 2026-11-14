@@ -44,4 +44,5 @@
 ## 도움말
 
 * [막혔을 때](help/when-stuck.md)
+* [이용 조건과 개인정보](help/terms-and-privacy.md)
 * [변경 사항](changelog.md)
