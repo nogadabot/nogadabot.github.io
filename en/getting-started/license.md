@@ -33,6 +33,14 @@ Every order has different last digits. The store matches deposits to orders by t
 - If you sent a different amount or it was not picked up, enter the transaction hash in the field at the bottom of the order screen and click **Check**. The operator checks it and then issues the key.
 - ETH sent through a contract, such as some exchanges' batched withdrawals or smart wallets, is not picked up automatically. Contact the operator (see [Asking for help](../help/when-stuck.md#asking-for-help)).
 
+## Free Discord key
+
+Open the link your community shared (`nogada.app/claim/...`) and click **Log in with Discord**. If you have that community's set role, **Claim now** appears; clicking it gives you a key that runs for 30 days from then. You can download the app on the same page.
+
+- It is once per Discord account across all communities. Signing in again shows the key you received.
+- Each link can be claimed only for a set period. The page shows the last day.
+- A free key cannot use the device reset on **My license**. If you change PCs, tell us through [Asking for help](../help/when-stuck.md#asking-for-help).
+
 ## Activating in the app
 
 ![License screen](../images/license.png)

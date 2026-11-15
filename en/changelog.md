@@ -2,6 +2,13 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it: see [Download](getting-started/install.md) to install.
 
+## v1.0.0 (beta)
+
+- The first release of the new Nogada App: Smart Mint, tasks, wallets, Market, NFTs and alerts in one app.
+- App alerts arrive on Telegram. Connect it in the Alert Center.
+- Send ideas, feedback and bug reports with the **Feedback** button at the top right.
+- With the set role in a partner Discord community you can claim a free 30-day key once. See [License](getting-started/license.md#free-discord-key).
+
 ## v0.9.43
 
 - Tasks now keep STATUS compact and use a separate RESULT area for confirmed mint evidence, transaction links, readable failure reasons and a wallet-level result summary without crowding row actions.
