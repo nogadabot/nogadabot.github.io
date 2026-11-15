@@ -21,7 +21,7 @@
 
 Click an item in the agenda to see each stage's start and end, price, wallet cap, supply, contract, and website and X links. It also shows whether values were checked on chain.
 
-**Set reminder** chooses how long before the stage opens you are notified. Reminders arrive as Windows notifications. The number of reminders shows under **Reminders** below the calendar.
+**Set reminder** chooses how long before the stage opens you are notified. Reminders arrive on Telegram; connect it first in the [Alert Center](market.md#alert-center). The number of reminders shows under **Reminders** below the calendar.
 
 ## Seeing your own allowlists
 

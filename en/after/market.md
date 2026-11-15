@@ -58,7 +58,7 @@ Scroll to zoom and drag to move. Double-click or press Home to get back to the f
 
 ## Alert Center
 
-In the **Alert Center** you make alerts for changes in a collection or a wallet. They work while the app is open, without the detail screen open. The app decides when to alert, so nothing comes while it is closed. Alerts arrive as Windows notifications.
+In the **Alert Center** you make alerts for changes in a collection or a wallet. They work while the app is open, without the detail screen open. The app decides when to alert, so nothing comes while it is closed. Alerts arrive on Telegram. Open **Market Telegram connection** in the Alert Center, click **Generate connection code**, and send the command it shows to the bot chat signed in with the same license as the app. The code expires in 5 minutes. Once connected, the license end notice and a task's site step notices come to the same chat.
 
 The Alert Center's tabs are **Collection**, **Wallet** and **History**. The numbers next to the Collection and Wallet tabs are how many alerts you have made.
 
