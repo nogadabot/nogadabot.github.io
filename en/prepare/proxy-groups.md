@@ -34,6 +34,10 @@ The **Status** column shows the response time (ms) and the response code.
 
 The row's edit button changes the proxy line and the trash button removes it.
 
-## How many you need
+## When you need them
 
-Some launchpad fields in the task window suggest about 1 IP per 8 wallets. Add more as you add wallets, and test with the site you will mint on first. The app's help recommends BirdProxies, StatProxies and Zesty.
+- **Not needed** for a mint where the app only talks to the chain, such as calling a contract's mint function directly. Transactions and chain reads go to the RPC and never through a proxy, so proxies change nothing there.
+- **Needed** when the app has to get something from a site for every wallet before it can mint: signed mint data from OpenSea, a launchpad or the project's own site, an allowlist proof, or a sign-in. This holds even when the mint itself is a contract call. With many wallets, all those requests coming from one IP can get slowed down or blocked, and a wallet that does not get its data in time cannot mint.
+- Social tasks use the proxy set on each account.
+
+The more wallets you run, the more proxies you want. Test them with the site you will mint on first. The app's help recommends BirdProxies, StatProxies and Zesty.
