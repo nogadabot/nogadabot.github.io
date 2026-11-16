@@ -6,7 +6,7 @@ An RPC is the node address the app uses to read a chain and send transactions. E
 
 ## If you add no RPC
 
-The app still works. If you have saved no RPC for a chain, it sends through that chain's built-in public RPC and says **No RPC, public RPC fallback** at the bottom of the task window. Public RPCs are shared by many people and get blocked or slow when requests pile up. For a contested mint, add a paid RPC. With many wallets, add several: tasks share the RPCs out (see below), so when there is only one, every wallet sends through it. The app's help recommends Alchemy, Ankr, DRPC and QuickNode.
+The app still works. If you have saved no RPC for a chain, it sends through that chain's built-in public RPC and says **No RPC, public RPC fallback** at the bottom of the task window. Public RPCs are shared by many people and get blocked or slow when requests pile up. For a contested mint, add a paid RPC. With many wallets, add several: tasks share the RPCs out (see below), so when there is only one, every wallet sends through it. If you run many wallets with **Simulate** (or **Safe (simulate first)** in Smart Mint), you need your own RPC: each wallet keeps trying the call before it sends, and public RPCs block that quickly. The app's help recommends Alchemy, Ankr, DRPC and QuickNode.
 
 The **Built-in** tab at the front of the RPC screen holds the public RPCs the app carries for each chain. You cannot edit or delete them; **Test All** or a row's button only checks whether they answer now.
 
@@ -35,6 +35,20 @@ When you pick several wallets in the task window, one task is made per wallet. R
 - When a task has several RPCs and an RPC error happens during the pre-send check or preparation, it moves to the next RPC. If all of its RPCs report they are out of balance or credits, the task stops with that reason.
 
 Alchemy addresses saved in RPC are also used to read NFT P&L and holdings. To set them per chain, enter them in **Settings → Integrations → PnL Alchemy URLs**.
+
+## What we saw in our tests
+
+Rough numbers from our own tests on the Robinhood chain in November 2026, from one internet connection (one IP), to give you a feel for it. Other chains, other RPCs and paid plans will give different results.
+
+| What we tried | What happened |
+|---|---|
+| 99 wallets at the open, Simulate off, public RPC | All 99 minted, nothing was blocked |
+| 92 wallets at the open, Simulate on, public RPC | Only 34 minted; the RPC blocked the rest |
+| 100 wallets at the open, Simulate on, public RPC | 6 minted |
+| 100 wallets after the open, Simulate on, Alchemy free plan | 70 minted; 24 stopped when their sends were blocked |
+| Simulations per second before getting blocked | Public RPC: about 10 was fine, at 25 most were blocked. Alchemy free plan: about 50 was fine, at 100 most were blocked |
+
+In short: with many wallets on a public RPC, Simulate off went through. If you want Simulate on with many wallets, use a paid RPC, or several.
 
 ## Chain settings
 

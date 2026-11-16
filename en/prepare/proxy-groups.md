@@ -43,3 +43,13 @@ The row's edit button changes the proxy line and the trash button removes it.
 - Social tasks use the proxy set on each account.
 
 The more wallets you run, the more proxies you want. Test them with the site you will mint on first. The app's help recommends BirdProxies, StatProxies and Zesty.
+
+## What we saw in our tests
+
+Our own results from November 2026, to give you a feel for it. Yours can differ.
+
+| What we tried | What happened |
+|---|---|
+| OpenSea, 400 wallets asking for mint data at the same time from one IP (Anonymous mode) | All 400 got an answer |
+| Making Instant keys from one IP | 5 keys, then about 4 hours 50 minutes of waiting |
+| Launchpads and projects' own sites | Not tested. Each site limits differently, so test with that site first |
