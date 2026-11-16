@@ -37,7 +37,9 @@ The row's edit button changes the proxy line and the trash button removes it.
 ## When you need them
 
 - **Not needed** for a mint where the app only talks to the chain, such as calling a contract's mint function directly. Transactions and chain reads go to the RPC and never through a proxy, so proxies change nothing there.
-- **Needed** when the app has to get something from a site for every wallet before it can mint: signed mint data from OpenSea, a launchpad or the project's own site, an allowlist proof, or a sign-in. This holds even when the mint itself is a contract call. With many wallets, all those requests coming from one IP can get slowed down or blocked, and a wallet that does not get its data in time cannot mint.
+- **Needed** when the app has to get something from a launchpad or a project's own site for every wallet before it can mint: signed mint data, an allowlist proof, or a sign-in. This holds even when the mint itself is a contract call. With many wallets, all those requests coming from one IP can get slowed down or blocked, and a wallet that does not get its data in time cannot mint.
+- **Always needed** for the Instant key task: the app does not make an OpenSea Instant key without a proxy, because OpenSea allows only a few keys per IP.
+- OpenSea drops worked from a single IP in our tests, so proxies are optional there.
 - Social tasks use the proxy set on each account.
 
 The more wallets you run, the more proxies you want. Test them with the site you will mint on first. The app's help recommends BirdProxies, StatProxies and Zesty.
