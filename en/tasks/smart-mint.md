@@ -26,6 +26,8 @@ Click **Resolve mint route**, or press Enter in the field, and **Resolving…** 
 
 You see the project's name and platform, the mint function, the supply and the list of phases. Each phase shows its price (**free** when free), the per-wallet limit and the time. Click the phase you want to mint.
 
+For an UnVault drop with a schedule, like DeBugz, every phase is listed with its time, the ones that are over included. The task is made with the start time of the phase you pick. If you pick a phase that is over, it mints the phase UnVault has open at that time.
+
 You may see:
 
 - **A warning that the source is unverified**: the contract code is not publicly verified, so the app cannot read what it does. You can still mint, but check that the project is one you trust.
@@ -68,6 +70,8 @@ Under the launch method you see when Spam stops and the current **Spam Guardrail
 
 When the phase opens later, **Recommended** appears next to Spam. It means Spam fits if you start early and want to send the moment it opens. The launch method does not change until you pick it yourself.
 
+For an UnVault drop, Spam cannot be chosen: the Spam button is greyed out, gets no **Recommended**, and you use **Instant ×1**. Instant ×1 also keeps asking UnVault until the phase opens, and mints as soon as it does. On a signed-order drop like DeBugz your wallet only signs the order UnVault prepares and UnVault sends the mint; on a drop like Genesis your wallet sends the transaction UnVault prepares.
+
 ### Mode for OpenSea drops
 
 OpenSea drops have a **Mode** field. It sets how each wallet's signed mint data is fetched.
@@ -104,5 +108,7 @@ Once the tasks are made, an **Open Tasks** button appears. A task made for a pha
 | R-RESOLVE | It could not find the mint route. Try again, or use **Use ABI / Hex** to [create a task by hand](task-form.md). |
 | No RPC endpoint for this chain | Add an RPC for that chain on the RPC screen. |
 | This address is not a contract | You pasted a wallet address. Check the mint contract address. |
+
+If an UnVault link fails because UnVault's server does not answer, the screen looks it up again on its own every 5 seconds, and the result appears by itself once the server answers.
 
 **Recent resolves** at the bottom keeps the projects you looked up. Click one to look it up again; **Clear list** empties it.

@@ -42,10 +42,26 @@ The top shows the name, chain and contract, with figures.
 - **Indicators**: SMA 20, EMA 50, Bollinger Bands, RSI 14, volume. If there are too few sale candles, it tells you how many it needs.
 - Shape: **Sale dots**, **Candles**, **Close line**
 - Overlays: **Floor**, **Order book** (listings and offers), **My average** (if you calculated P&L in the NFT menu)
-- Top right: **Log** price axis, copy chart image, reset view, enlarge
-- Left tools: crosshair, trend line, price line, price and time measure, zoom in, zoom out, clear drawings
+- Top right: **Auto** (fit the price range automatically), **Log** price axis, zoom in, zoom out, copy chart image, reset view, enlarge
+- Left tools: crosshair, trend line, ray, price line, vertical line, rectangle, Fibonacci retracement, price and time measure. Below them are the **magnet** (snaps to the nearest sale dot or candle value), undo, delete the picked drawing and clear drawings.
+- Legend: the readout line and the indicator chips do not float over the chart; they sit on their own lines above it. The readout also shows the candle's change. So the top dots are not covered and can be clicked.
+- Strip under the chart: when there are sales outside the range, it shows **N outliers** with **Show all**.
 
-Scroll to zoom and drag to move. Double-click or press Home to get back to the first view. Clicking a sale dot opens that token's card.
+How to work it:
+
+- **Move**: drag the chart in any direction and it moves that way, up and down too (once you drag 4 px or more in a direction, that direction moves). The Up and Down keys move the prices.
+- **Price range**: it is automatic until you move or stretch it. Dragging the price axis stretches or shrinks the range. Double-clicking the price axis, the **Auto** button, changing the period, switching **Log** and reset view make it automatic again. The automatic range leaves out sales far off the floor.
+- **Sales outside the range**: sale dots and candles that fall outside show as an arrow on the edge with their price. Clicking the arrow on a sale dot opens that sale. **Show all** puts them in the range; **Fold outliers** puts them back.
+- **Time zoom**: scroll to zoom. Dragging the time axis zooms about its right edge, and double-clicking the time axis refits the time range. The zoom in and zoom out buttons at the top right work about the middle of the time range you see. **Shift** + wheel, or sideways scrolling on a touchpad, moves left and right.
+- **Back to the latest trade**: when the latest trade is out of view, a button to go back to it appears. The width you were viewing stays.
+- **Back to the first view**: double-click or press Home.
+- **Sale dots**: clicking a sale dot on the chart opens that token's card.
+
+Drawings:
+
+- Click a drawing to pick it and press **Delete** to remove it.
+- **Ctrl+Z** undoes, also after **Clear drawings**.
+- Drawings stay on this PC, per collection and per currency.
 
 ### The right panel
 
@@ -58,7 +74,7 @@ Scroll to zoom and drag to move. Double-click or press Home to get back to the f
 
 ## Alert Center
 
-In the **Alert Center** you make alerts for changes in a collection or a wallet. They work while the app is open, without the detail screen open. The app decides when to alert, so nothing comes while it is closed. Alerts arrive on Telegram. Open **Market Telegram connection** in the Alert Center, click **Generate connection code**, and send the command it shows to the bot chat signed in with the same license as the app. The code expires in 5 minutes. Once connected, the license end notice and a task's site step notices come to the same chat.
+In the **Alert Center** you make alerts for changes in a collection or a wallet. They work while the app is open, without the detail screen open. The app decides when to alert, so nothing comes while it is closed. Alerts arrive on Telegram. Open **Market Telegram connection** in the Alert Center, click **Generate connection code**, and send the command it shows to the bot chat signed in with the same license as the app. The code expires in 5 minutes. Once connected, the license end notice and a task's site step notices come to the same chat. The same connection card is also in **Settings → General**, right under Updates. To end the connection, use **Disconnect Market alerts**; to connect again, make a new code and send it.
 
 The Alert Center's tabs are **Collection**, **Wallet** and **History**. The numbers next to the Collection and Wallet tabs are how many alerts you have made.
 

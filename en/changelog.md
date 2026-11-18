@@ -2,6 +2,29 @@
 
 Newest version first. The app auto-updates to the latest version every time you open it: see [Download](getting-started/install.md) to install.
 
+## v1.0.3
+
+- Settings > General now has the Telegram connection, right under Updates: make a connection code, disconnect, or connect again.
+- Market chart: drag it up and down; a single sale far above the floor no longer squashes the chart (it shows as an arrow on the edge, with Show all); the highest dots open on click.
+- Market chart: trading-chart controls (drag the time axis to zoom, go back to the latest trade, zoom buttons) and more drawing tools (ray, vertical line, rectangle, Fibonacci) with magnet, undo and delete.
+- Smart Mint shows every phase of an UnVault drop and makes the task for the phase you pick. Spam is off for UnVault: Instant already keeps asking UnVault until the phase opens.
+- When UnVault's server does not answer, Smart Mint looks the drop up again every few seconds by itself.
+- UnVault tasks keep going when UnVault blocks its drop status, send the signed order again when the first send gets no answer, and tasks for more than one token are ready before the open. A stopped UnVault task sends nothing more.
+
+## v1.0.2
+
+- Smart Mint takes any UnVault drop link, on any unvault.com address (mint-prod.unvault.com/bugz, unvault.com/bugz and the like), and mints the drop that page is running now.
+- Smart Mint mints DeBugz on UnVault: your wallet signs the mint order UnVault prepares at the open and UnVault sends the mint.
+- UnVault tasks keep waiting for the open again: UnVault changed its "not open yet" answer and the app read it as a failure.
+- The app reaches UnVault through either of its server addresses and moves to the other one when one is down.
+- UnVault tasks read the drop and your wallet's eligibility before the start and ask for the mint right at the start; a busy answer from UnVault no longer slows them down.
+
+## v1.0.1
+
+- Smart Mint now mints UnVault drops: paste an UnVault drop link (such as unvault.com/bugz). The app signs your wallet in, accepts the terms and sends the mint UnVault prepares at the open. Later phases mint as many per wallet as UnVault allows.
+- Smart Mint steps 2 and 3 have a Next step button.
+- Boost keeps watching every transaction it sent, so a mint that went through is no longer shown as failed.
+
 ## v1.0.0 (beta)
 
 - The first release of the new Nogada App: Smart Mint, tasks, wallets, Market, NFTs and alerts in one app.
